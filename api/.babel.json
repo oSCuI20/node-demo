@@ -1,0 +1,2188 @@
+{
+  "{\"filename\":\"/app/server/app.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "./app-server",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "APPServer"
+              }
+            ]
+          },
+          {
+            "source": "./router",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "router"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/app.js",
+      "filenameRelative": "/app/server/app.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "app.js",
+      "sourceFileName": "app.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "app"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _appServer = require('./app-server');\n\nvar _appServer2 = _interopRequireDefault(_appServer);\n\nvar _router = require('./router');\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst server = new _appServer2.default((0, _express2.default)());\n\nserver.setRouter(_router2.default);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6WyJzZXJ2ZXIiLCJBUFBTZXJ2ZXIiLCJzZXRSb3V0ZXIiLCJyb3V0ZXIiLCJlcnJvckhhbmRsZXIiLCJsaXN0ZW4iLCJjb25uZWN0Il0sIm1hcHBpbmdzIjoiOztBQUFBOzs7O0FBRUE7Ozs7QUFDQTs7Ozs7O0FBR0EsTUFBTUEsU0FBUyxJQUFJQyxtQkFBSixDQUFjLHdCQUFkLENBQWY7O0FBRUFELE9BQU9FLFNBQVAsQ0FBaUJDLGdCQUFqQjtBQUNBSCxPQUFPSSxZQUFQO0FBQ0FKLE9BQU9LLE1BQVA7QUFDQUwsT0FBT00sT0FBUCIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxuaW1wb3J0IEFQUFNlcnZlciBmcm9tICcuL2FwcC1zZXJ2ZXInO1xuaW1wb3J0IHJvdXRlciAgICBmcm9tICcuL3JvdXRlcic7XG5cblxuY29uc3Qgc2VydmVyID0gbmV3IEFQUFNlcnZlcihleHByZXNzKCkpO1xuXG5zZXJ2ZXIuc2V0Um91dGVyKHJvdXRlcik7XG5zZXJ2ZXIuZXJyb3JIYW5kbGVyKCk7XG5zZXJ2ZXIubGlzdGVuKCk7XG5zZXJ2ZXIuY29ubmVjdCgpO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "app.js"
+      ],
+      "names": [
+        "server",
+        "APPServer",
+        "setRouter",
+        "router",
+        "errorHandler",
+        "listen",
+        "connect"
+      ],
+      "mappings": ";;AAAA;;;;AAEA;;;;AACA;;;;;;AAGA,MAAMA,SAAS,IAAIC,mBAAJ,CAAc,wBAAd,CAAf;;AAEAD,OAAOE,SAAP,CAAiBC,gBAAjB;AACAH,OAAOI,YAAP;AACAJ,OAAOK,MAAP;AACAL,OAAOM,OAAP",
+      "file": "app.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import express from 'express';\n\nimport APPServer from './app-server';\nimport router    from './router';\n\n\nconst server = new APPServer(express());\n\nserver.setRouter(router);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n"
+      ]
+    },
+    "mtime": 1691830419332
+  },
+  "{\"filename\":\"/app/server/routes/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/routes/index.js",
+      "filenameRelative": "/app/server/routes/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/routes",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/routes",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar express = require('express');\nvar router = express.Router();\n\n/* GET home page. */\nrouter.get('/', (request, response, next) => {\n  response.send('{\"json\": \"this is a json output\"}');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJyZXF1aXJlIiwicm91dGVyIiwiUm91dGVyIiwiZ2V0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwibmV4dCIsInNlbmQiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLFVBQVVDLFFBQVEsU0FBUixDQUFkO0FBQ0EsSUFBSUMsU0FBU0YsUUFBUUcsTUFBUixFQUFiOztBQUVBO0FBQ0FELE9BQU9FLEdBQVAsQ0FBVyxHQUFYLEVBQWdCLENBQUNDLE9BQUQsRUFBVUMsUUFBVixFQUFvQkMsSUFBcEIsS0FBNkI7QUFDM0NELFdBQVNFLElBQVQsQ0FBYyxtQ0FBZDtBQUNELENBRkQ7O0FBSUFDLE9BQU9DLE9BQVAsR0FBaUJSLE1BQWpCIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL3JvdXRlcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBleHByZXNzID0gcmVxdWlyZSgnZXhwcmVzcycpO1xudmFyIHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XG5cbi8qIEdFVCBob21lIHBhZ2UuICovXG5yb3V0ZXIuZ2V0KCcvJywgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIHJlc3BvbnNlLnNlbmQoJ3tcImpzb25cIjogXCJ0aGlzIGlzIGEganNvbiBvdXRwdXRcIn0nKVxufSk7XG5cbm1vZHVsZS5leHBvcnRzID0gcm91dGVyO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "express",
+        "require",
+        "router",
+        "Router",
+        "get",
+        "request",
+        "response",
+        "next",
+        "send",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA,IAAIA,UAAUC,QAAQ,SAAR,CAAd;AACA,IAAIC,SAASF,QAAQG,MAAR,EAAb;;AAEA;AACAD,OAAOE,GAAP,CAAW,GAAX,EAAgB,CAACC,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC3CD,WAASE,IAAT,CAAc,mCAAd;AACD,CAFD;;AAIAC,OAAOC,OAAP,GAAiBR,MAAjB",
+      "file": "index.js",
+      "sourceRoot": "/app/server/routes",
+      "sourcesContent": [
+        "var express = require('express');\nvar router = express.Router();\n\n/* GET home page. */\nrouter.get('/', (request, response, next) => {\n  response.send('{\"json\": \"this is a json output\"}')\n});\n\nmodule.exports = router;\n"
+      ]
+    },
+    "mtime": 1690954593616
+  },
+  "{\"filename\":\"/app/server/routes/users.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/routes/users.js",
+      "filenameRelative": "/app/server/routes/users.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "users.js",
+      "sourceFileName": "users.js",
+      "sourceRoot": "/app/server/routes",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/routes",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "users"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nconst express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (request, response, next) => {\n  response.send('respond with a resource');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZXJzLmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJyZXF1aXJlIiwicm91dGVyIiwiUm91dGVyIiwiZ2V0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwibmV4dCIsInNlbmQiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiOztBQUFBLE1BQU1BLFVBQVVDLFFBQVEsU0FBUixDQUFoQjtBQUNBLE1BQU1DLFNBQVNGLFFBQVFHLE1BQVIsRUFBZjs7QUFFQUQsT0FBT0UsR0FBUCxDQUFXLEdBQVgsRUFBZ0IsQ0FBQ0MsT0FBRCxFQUFVQyxRQUFWLEVBQW9CQyxJQUFwQixLQUE2QjtBQUMzQ0QsV0FBU0UsSUFBVCxDQUFjLHlCQUFkO0FBQ0QsQ0FGRDs7QUFJQUMsT0FBT0MsT0FBUCxHQUFpQlIsTUFBakIiLCJmaWxlIjoidXNlcnMuanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvcm91dGVzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTtcbmNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XG5cbnJvdXRlci5nZXQoJy8nLCAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2Uuc2VuZCgncmVzcG9uZCB3aXRoIGEgcmVzb3VyY2UnKTtcbn0pO1xuXG5tb2R1bGUuZXhwb3J0cyA9IHJvdXRlcjtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "users.js"
+      ],
+      "names": [
+        "express",
+        "require",
+        "router",
+        "Router",
+        "get",
+        "request",
+        "response",
+        "next",
+        "send",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA,MAAMA,UAAUC,QAAQ,SAAR,CAAhB;AACA,MAAMC,SAASF,QAAQG,MAAR,EAAf;;AAEAD,OAAOE,GAAP,CAAW,GAAX,EAAgB,CAACC,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC3CD,WAASE,IAAT,CAAc,yBAAd;AACD,CAFD;;AAIAC,OAAOC,OAAP,GAAiBR,MAAjB",
+      "file": "users.js",
+      "sourceRoot": "/app/server/routes",
+      "sourcesContent": [
+        "const express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (request, response, next) => {\n  response.send('respond with a resource');\n});\n\nmodule.exports = router;\n"
+      ]
+    },
+    "mtime": 1690778293470
+  },
+  "{\"filename\":\"/app/server/routes/user.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/routes/user.js",
+      "filenameRelative": "/app/server/routes/user.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "user.js",
+      "sourceFileName": "user.js",
+      "sourceRoot": "/app/server/routes",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/routes",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "user"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nconst express = require('express');\nconst router = express.Router();\n\nrouter.get('/:id', (request, response, next) => {\n  response.send(`response id ${request.params.id}`);\n});\n\nrouter.post('/:id', (request, response, next) => {\n  response.send('post ');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZXIuanMiXSwibmFtZXMiOlsiZXhwcmVzcyIsInJlcXVpcmUiLCJyb3V0ZXIiLCJSb3V0ZXIiLCJnZXQiLCJyZXF1ZXN0IiwicmVzcG9uc2UiLCJuZXh0Iiwic2VuZCIsInBhcmFtcyIsImlkIiwicG9zdCIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiI7O0FBQUEsTUFBTUEsVUFBVUMsUUFBUSxTQUFSLENBQWhCO0FBQ0EsTUFBTUMsU0FBU0YsUUFBUUcsTUFBUixFQUFmOztBQUVBRCxPQUFPRSxHQUFQLENBQVcsTUFBWCxFQUFtQixDQUFDQyxPQUFELEVBQVVDLFFBQVYsRUFBb0JDLElBQXBCLEtBQTZCO0FBQzlDRCxXQUFTRSxJQUFULENBQWUsZUFBY0gsUUFBUUksTUFBUixDQUFlQyxFQUFHLEVBQS9DO0FBQ0QsQ0FGRDs7QUFJQVIsT0FBT1MsSUFBUCxDQUFZLE1BQVosRUFBb0IsQ0FBQ04sT0FBRCxFQUFVQyxRQUFWLEVBQW9CQyxJQUFwQixLQUE2QjtBQUMvQ0QsV0FBU0UsSUFBVCxDQUFjLE9BQWQ7QUFDRCxDQUZEOztBQUlBSSxPQUFPQyxPQUFQLEdBQWlCWCxNQUFqQiIsImZpbGUiOiJ1c2VyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL3JvdXRlcyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGV4cHJlc3MgPSByZXF1aXJlKCdleHByZXNzJyk7XG5jb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpO1xuXG5yb3V0ZXIuZ2V0KCcvOmlkJywgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIHJlc3BvbnNlLnNlbmQoYHJlc3BvbnNlIGlkICR7cmVxdWVzdC5wYXJhbXMuaWR9YCk7XG59KTtcblxucm91dGVyLnBvc3QoJy86aWQnLCAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2Uuc2VuZCgncG9zdCAnKTtcbn0pO1xuXG5tb2R1bGUuZXhwb3J0cyA9IHJvdXRlcjtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "user.js"
+      ],
+      "names": [
+        "express",
+        "require",
+        "router",
+        "Router",
+        "get",
+        "request",
+        "response",
+        "next",
+        "send",
+        "params",
+        "id",
+        "post",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA,MAAMA,UAAUC,QAAQ,SAAR,CAAhB;AACA,MAAMC,SAASF,QAAQG,MAAR,EAAf;;AAEAD,OAAOE,GAAP,CAAW,MAAX,EAAmB,CAACC,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC9CD,WAASE,IAAT,CAAe,eAAcH,QAAQI,MAAR,CAAeC,EAAG,EAA/C;AACD,CAFD;;AAIAR,OAAOS,IAAP,CAAY,MAAZ,EAAoB,CAACN,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC/CD,WAASE,IAAT,CAAc,OAAd;AACD,CAFD;;AAIAI,OAAOC,OAAP,GAAiBX,MAAjB",
+      "file": "user.js",
+      "sourceRoot": "/app/server/routes",
+      "sourcesContent": [
+        "const express = require('express');\nconst router = express.Router();\n\nrouter.get('/:id', (request, response, next) => {\n  response.send(`response id ${request.params.id}`);\n});\n\nrouter.post('/:id', (request, response, next) => {\n  response.send('post ');\n});\n\nmodule.exports = router;\n"
+      ]
+    },
+    "mtime": 1690778215845
+  },
+  "{\"filename\":\"/app/config/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/config\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/config/index.js",
+      "filenameRelative": "/app/config/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/config",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/config",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nconst path = require('path');\n\nconst Config = {\n  app: {\n    host: process.env.APP_HOST,\n    port: process.env.APP_PORT,\n    admin: process.env.APP_ADMIN_URL,\n    rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n  },\n  mongodb: {\n    host: process.env.MONGO_HOST,\n    port: process.env.MONGO_PORT,\n    name: process.env.MONGO_NAME,\n    options: {\n      user: process.env.MONGO_USER,\n      pass: process.env.MONGO_PASS,\n      useNewUrlParser: true,\n      useCreateIndex: true,\n      useUnifiedTopology: true,\n      useFindAndModify: false,\n      poolSize: process.env.MONGO_POOL_SIZE || 10,\n      bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n    }\n  },\n  mail: {\n    admin: process.env.MAIL_ADMIN,\n    from: process.env.MAIL_FROM,\n    credentials: {\n      host: process.env.MAIL_CREDENTIALS_HOST,\n      port: process.env.MAIL_CREDENTIALS_PORT || 587,\n      auth: {\n        user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n        pass: process.env.MAIL_CREDENTIALS_AUTH_PASS\n      },\n      tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || { rejectUnauthorized: false }\n    }\n  }\n};\n\nexports.default = Config;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInBhdGgiLCJyZXF1aXJlIiwiQ29uZmlnIiwiYXBwIiwiaG9zdCIsInByb2Nlc3MiLCJlbnYiLCJBUFBfSE9TVCIsInBvcnQiLCJBUFBfUE9SVCIsImFkbWluIiwiQVBQX0FETUlOX1VSTCIsInJvb3RmcyIsIkFQUF9IT01FIiwibm9ybWFsaXplIiwiX19kaXJuYW1lIiwibW9uZ29kYiIsIk1PTkdPX0hPU1QiLCJNT05HT19QT1JUIiwibmFtZSIsIk1PTkdPX05BTUUiLCJvcHRpb25zIiwidXNlciIsIk1PTkdPX1VTRVIiLCJwYXNzIiwiTU9OR09fUEFTUyIsInVzZU5ld1VybFBhcnNlciIsInVzZUNyZWF0ZUluZGV4IiwidXNlVW5pZmllZFRvcG9sb2d5IiwidXNlRmluZEFuZE1vZGlmeSIsInBvb2xTaXplIiwiTU9OR09fUE9PTF9TSVpFIiwiYnVmZmVyTWF4RW50cmllcyIsIk1PTkdPX0JVRkZFUl9NQVhfRU5UUklFUyIsIm1haWwiLCJNQUlMX0FETUlOIiwiZnJvbSIsIk1BSUxfRlJPTSIsImNyZWRlbnRpYWxzIiwiTUFJTF9DUkVERU5USUFMU19IT1NUIiwiTUFJTF9DUkVERU5USUFMU19QT1JUIiwiYXV0aCIsIk1BSUxfQ1JFREVOVElBTFNfQVVUSF9VU0VSIiwiTUFJTF9DUkVERU5USUFMU19BVVRIX1BBU1MiLCJ0bHMiLCJNQUlMX0NSRURFTlRJQUxTX1RMU19PUFRJT05TIiwicmVqZWN0VW5hdXRob3JpemVkIl0sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE1BQU1BLE9BQU9DLFFBQVEsTUFBUixDQUFiOztBQUVBLE1BQU1DLFNBQVM7QUFDYkMsT0FBSztBQUNIQyxVQUFNQyxRQUFRQyxHQUFSLENBQVlDLFFBRGY7QUFFSEMsVUFBTUgsUUFBUUMsR0FBUixDQUFZRyxRQUZmO0FBR0hDLFdBQU9MLFFBQVFDLEdBQVIsQ0FBWUssYUFIaEI7QUFJSEMsWUFBUVAsUUFBUUMsR0FBUixDQUFZTyxRQUFaLElBQXdCYixLQUFLYyxTQUFMLENBQWdCLEdBQUVDLFNBQVUsRUFBNUI7QUFKN0IsR0FEUTtBQU9iQyxXQUFTO0FBQ1BaLFVBQU1DLFFBQVFDLEdBQVIsQ0FBWVcsVUFEWDtBQUVQVCxVQUFNSCxRQUFRQyxHQUFSLENBQVlZLFVBRlg7QUFHUEMsVUFBTWQsUUFBUUMsR0FBUixDQUFZYyxVQUhYO0FBSVBDLGFBQVM7QUFDUEMsWUFBTWpCLFFBQVFDLEdBQVIsQ0FBWWlCLFVBRFg7QUFFUEMsWUFBTW5CLFFBQVFDLEdBQVIsQ0FBWW1CLFVBRlg7QUFHUEMsdUJBQWlCLElBSFY7QUFJUEMsc0JBQWdCLElBSlQ7QUFLUEMsMEJBQW9CLElBTGI7QUFNUEMsd0JBQWtCLEtBTlg7QUFPUEMsZ0JBQVV6QixRQUFRQyxHQUFSLENBQVl5QixlQUFaLElBQStCLEVBUGxDO0FBUVBDLHdCQUFrQjNCLFFBQVFDLEdBQVIsQ0FBWTJCLHdCQUFaLElBQXdDO0FBUm5EO0FBSkYsR0FQSTtBQXNCYkMsUUFBTTtBQUNKeEIsV0FBT0wsUUFBUUMsR0FBUixDQUFZNkIsVUFEZjtBQUVKQyxVQUFNL0IsUUFBUUMsR0FBUixDQUFZK0IsU0FGZDtBQUdKQyxpQkFBYTtBQUNYbEMsWUFBTUMsUUFBUUMsR0FBUixDQUFZaUMscUJBRFA7QUFFWC9CLFlBQU1ILFFBQVFDLEdBQVIsQ0FBWWtDLHFCQUFaLElBQXFDLEdBRmhDO0FBR1hDLFlBQU07QUFDSm5CLGNBQU1qQixRQUFRQyxHQUFSLENBQVlvQywwQkFEZDtBQUVKbEIsY0FBTW5CLFFBQVFDLEdBQVIsQ0FBWXFDO0FBRmQsT0FISztBQU9YQyxXQUFLdkMsUUFBUUMsR0FBUixDQUFZdUMsNEJBQVosSUFBNEMsRUFBQ0Msb0JBQW9CLEtBQXJCO0FBUHRDO0FBSFQ7QUF0Qk8sQ0FBZjs7a0JBcUNlNUMsTSIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL2NvbmZpZyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IHBhdGggPSByZXF1aXJlKCdwYXRoJyk7XG5cbmNvbnN0IENvbmZpZyA9IHtcbiAgYXBwOiB7XG4gICAgaG9zdDogcHJvY2Vzcy5lbnYuQVBQX0hPU1QsXG4gICAgcG9ydDogcHJvY2Vzcy5lbnYuQVBQX1BPUlQsXG4gICAgYWRtaW46IHByb2Nlc3MuZW52LkFQUF9BRE1JTl9VUkwsXG4gICAgcm9vdGZzOiBwcm9jZXNzLmVudi5BUFBfSE9NRSB8fCBwYXRoLm5vcm1hbGl6ZShgJHtfX2Rpcm5hbWV9YClcbiAgfSxcbiAgbW9uZ29kYjoge1xuICAgIGhvc3Q6IHByb2Nlc3MuZW52Lk1PTkdPX0hPU1QsXG4gICAgcG9ydDogcHJvY2Vzcy5lbnYuTU9OR09fUE9SVCxcbiAgICBuYW1lOiBwcm9jZXNzLmVudi5NT05HT19OQU1FLFxuICAgIG9wdGlvbnM6IHtcbiAgICAgIHVzZXI6IHByb2Nlc3MuZW52Lk1PTkdPX1VTRVIsXG4gICAgICBwYXNzOiBwcm9jZXNzLmVudi5NT05HT19QQVNTLFxuICAgICAgdXNlTmV3VXJsUGFyc2VyOiB0cnVlLFxuICAgICAgdXNlQ3JlYXRlSW5kZXg6IHRydWUsXG4gICAgICB1c2VVbmlmaWVkVG9wb2xvZ3k6IHRydWUsXG4gICAgICB1c2VGaW5kQW5kTW9kaWZ5OiBmYWxzZSxcbiAgICAgIHBvb2xTaXplOiBwcm9jZXNzLmVudi5NT05HT19QT09MX1NJWkUgfHwgMTAsXG4gICAgICBidWZmZXJNYXhFbnRyaWVzOiBwcm9jZXNzLmVudi5NT05HT19CVUZGRVJfTUFYX0VOVFJJRVMgfHwgMFxuICAgIH0sXG4gIH0sXG4gIG1haWw6IHtcbiAgICBhZG1pbjogcHJvY2Vzcy5lbnYuTUFJTF9BRE1JTixcbiAgICBmcm9tOiBwcm9jZXNzLmVudi5NQUlMX0ZST00sXG4gICAgY3JlZGVudGlhbHM6IHtcbiAgICAgIGhvc3Q6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfSE9TVCxcbiAgICAgIHBvcnQ6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfUE9SVCB8fCA1ODcsXG4gICAgICBhdXRoOiB7XG4gICAgICAgIHVzZXI6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfQVVUSF9VU0VSLFxuICAgICAgICBwYXNzOiBwcm9jZXNzLmVudi5NQUlMX0NSRURFTlRJQUxTX0FVVEhfUEFTUyxcbiAgICAgIH0sXG4gICAgICB0bHM6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfVExTX09QVElPTlMgfHwge3JlamVjdFVuYXV0aG9yaXplZDogZmFsc2V9XG4gICAgfVxuICB9LFxufTtcblxuZXhwb3J0IGRlZmF1bHQgQ29uZmlnO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "path",
+        "require",
+        "Config",
+        "app",
+        "host",
+        "process",
+        "env",
+        "APP_HOST",
+        "port",
+        "APP_PORT",
+        "admin",
+        "APP_ADMIN_URL",
+        "rootfs",
+        "APP_HOME",
+        "normalize",
+        "__dirname",
+        "mongodb",
+        "MONGO_HOST",
+        "MONGO_PORT",
+        "name",
+        "MONGO_NAME",
+        "options",
+        "user",
+        "MONGO_USER",
+        "pass",
+        "MONGO_PASS",
+        "useNewUrlParser",
+        "useCreateIndex",
+        "useUnifiedTopology",
+        "useFindAndModify",
+        "poolSize",
+        "MONGO_POOL_SIZE",
+        "bufferMaxEntries",
+        "MONGO_BUFFER_MAX_ENTRIES",
+        "mail",
+        "MAIL_ADMIN",
+        "from",
+        "MAIL_FROM",
+        "credentials",
+        "MAIL_CREDENTIALS_HOST",
+        "MAIL_CREDENTIALS_PORT",
+        "auth",
+        "MAIL_CREDENTIALS_AUTH_USER",
+        "MAIL_CREDENTIALS_AUTH_PASS",
+        "tls",
+        "MAIL_CREDENTIALS_TLS_OPTIONS",
+        "rejectUnauthorized"
+      ],
+      "mappings": ";;;;;AAAA,MAAMA,OAAOC,QAAQ,MAAR,CAAb;;AAEA,MAAMC,SAAS;AACbC,OAAK;AACHC,UAAMC,QAAQC,GAAR,CAAYC,QADf;AAEHC,UAAMH,QAAQC,GAAR,CAAYG,QAFf;AAGHC,WAAOL,QAAQC,GAAR,CAAYK,aAHhB;AAIHC,YAAQP,QAAQC,GAAR,CAAYO,QAAZ,IAAwBb,KAAKc,SAAL,CAAgB,GAAEC,SAAU,EAA5B;AAJ7B,GADQ;AAObC,WAAS;AACPZ,UAAMC,QAAQC,GAAR,CAAYW,UADX;AAEPT,UAAMH,QAAQC,GAAR,CAAYY,UAFX;AAGPC,UAAMd,QAAQC,GAAR,CAAYc,UAHX;AAIPC,aAAS;AACPC,YAAMjB,QAAQC,GAAR,CAAYiB,UADX;AAEPC,YAAMnB,QAAQC,GAAR,CAAYmB,UAFX;AAGPC,uBAAiB,IAHV;AAIPC,sBAAgB,IAJT;AAKPC,0BAAoB,IALb;AAMPC,wBAAkB,KANX;AAOPC,gBAAUzB,QAAQC,GAAR,CAAYyB,eAAZ,IAA+B,EAPlC;AAQPC,wBAAkB3B,QAAQC,GAAR,CAAY2B,wBAAZ,IAAwC;AARnD;AAJF,GAPI;AAsBbC,QAAM;AACJxB,WAAOL,QAAQC,GAAR,CAAY6B,UADf;AAEJC,UAAM/B,QAAQC,GAAR,CAAY+B,SAFd;AAGJC,iBAAa;AACXlC,YAAMC,QAAQC,GAAR,CAAYiC,qBADP;AAEX/B,YAAMH,QAAQC,GAAR,CAAYkC,qBAAZ,IAAqC,GAFhC;AAGXC,YAAM;AACJnB,cAAMjB,QAAQC,GAAR,CAAYoC,0BADd;AAEJlB,cAAMnB,QAAQC,GAAR,CAAYqC;AAFd,OAHK;AAOXC,WAAKvC,QAAQC,GAAR,CAAYuC,4BAAZ,IAA4C,EAACC,oBAAoB,KAArB;AAPtC;AAHT;AAtBO,CAAf;;kBAqCe5C,M",
+      "file": "index.js",
+      "sourceRoot": "/app/config",
+      "sourcesContent": [
+        "const path = require('path');\n\nconst Config = {\n  app: {\n    host: process.env.APP_HOST,\n    port: process.env.APP_PORT,\n    admin: process.env.APP_ADMIN_URL,\n    rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n  },\n  mongodb: {\n    host: process.env.MONGO_HOST,\n    port: process.env.MONGO_PORT,\n    name: process.env.MONGO_NAME,\n    options: {\n      user: process.env.MONGO_USER,\n      pass: process.env.MONGO_PASS,\n      useNewUrlParser: true,\n      useCreateIndex: true,\n      useUnifiedTopology: true,\n      useFindAndModify: false,\n      poolSize: process.env.MONGO_POOL_SIZE || 10,\n      bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n    },\n  },\n  mail: {\n    admin: process.env.MAIL_ADMIN,\n    from: process.env.MAIL_FROM,\n    credentials: {\n      host: process.env.MAIL_CREDENTIALS_HOST,\n      port: process.env.MAIL_CREDENTIALS_PORT || 587,\n      auth: {\n        user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n        pass: process.env.MAIL_CREDENTIALS_AUTH_PASS,\n      },\n      tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || {rejectUnauthorized: false}\n    }\n  },\n};\n\nexport default Config;\n"
+      ]
+    },
+    "mtime": 1690954692773
+  },
+  "{\"filename\":\"/app/server/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./config",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "config"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "router",
+            "app"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "router",
+              "exported": "default"
+            },
+            {
+              "kind": "local",
+              "local": "app",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/router.js",
+      "filenameRelative": "/app/server/router.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "router.js",
+      "sourceFileName": "router.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "router"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n   value: true\n});\nexports.default = router;\n\nvar _config = require(\"./config\");\n\nvar _config2 = _interopRequireDefault(_config);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userRouter = require(`${_config2.default.app.rootfs}/server/controllers/user/router`);\n\nfunction router(app) {\n   app.use('/user', userRouter);\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJ1c2VyUm91dGVyIiwicmVxdWlyZSIsImNvbmZpZyIsImFwcCIsInJvb3RmcyIsInVzZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBSXdCQSxNOztBQUp4Qjs7Ozs7O0FBRUEsTUFBTUMsYUFBY0MsUUFBUyxHQUFFQyxpQkFBT0MsR0FBUCxDQUFXQyxNQUFPLGlDQUE3QixDQUFwQjs7QUFFZSxTQUFTTCxNQUFULENBQWdCSSxHQUFoQixFQUFxQjtBQUNqQ0EsT0FBSUUsR0FBSixDQUFRLE9BQVIsRUFBaUJMLFVBQWpCO0FBQ0YiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNvbmZpZyBmcm9tIFwiLi9jb25maWdcIjtcblxuY29uc3QgdXNlclJvdXRlciAgPSByZXF1aXJlKGAke2NvbmZpZy5hcHAucm9vdGZzfS9zZXJ2ZXIvY29udHJvbGxlcnMvdXNlci9yb3V0ZXJgKTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gcm91dGVyKGFwcCkge1xuICAgYXBwLnVzZSgnL3VzZXInLCB1c2VyUm91dGVyKTtcbn0iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "router.js"
+      ],
+      "names": [
+        "router",
+        "userRouter",
+        "require",
+        "config",
+        "app",
+        "rootfs",
+        "use"
+      ],
+      "mappings": ";;;;;kBAIwBA,M;;AAJxB;;;;;;AAEA,MAAMC,aAAcC,QAAS,GAAEC,iBAAOC,GAAP,CAAWC,MAAO,iCAA7B,CAApB;;AAEe,SAASL,MAAT,CAAgBI,GAAhB,EAAqB;AACjCA,OAAIE,GAAJ,CAAQ,OAAR,EAAiBL,UAAjB;AACF",
+      "file": "router.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import config from \"./config\";\n\nconst userRouter  = require(`${config.app.rootfs}/server/controllers/user/router`);\n\nexport default function router(app) {\n   app.use('/user', userRouter);\n}"
+      ]
+    },
+    "mtime": 1691734537680
+  },
+  "{\"filename\":\"/app/server/config/config.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/config\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "config"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "config",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/config/config.js",
+      "filenameRelative": "/app/server/config/config.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "config.js",
+      "sourceFileName": "config.js",
+      "sourceRoot": "/app/server/config",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/config",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "config"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = config;\nconst path = require('path');\n\nfunction config() {\n  return {\n    app: {\n      host: process.env.APP_HOST,\n      port: process.env.APP_PORT,\n      admin: process.env.APP_ADMIN_URL,\n      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n    },\n    mongodb: {\n      host: process.env.MONGO_HOST,\n      port: process.env.MONGO_PORT,\n      name: process.env.MONGO_NAME,\n      options: {\n        user: process.env.MONGO_USER,\n        pass: process.env.MONGO_PASS,\n        useNewUrlParser: true,\n        useCreateIndex: true,\n        useUnifiedTopology: true,\n        useFindAndModify: false,\n        poolSize: process.env.MONGO_POOL_SIZE || 10,\n        bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n      }\n    },\n    mail: {\n      admin: process.env.MAIL_ADMIN,\n      from: process.env.MAIL_FROM,\n      credentials: {\n        host: process.env.MAIL_CREDENTIALS_HOST,\n        port: process.env.MAIL_CREDENTIALS_PORT || 587,\n        auth: {\n          user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n          pass: process.env.MAIL_CREDENTIALS_AUTH_PASS\n        },\n        tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || { rejectUnauthorized: false }\n      }\n    }\n  };\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy5qcyJdLCJuYW1lcyI6WyJjb25maWciLCJwYXRoIiwicmVxdWlyZSIsImFwcCIsImhvc3QiLCJwcm9jZXNzIiwiZW52IiwiQVBQX0hPU1QiLCJwb3J0IiwiQVBQX1BPUlQiLCJhZG1pbiIsIkFQUF9BRE1JTl9VUkwiLCJyb290ZnMiLCJBUFBfSE9NRSIsIm5vcm1hbGl6ZSIsIl9fZGlybmFtZSIsIm1vbmdvZGIiLCJNT05HT19IT1NUIiwiTU9OR09fUE9SVCIsIm5hbWUiLCJNT05HT19OQU1FIiwib3B0aW9ucyIsInVzZXIiLCJNT05HT19VU0VSIiwicGFzcyIsIk1PTkdPX1BBU1MiLCJ1c2VOZXdVcmxQYXJzZXIiLCJ1c2VDcmVhdGVJbmRleCIsInVzZVVuaWZpZWRUb3BvbG9neSIsInVzZUZpbmRBbmRNb2RpZnkiLCJwb29sU2l6ZSIsIk1PTkdPX1BPT0xfU0laRSIsImJ1ZmZlck1heEVudHJpZXMiLCJNT05HT19CVUZGRVJfTUFYX0VOVFJJRVMiLCJtYWlsIiwiTUFJTF9BRE1JTiIsImZyb20iLCJNQUlMX0ZST00iLCJjcmVkZW50aWFscyIsIk1BSUxfQ1JFREVOVElBTFNfSE9TVCIsIk1BSUxfQ1JFREVOVElBTFNfUE9SVCIsImF1dGgiLCJNQUlMX0NSRURFTlRJQUxTX0FVVEhfVVNFUiIsIk1BSUxfQ1JFREVOVElBTFNfQVVUSF9QQVNTIiwidGxzIiwiTUFJTF9DUkVERU5USUFMU19UTFNfT1BUSU9OUyIsInJlamVjdFVuYXV0aG9yaXplZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBRXdCQSxNO0FBRnhCLE1BQU1DLE9BQU9DLFFBQVEsTUFBUixDQUFiOztBQUVlLFNBQVNGLE1BQVQsR0FBa0I7QUFDL0IsU0FBTztBQUNMRyxTQUFLO0FBQ0hDLFlBQU1DLFFBQVFDLEdBQVIsQ0FBWUMsUUFEZjtBQUVIQyxZQUFNSCxRQUFRQyxHQUFSLENBQVlHLFFBRmY7QUFHSEMsYUFBT0wsUUFBUUMsR0FBUixDQUFZSyxhQUhoQjtBQUlIQyxjQUFRUCxRQUFRQyxHQUFSLENBQVlPLFFBQVosSUFBd0JaLEtBQUthLFNBQUwsQ0FBZ0IsR0FBRUMsU0FBVSxFQUE1QjtBQUo3QixLQURBO0FBT0xDLGFBQVM7QUFDUFosWUFBTUMsUUFBUUMsR0FBUixDQUFZVyxVQURYO0FBRVBULFlBQU1ILFFBQVFDLEdBQVIsQ0FBWVksVUFGWDtBQUdQQyxZQUFNZCxRQUFRQyxHQUFSLENBQVljLFVBSFg7QUFJUEMsZUFBUztBQUNQQyxjQUFNakIsUUFBUUMsR0FBUixDQUFZaUIsVUFEWDtBQUVQQyxjQUFNbkIsUUFBUUMsR0FBUixDQUFZbUIsVUFGWDtBQUdQQyx5QkFBaUIsSUFIVjtBQUlQQyx3QkFBZ0IsSUFKVDtBQUtQQyw0QkFBb0IsSUFMYjtBQU1QQywwQkFBa0IsS0FOWDtBQU9QQyxrQkFBVXpCLFFBQVFDLEdBQVIsQ0FBWXlCLGVBQVosSUFBK0IsRUFQbEM7QUFRUEMsMEJBQWtCM0IsUUFBUUMsR0FBUixDQUFZMkIsd0JBQVosSUFBd0M7QUFSbkQ7QUFKRixLQVBKO0FBc0JMQyxVQUFNO0FBQ0p4QixhQUFPTCxRQUFRQyxHQUFSLENBQVk2QixVQURmO0FBRUpDLFlBQU0vQixRQUFRQyxHQUFSLENBQVkrQixTQUZkO0FBR0pDLG1CQUFhO0FBQ1hsQyxjQUFNQyxRQUFRQyxHQUFSLENBQVlpQyxxQkFEUDtBQUVYL0IsY0FBTUgsUUFBUUMsR0FBUixDQUFZa0MscUJBQVosSUFBcUMsR0FGaEM7QUFHWEMsY0FBTTtBQUNKbkIsZ0JBQU1qQixRQUFRQyxHQUFSLENBQVlvQywwQkFEZDtBQUVKbEIsZ0JBQU1uQixRQUFRQyxHQUFSLENBQVlxQztBQUZkLFNBSEs7QUFPWEMsYUFBS3ZDLFFBQVFDLEdBQVIsQ0FBWXVDLDRCQUFaLElBQTRDLEVBQUNDLG9CQUFvQixLQUFyQjtBQVB0QztBQUhUO0FBdEJELEdBQVA7QUFvQ0QiLCJmaWxlIjoiY29uZmlnLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL2NvbmZpZyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IHBhdGggPSByZXF1aXJlKCdwYXRoJyk7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGNvbmZpZygpIHtcbiAgcmV0dXJuIHtcbiAgICBhcHA6IHtcbiAgICAgIGhvc3Q6IHByb2Nlc3MuZW52LkFQUF9IT1NULFxuICAgICAgcG9ydDogcHJvY2Vzcy5lbnYuQVBQX1BPUlQsXG4gICAgICBhZG1pbjogcHJvY2Vzcy5lbnYuQVBQX0FETUlOX1VSTCxcbiAgICAgIHJvb3RmczogcHJvY2Vzcy5lbnYuQVBQX0hPTUUgfHwgcGF0aC5ub3JtYWxpemUoYCR7X19kaXJuYW1lfWApXG4gICAgfSxcbiAgICBtb25nb2RiOiB7XG4gICAgICBob3N0OiBwcm9jZXNzLmVudi5NT05HT19IT1NULFxuICAgICAgcG9ydDogcHJvY2Vzcy5lbnYuTU9OR09fUE9SVCxcbiAgICAgIG5hbWU6IHByb2Nlc3MuZW52Lk1PTkdPX05BTUUsXG4gICAgICBvcHRpb25zOiB7XG4gICAgICAgIHVzZXI6IHByb2Nlc3MuZW52Lk1PTkdPX1VTRVIsXG4gICAgICAgIHBhc3M6IHByb2Nlc3MuZW52Lk1PTkdPX1BBU1MsXG4gICAgICAgIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcbiAgICAgICAgdXNlQ3JlYXRlSW5kZXg6IHRydWUsXG4gICAgICAgIHVzZVVuaWZpZWRUb3BvbG9neTogdHJ1ZSxcbiAgICAgICAgdXNlRmluZEFuZE1vZGlmeTogZmFsc2UsXG4gICAgICAgIHBvb2xTaXplOiBwcm9jZXNzLmVudi5NT05HT19QT09MX1NJWkUgfHwgMTAsXG4gICAgICAgIGJ1ZmZlck1heEVudHJpZXM6IHByb2Nlc3MuZW52Lk1PTkdPX0JVRkZFUl9NQVhfRU5UUklFUyB8fCAwXG4gICAgICB9LFxuICAgIH0sXG4gICAgbWFpbDoge1xuICAgICAgYWRtaW46IHByb2Nlc3MuZW52Lk1BSUxfQURNSU4sXG4gICAgICBmcm9tOiBwcm9jZXNzLmVudi5NQUlMX0ZST00sXG4gICAgICBjcmVkZW50aWFsczoge1xuICAgICAgICBob3N0OiBwcm9jZXNzLmVudi5NQUlMX0NSRURFTlRJQUxTX0hPU1QsXG4gICAgICAgIHBvcnQ6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfUE9SVCB8fCA1ODcsXG4gICAgICAgIGF1dGg6IHtcbiAgICAgICAgICB1c2VyOiBwcm9jZXNzLmVudi5NQUlMX0NSRURFTlRJQUxTX0FVVEhfVVNFUixcbiAgICAgICAgICBwYXNzOiBwcm9jZXNzLmVudi5NQUlMX0NSRURFTlRJQUxTX0FVVEhfUEFTUyxcbiAgICAgICAgfSxcbiAgICAgICAgdGxzOiBwcm9jZXNzLmVudi5NQUlMX0NSRURFTlRJQUxTX1RMU19PUFRJT05TIHx8IHtyZWplY3RVbmF1dGhvcml6ZWQ6IGZhbHNlfVxuICAgICAgfVxuICAgIH1cbiAgfTtcbn07XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "config.js"
+      ],
+      "names": [
+        "config",
+        "path",
+        "require",
+        "app",
+        "host",
+        "process",
+        "env",
+        "APP_HOST",
+        "port",
+        "APP_PORT",
+        "admin",
+        "APP_ADMIN_URL",
+        "rootfs",
+        "APP_HOME",
+        "normalize",
+        "__dirname",
+        "mongodb",
+        "MONGO_HOST",
+        "MONGO_PORT",
+        "name",
+        "MONGO_NAME",
+        "options",
+        "user",
+        "MONGO_USER",
+        "pass",
+        "MONGO_PASS",
+        "useNewUrlParser",
+        "useCreateIndex",
+        "useUnifiedTopology",
+        "useFindAndModify",
+        "poolSize",
+        "MONGO_POOL_SIZE",
+        "bufferMaxEntries",
+        "MONGO_BUFFER_MAX_ENTRIES",
+        "mail",
+        "MAIL_ADMIN",
+        "from",
+        "MAIL_FROM",
+        "credentials",
+        "MAIL_CREDENTIALS_HOST",
+        "MAIL_CREDENTIALS_PORT",
+        "auth",
+        "MAIL_CREDENTIALS_AUTH_USER",
+        "MAIL_CREDENTIALS_AUTH_PASS",
+        "tls",
+        "MAIL_CREDENTIALS_TLS_OPTIONS",
+        "rejectUnauthorized"
+      ],
+      "mappings": ";;;;;kBAEwBA,M;AAFxB,MAAMC,OAAOC,QAAQ,MAAR,CAAb;;AAEe,SAASF,MAAT,GAAkB;AAC/B,SAAO;AACLG,SAAK;AACHC,YAAMC,QAAQC,GAAR,CAAYC,QADf;AAEHC,YAAMH,QAAQC,GAAR,CAAYG,QAFf;AAGHC,aAAOL,QAAQC,GAAR,CAAYK,aAHhB;AAIHC,cAAQP,QAAQC,GAAR,CAAYO,QAAZ,IAAwBZ,KAAKa,SAAL,CAAgB,GAAEC,SAAU,EAA5B;AAJ7B,KADA;AAOLC,aAAS;AACPZ,YAAMC,QAAQC,GAAR,CAAYW,UADX;AAEPT,YAAMH,QAAQC,GAAR,CAAYY,UAFX;AAGPC,YAAMd,QAAQC,GAAR,CAAYc,UAHX;AAIPC,eAAS;AACPC,cAAMjB,QAAQC,GAAR,CAAYiB,UADX;AAEPC,cAAMnB,QAAQC,GAAR,CAAYmB,UAFX;AAGPC,yBAAiB,IAHV;AAIPC,wBAAgB,IAJT;AAKPC,4BAAoB,IALb;AAMPC,0BAAkB,KANX;AAOPC,kBAAUzB,QAAQC,GAAR,CAAYyB,eAAZ,IAA+B,EAPlC;AAQPC,0BAAkB3B,QAAQC,GAAR,CAAY2B,wBAAZ,IAAwC;AARnD;AAJF,KAPJ;AAsBLC,UAAM;AACJxB,aAAOL,QAAQC,GAAR,CAAY6B,UADf;AAEJC,YAAM/B,QAAQC,GAAR,CAAY+B,SAFd;AAGJC,mBAAa;AACXlC,cAAMC,QAAQC,GAAR,CAAYiC,qBADP;AAEX/B,cAAMH,QAAQC,GAAR,CAAYkC,qBAAZ,IAAqC,GAFhC;AAGXC,cAAM;AACJnB,gBAAMjB,QAAQC,GAAR,CAAYoC,0BADd;AAEJlB,gBAAMnB,QAAQC,GAAR,CAAYqC;AAFd,SAHK;AAOXC,aAAKvC,QAAQC,GAAR,CAAYuC,4BAAZ,IAA4C,EAACC,oBAAoB,KAArB;AAPtC;AAHT;AAtBD,GAAP;AAoCD",
+      "file": "config.js",
+      "sourceRoot": "/app/server/config",
+      "sourcesContent": [
+        "const path = require('path');\n\nexport default function config() {\n  return {\n    app: {\n      host: process.env.APP_HOST,\n      port: process.env.APP_PORT,\n      admin: process.env.APP_ADMIN_URL,\n      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n    },\n    mongodb: {\n      host: process.env.MONGO_HOST,\n      port: process.env.MONGO_PORT,\n      name: process.env.MONGO_NAME,\n      options: {\n        user: process.env.MONGO_USER,\n        pass: process.env.MONGO_PASS,\n        useNewUrlParser: true,\n        useCreateIndex: true,\n        useUnifiedTopology: true,\n        useFindAndModify: false,\n        poolSize: process.env.MONGO_POOL_SIZE || 10,\n        bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n      },\n    },\n    mail: {\n      admin: process.env.MAIL_ADMIN,\n      from: process.env.MAIL_FROM,\n      credentials: {\n        host: process.env.MAIL_CREDENTIALS_HOST,\n        port: process.env.MAIL_CREDENTIALS_PORT || 587,\n        auth: {\n          user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n          pass: process.env.MAIL_CREDENTIALS_AUTH_PASS,\n        },\n        tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || {rejectUnauthorized: false}\n      }\n    }\n  };\n};\n"
+      ]
+    },
+    "mtime": 1690958220506
+  },
+  "{\"filename\":\"/app/server/config/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/config\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/config/index.js",
+      "filenameRelative": "/app/server/config/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/config",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/config",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nconst path = require('path');\n\nfunction config() {\n  return {\n    app: {\n      host: process.env.APP_HOST,\n      port: process.env.APP_PORT || '3000',\n      admin: process.env.APP_ADMIN_URL,\n      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n    },\n    mongodb: {\n      host: process.env.MONGO_HOST,\n      port: process.env.MONGO_PORT,\n      name: process.env.MONGO_NAME,\n      options: {\n        user: process.env.MONGO_USER,\n        pass: process.env.MONGO_PASS,\n        useNewUrlParser: true,\n        useCreateIndex: true,\n        useUnifiedTopology: true,\n        useFindAndModify: false,\n        poolSize: process.env.MONGO_POOL_SIZE || 10\n        //bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n      }\n    },\n    mail: {\n      admin: process.env.MAIL_ADMIN,\n      from: process.env.MAIL_FROM,\n      credentials: {\n        host: process.env.MAIL_CREDENTIALS_HOST,\n        port: process.env.MAIL_CREDENTIALS_PORT || 587,\n        auth: {\n          user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n          pass: process.env.MAIL_CREDENTIALS_AUTH_PASS\n        },\n        tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || { rejectUnauthorized: false }\n      }\n    }\n  };\n};\n\nexports.default = config();\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInBhdGgiLCJyZXF1aXJlIiwiY29uZmlnIiwiYXBwIiwiaG9zdCIsInByb2Nlc3MiLCJlbnYiLCJBUFBfSE9TVCIsInBvcnQiLCJBUFBfUE9SVCIsImFkbWluIiwiQVBQX0FETUlOX1VSTCIsInJvb3RmcyIsIkFQUF9IT01FIiwibm9ybWFsaXplIiwiX19kaXJuYW1lIiwibW9uZ29kYiIsIk1PTkdPX0hPU1QiLCJNT05HT19QT1JUIiwibmFtZSIsIk1PTkdPX05BTUUiLCJvcHRpb25zIiwidXNlciIsIk1PTkdPX1VTRVIiLCJwYXNzIiwiTU9OR09fUEFTUyIsInVzZU5ld1VybFBhcnNlciIsInVzZUNyZWF0ZUluZGV4IiwidXNlVW5pZmllZFRvcG9sb2d5IiwidXNlRmluZEFuZE1vZGlmeSIsInBvb2xTaXplIiwiTU9OR09fUE9PTF9TSVpFIiwibWFpbCIsIk1BSUxfQURNSU4iLCJmcm9tIiwiTUFJTF9GUk9NIiwiY3JlZGVudGlhbHMiLCJNQUlMX0NSRURFTlRJQUxTX0hPU1QiLCJNQUlMX0NSRURFTlRJQUxTX1BPUlQiLCJhdXRoIiwiTUFJTF9DUkVERU5USUFMU19BVVRIX1VTRVIiLCJNQUlMX0NSRURFTlRJQUxTX0FVVEhfUEFTUyIsInRscyIsIk1BSUxfQ1JFREVOVElBTFNfVExTX09QVElPTlMiLCJyZWplY3RVbmF1dGhvcml6ZWQiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsTUFBTUEsT0FBT0MsUUFBUSxNQUFSLENBQWI7O0FBRUEsU0FBU0MsTUFBVCxHQUFrQjtBQUNoQixTQUFPO0FBQ0xDLFNBQUs7QUFDSEMsWUFBTUMsUUFBUUMsR0FBUixDQUFZQyxRQURmO0FBRUhDLFlBQU1ILFFBQVFDLEdBQVIsQ0FBWUcsUUFBWixJQUF3QixNQUYzQjtBQUdIQyxhQUFPTCxRQUFRQyxHQUFSLENBQVlLLGFBSGhCO0FBSUhDLGNBQVFQLFFBQVFDLEdBQVIsQ0FBWU8sUUFBWixJQUF3QmIsS0FBS2MsU0FBTCxDQUFnQixHQUFFQyxTQUFVLEVBQTVCO0FBSjdCLEtBREE7QUFPTEMsYUFBUztBQUNQWixZQUFNQyxRQUFRQyxHQUFSLENBQVlXLFVBRFg7QUFFUFQsWUFBTUgsUUFBUUMsR0FBUixDQUFZWSxVQUZYO0FBR1BDLFlBQU1kLFFBQVFDLEdBQVIsQ0FBWWMsVUFIWDtBQUlQQyxlQUFTO0FBQ1BDLGNBQU1qQixRQUFRQyxHQUFSLENBQVlpQixVQURYO0FBRVBDLGNBQU1uQixRQUFRQyxHQUFSLENBQVltQixVQUZYO0FBR1BDLHlCQUFpQixJQUhWO0FBSVBDLHdCQUFnQixJQUpUO0FBS1BDLDRCQUFvQixJQUxiO0FBTVBDLDBCQUFrQixLQU5YO0FBT1BDLGtCQUFVekIsUUFBUUMsR0FBUixDQUFZeUIsZUFBWixJQUErQjtBQUN6QztBQVJPO0FBSkYsS0FQSjtBQXNCTEMsVUFBTTtBQUNKdEIsYUFBT0wsUUFBUUMsR0FBUixDQUFZMkIsVUFEZjtBQUVKQyxZQUFNN0IsUUFBUUMsR0FBUixDQUFZNkIsU0FGZDtBQUdKQyxtQkFBYTtBQUNYaEMsY0FBTUMsUUFBUUMsR0FBUixDQUFZK0IscUJBRFA7QUFFWDdCLGNBQU1ILFFBQVFDLEdBQVIsQ0FBWWdDLHFCQUFaLElBQXFDLEdBRmhDO0FBR1hDLGNBQU07QUFDSmpCLGdCQUFNakIsUUFBUUMsR0FBUixDQUFZa0MsMEJBRGQ7QUFFSmhCLGdCQUFNbkIsUUFBUUMsR0FBUixDQUFZbUM7QUFGZCxTQUhLO0FBT1hDLGFBQUtyQyxRQUFRQyxHQUFSLENBQVlxQyw0QkFBWixJQUE0QyxFQUFDQyxvQkFBb0IsS0FBckI7QUFQdEM7QUFIVDtBQXRCRCxHQUFQO0FBb0NEOztrQkFFYzFDLFEiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvY29uZmlnIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgcGF0aCA9IHJlcXVpcmUoJ3BhdGgnKTtcblxuZnVuY3Rpb24gY29uZmlnKCkge1xuICByZXR1cm4ge1xuICAgIGFwcDoge1xuICAgICAgaG9zdDogcHJvY2Vzcy5lbnYuQVBQX0hPU1QsXG4gICAgICBwb3J0OiBwcm9jZXNzLmVudi5BUFBfUE9SVCB8fCAnMzAwMCcsXG4gICAgICBhZG1pbjogcHJvY2Vzcy5lbnYuQVBQX0FETUlOX1VSTCxcbiAgICAgIHJvb3RmczogcHJvY2Vzcy5lbnYuQVBQX0hPTUUgfHwgcGF0aC5ub3JtYWxpemUoYCR7X19kaXJuYW1lfWApXG4gICAgfSxcbiAgICBtb25nb2RiOiB7XG4gICAgICBob3N0OiBwcm9jZXNzLmVudi5NT05HT19IT1NULFxuICAgICAgcG9ydDogcHJvY2Vzcy5lbnYuTU9OR09fUE9SVCxcbiAgICAgIG5hbWU6IHByb2Nlc3MuZW52Lk1PTkdPX05BTUUsXG4gICAgICBvcHRpb25zOiB7XG4gICAgICAgIHVzZXI6IHByb2Nlc3MuZW52Lk1PTkdPX1VTRVIsXG4gICAgICAgIHBhc3M6IHByb2Nlc3MuZW52Lk1PTkdPX1BBU1MsXG4gICAgICAgIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcbiAgICAgICAgdXNlQ3JlYXRlSW5kZXg6IHRydWUsXG4gICAgICAgIHVzZVVuaWZpZWRUb3BvbG9neTogdHJ1ZSxcbiAgICAgICAgdXNlRmluZEFuZE1vZGlmeTogZmFsc2UsXG4gICAgICAgIHBvb2xTaXplOiBwcm9jZXNzLmVudi5NT05HT19QT09MX1NJWkUgfHwgMTAsXG4gICAgICAgIC8vYnVmZmVyTWF4RW50cmllczogcHJvY2Vzcy5lbnYuTU9OR09fQlVGRkVSX01BWF9FTlRSSUVTIHx8IDBcbiAgICAgIH0sXG4gICAgfSxcbiAgICBtYWlsOiB7XG4gICAgICBhZG1pbjogcHJvY2Vzcy5lbnYuTUFJTF9BRE1JTixcbiAgICAgIGZyb206IHByb2Nlc3MuZW52Lk1BSUxfRlJPTSxcbiAgICAgIGNyZWRlbnRpYWxzOiB7XG4gICAgICAgIGhvc3Q6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfSE9TVCxcbiAgICAgICAgcG9ydDogcHJvY2Vzcy5lbnYuTUFJTF9DUkVERU5USUFMU19QT1JUIHx8IDU4NyxcbiAgICAgICAgYXV0aDoge1xuICAgICAgICAgIHVzZXI6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfQVVUSF9VU0VSLFxuICAgICAgICAgIHBhc3M6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfQVVUSF9QQVNTLFxuICAgICAgICB9LFxuICAgICAgICB0bHM6IHByb2Nlc3MuZW52Lk1BSUxfQ1JFREVOVElBTFNfVExTX09QVElPTlMgfHwge3JlamVjdFVuYXV0aG9yaXplZDogZmFsc2V9XG4gICAgICB9XG4gICAgfVxuICB9O1xufTtcblxuZXhwb3J0IGRlZmF1bHQgY29uZmlnKCk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "path",
+        "require",
+        "config",
+        "app",
+        "host",
+        "process",
+        "env",
+        "APP_HOST",
+        "port",
+        "APP_PORT",
+        "admin",
+        "APP_ADMIN_URL",
+        "rootfs",
+        "APP_HOME",
+        "normalize",
+        "__dirname",
+        "mongodb",
+        "MONGO_HOST",
+        "MONGO_PORT",
+        "name",
+        "MONGO_NAME",
+        "options",
+        "user",
+        "MONGO_USER",
+        "pass",
+        "MONGO_PASS",
+        "useNewUrlParser",
+        "useCreateIndex",
+        "useUnifiedTopology",
+        "useFindAndModify",
+        "poolSize",
+        "MONGO_POOL_SIZE",
+        "mail",
+        "MAIL_ADMIN",
+        "from",
+        "MAIL_FROM",
+        "credentials",
+        "MAIL_CREDENTIALS_HOST",
+        "MAIL_CREDENTIALS_PORT",
+        "auth",
+        "MAIL_CREDENTIALS_AUTH_USER",
+        "MAIL_CREDENTIALS_AUTH_PASS",
+        "tls",
+        "MAIL_CREDENTIALS_TLS_OPTIONS",
+        "rejectUnauthorized"
+      ],
+      "mappings": ";;;;;AAAA,MAAMA,OAAOC,QAAQ,MAAR,CAAb;;AAEA,SAASC,MAAT,GAAkB;AAChB,SAAO;AACLC,SAAK;AACHC,YAAMC,QAAQC,GAAR,CAAYC,QADf;AAEHC,YAAMH,QAAQC,GAAR,CAAYG,QAAZ,IAAwB,MAF3B;AAGHC,aAAOL,QAAQC,GAAR,CAAYK,aAHhB;AAIHC,cAAQP,QAAQC,GAAR,CAAYO,QAAZ,IAAwBb,KAAKc,SAAL,CAAgB,GAAEC,SAAU,EAA5B;AAJ7B,KADA;AAOLC,aAAS;AACPZ,YAAMC,QAAQC,GAAR,CAAYW,UADX;AAEPT,YAAMH,QAAQC,GAAR,CAAYY,UAFX;AAGPC,YAAMd,QAAQC,GAAR,CAAYc,UAHX;AAIPC,eAAS;AACPC,cAAMjB,QAAQC,GAAR,CAAYiB,UADX;AAEPC,cAAMnB,QAAQC,GAAR,CAAYmB,UAFX;AAGPC,yBAAiB,IAHV;AAIPC,wBAAgB,IAJT;AAKPC,4BAAoB,IALb;AAMPC,0BAAkB,KANX;AAOPC,kBAAUzB,QAAQC,GAAR,CAAYyB,eAAZ,IAA+B;AACzC;AARO;AAJF,KAPJ;AAsBLC,UAAM;AACJtB,aAAOL,QAAQC,GAAR,CAAY2B,UADf;AAEJC,YAAM7B,QAAQC,GAAR,CAAY6B,SAFd;AAGJC,mBAAa;AACXhC,cAAMC,QAAQC,GAAR,CAAY+B,qBADP;AAEX7B,cAAMH,QAAQC,GAAR,CAAYgC,qBAAZ,IAAqC,GAFhC;AAGXC,cAAM;AACJjB,gBAAMjB,QAAQC,GAAR,CAAYkC,0BADd;AAEJhB,gBAAMnB,QAAQC,GAAR,CAAYmC;AAFd,SAHK;AAOXC,aAAKrC,QAAQC,GAAR,CAAYqC,4BAAZ,IAA4C,EAACC,oBAAoB,KAArB;AAPtC;AAHT;AAtBD,GAAP;AAoCD;;kBAEc1C,Q",
+      "file": "index.js",
+      "sourceRoot": "/app/server/config",
+      "sourcesContent": [
+        "const path = require('path');\n\nfunction config() {\n  return {\n    app: {\n      host: process.env.APP_HOST,\n      port: process.env.APP_PORT || '3000',\n      admin: process.env.APP_ADMIN_URL,\n      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n    },\n    mongodb: {\n      host: process.env.MONGO_HOST,\n      port: process.env.MONGO_PORT,\n      name: process.env.MONGO_NAME,\n      options: {\n        user: process.env.MONGO_USER,\n        pass: process.env.MONGO_PASS,\n        useNewUrlParser: true,\n        useCreateIndex: true,\n        useUnifiedTopology: true,\n        useFindAndModify: false,\n        poolSize: process.env.MONGO_POOL_SIZE || 10,\n        //bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n      },\n    },\n    mail: {\n      admin: process.env.MAIL_ADMIN,\n      from: process.env.MAIL_FROM,\n      credentials: {\n        host: process.env.MAIL_CREDENTIALS_HOST,\n        port: process.env.MAIL_CREDENTIALS_PORT || 587,\n        auth: {\n          user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n          pass: process.env.MAIL_CREDENTIALS_AUTH_PASS,\n        },\n        tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || {rejectUnauthorized: false}\n      }\n    }\n  };\n};\n\nexport default config();"
+      ]
+    },
+    "mtime": 1691423012563
+  },
+  "{\"filename\":\"/app/server/models/user/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/models/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "mongoose",
+            "imported": [
+              "default",
+              "Schema"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "db"
+              },
+              {
+                "kind": "named",
+                "imported": "Schema",
+                "local": "Schema"
+              }
+            ]
+          },
+          {
+            "source": "../default",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "DefaultModel"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "User"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "User",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/models/user/index.js",
+      "filenameRelative": "/app/server/models/user/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/models/user",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/models/user",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _default = require('../default');\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userModel = _mongoose2.default.model('users', new _mongoose.Schema({\n  username: { type: String, unique: true, required: true, dropDups: true },\n  email: { type: String, unique: true, required: true, lowercase: true },\n  password: { type: String, required: true },\n  name: { type: String, required: false },\n\n  is_active: { type: Boolean, default: true },\n  is_delete: { type: Boolean, default: false },\n  is_signed: { type: Boolean, default: false },\n  is_admin: { type: Boolean, default: false },\n\n  created_at: { type: Date, default: Date.now },\n  updated_at: { type: Date, default: Date.now }\n}, {\n  strict: true,\n  collection: 'users'\n}).pre('save', function (next) {\n  let current_date = new Date();\n  this.updated_at = current_date;\n\n  if (!this.created_at) {\n    this.created_at = current_date;\n  }\n\n  if (this.password) {\n    // TODO password hashed\n  }\n\n  next();\n}).post('save', function (error, doc, next) {\n  if (error.name !== 'MongoError') {\n    return next();\n  }\n\n  next(error);\n}));\n\nclass User extends _default2.default {\n  constructor() {\n    super({ model: new userModel() });\n  }\n}exports.default = User;\n;\n\n// const _schema = new Schema(\n//   {\n//     username: {type: String, unique: true, required: true, dropDups: true},\n//     email   : {type: String, unique: true, required: true, lowercase: true},\n//     password: {type: String, required: true},\n//     name    : {type: String, required: false},\n\n//     is_active: {type: Boolean, default: true},\n//     is_delete: {type: Boolean, default: false},\n//     is_signed: {type: Boolean, default: false},\n//     is_admin : {type: Boolean, default: false},\n\n//     created_at: {type: Date, default: Date.now},\n//     updated_at: {type: Date, default: Date.now},\n//   },\n//   {\n//     strict: true,\n//     collection: 'users',\n//   }\n// );\n\n// _schema.pre('save', function (next) {\n//   let current_date = new Date();\n//   this.updated_at = current_date;\n\n//   if (!this.created_at) {\n//     this.created_at = current_date;\n//   }\n\n//   if (this.password) {\n//     // TODO password hashed\n//   }\n\n//   next();\n// });\n\n// _schema.post('save', function (error, doc, next) {\n//   if (error.name !== 'MongoError') {\n//     return next();\n//   }\n\n//   next(error);\n// });\n\n// const userModel = db.model('users', _schema);\n\n// export default class User extends DefaultModel {\n//   constructor() {\n//     super({model: new userModel});\n//   }\n// };\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInVzZXJNb2RlbCIsImRiIiwibW9kZWwiLCJTY2hlbWEiLCJ1c2VybmFtZSIsInR5cGUiLCJTdHJpbmciLCJ1bmlxdWUiLCJyZXF1aXJlZCIsImRyb3BEdXBzIiwiZW1haWwiLCJsb3dlcmNhc2UiLCJwYXNzd29yZCIsIm5hbWUiLCJpc19hY3RpdmUiLCJCb29sZWFuIiwiZGVmYXVsdCIsImlzX2RlbGV0ZSIsImlzX3NpZ25lZCIsImlzX2FkbWluIiwiY3JlYXRlZF9hdCIsIkRhdGUiLCJub3ciLCJ1cGRhdGVkX2F0Iiwic3RyaWN0IiwiY29sbGVjdGlvbiIsInByZSIsIm5leHQiLCJjdXJyZW50X2RhdGUiLCJwb3N0IiwiZXJyb3IiLCJkb2MiLCJVc2VyIiwiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7OztBQUdBLE1BQU1BLFlBQVlDLG1CQUFHQyxLQUFILENBQVMsT0FBVCxFQUNoQixJQUFJQyxnQkFBSixDQUNFO0FBQ0VDLFlBQVUsRUFBQ0MsTUFBTUMsTUFBUCxFQUFlQyxRQUFRLElBQXZCLEVBQTZCQyxVQUFVLElBQXZDLEVBQTZDQyxVQUFVLElBQXZELEVBRFo7QUFFRUMsU0FBVSxFQUFDTCxNQUFNQyxNQUFQLEVBQWVDLFFBQVEsSUFBdkIsRUFBNkJDLFVBQVUsSUFBdkMsRUFBNkNHLFdBQVcsSUFBeEQsRUFGWjtBQUdFQyxZQUFVLEVBQUNQLE1BQU1DLE1BQVAsRUFBZUUsVUFBVSxJQUF6QixFQUhaO0FBSUVLLFFBQVUsRUFBQ1IsTUFBTUMsTUFBUCxFQUFlRSxVQUFVLEtBQXpCLEVBSlo7O0FBTUVNLGFBQVcsRUFBQ1QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxJQUF6QixFQU5iO0FBT0VDLGFBQVcsRUFBQ1osTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVBiO0FBUUVFLGFBQVcsRUFBQ2IsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVJiO0FBU0VHLFlBQVcsRUFBQ2QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVRiOztBQVdFSSxjQUFZLEVBQUNmLE1BQU1nQixJQUFQLEVBQWFMLFNBQVNLLEtBQUtDLEdBQTNCLEVBWGQ7QUFZRUMsY0FBWSxFQUFDbEIsTUFBTWdCLElBQVAsRUFBYUwsU0FBU0ssS0FBS0MsR0FBM0I7QUFaZCxDQURGLEVBZUU7QUFDRUUsVUFBUSxJQURWO0FBRUVDLGNBQVk7QUFGZCxDQWZGLEVBb0JDQyxHQXBCRCxDQW9CSyxNQXBCTCxFQW9CYSxVQUFVQyxJQUFWLEVBQWdCO0FBQzNCLE1BQUlDLGVBQWUsSUFBSVAsSUFBSixFQUFuQjtBQUNBLE9BQUtFLFVBQUwsR0FBa0JLLFlBQWxCOztBQUVBLE1BQUksQ0FBQyxLQUFLUixVQUFWLEVBQXNCO0FBQ3BCLFNBQUtBLFVBQUwsR0FBa0JRLFlBQWxCO0FBQ0Q7O0FBRUQsTUFBSSxLQUFLaEIsUUFBVCxFQUFtQjtBQUNqQjtBQUNEOztBQUVEZTtBQUNELENBakNELEVBa0NDRSxJQWxDRCxDQWtDTSxNQWxDTixFQWtDYyxVQUFVQyxLQUFWLEVBQWlCQyxHQUFqQixFQUFzQkosSUFBdEIsRUFBNEI7QUFDeEMsTUFBSUcsTUFBTWpCLElBQU4sS0FBZSxZQUFuQixFQUFpQztBQUMvQixXQUFPYyxNQUFQO0FBQ0Q7O0FBRURBLE9BQUtHLEtBQUw7QUFDRCxDQXhDRCxDQURnQixDQUFsQjs7QUE0Q2UsTUFBTUUsSUFBTixTQUFtQkMsaUJBQW5CLENBQWdDO0FBQzdDQyxnQkFBYztBQUNaLFVBQU0sRUFBQ2hDLE9BQU8sSUFBSUYsU0FBSixFQUFSLEVBQU47QUFDRDtBQUg0QyxDLGtCQUExQmdDLEk7QUFJcEI7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvbW9kZWxzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZGIsIHsgU2NoZW1hIH0gZnJvbSAnbW9uZ29vc2UnO1xuaW1wb3J0IERlZmF1bHRNb2RlbCAgICAgICAgZnJvbSAnLi4vZGVmYXVsdCc7XG5cblxuY29uc3QgdXNlck1vZGVsID0gZGIubW9kZWwoJ3VzZXJzJywgXG4gIG5ldyBTY2hlbWEoXG4gICAge1xuICAgICAgdXNlcm5hbWU6IHt0eXBlOiBTdHJpbmcsIHVuaXF1ZTogdHJ1ZSwgcmVxdWlyZWQ6IHRydWUsIGRyb3BEdXBzOiB0cnVlfSxcbiAgICAgIGVtYWlsICAgOiB7dHlwZTogU3RyaW5nLCB1bmlxdWU6IHRydWUsIHJlcXVpcmVkOiB0cnVlLCBsb3dlcmNhc2U6IHRydWV9LFxuICAgICAgcGFzc3dvcmQ6IHt0eXBlOiBTdHJpbmcsIHJlcXVpcmVkOiB0cnVlfSxcbiAgICAgIG5hbWUgICAgOiB7dHlwZTogU3RyaW5nLCByZXF1aXJlZDogZmFsc2V9LFxuICAgICAgXG4gICAgICBpc19hY3RpdmU6IHt0eXBlOiBCb29sZWFuLCBkZWZhdWx0OiB0cnVlfSxcbiAgICAgIGlzX2RlbGV0ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbiAgICAgIGlzX3NpZ25lZDoge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbiAgICAgIGlzX2FkbWluIDoge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcblxuICAgICAgY3JlYXRlZF9hdDoge3R5cGU6IERhdGUsIGRlZmF1bHQ6IERhdGUubm93fSxcbiAgICAgIHVwZGF0ZWRfYXQ6IHt0eXBlOiBEYXRlLCBkZWZhdWx0OiBEYXRlLm5vd30sXG4gICAgfSxcbiAgICB7XG4gICAgICBzdHJpY3Q6IHRydWUsXG4gICAgICBjb2xsZWN0aW9uOiAndXNlcnMnLFxuICAgIH1cbiAgKVxuICAucHJlKCdzYXZlJywgZnVuY3Rpb24gKG5leHQpIHtcbiAgICBsZXQgY3VycmVudF9kYXRlID0gbmV3IERhdGUoKTtcbiAgICB0aGlzLnVwZGF0ZWRfYXQgPSBjdXJyZW50X2RhdGU7XG5cbiAgICBpZiAoIXRoaXMuY3JlYXRlZF9hdCkge1xuICAgICAgdGhpcy5jcmVhdGVkX2F0ID0gY3VycmVudF9kYXRlO1xuICAgIH1cblxuICAgIGlmICh0aGlzLnBhc3N3b3JkKSB7XG4gICAgICAvLyBUT0RPIHBhc3N3b3JkIGhhc2hlZFxuICAgIH1cbiAgICBcbiAgICBuZXh0KCk7XG4gIH0pXG4gIC5wb3N0KCdzYXZlJywgZnVuY3Rpb24gKGVycm9yLCBkb2MsIG5leHQpIHtcbiAgICBpZiAoZXJyb3IubmFtZSAhPT0gJ01vbmdvRXJyb3InKSB7XG4gICAgICByZXR1cm4gbmV4dCgpO1xuICAgIH1cbiAgXG4gICAgbmV4dChlcnJvcik7XG4gIH0pXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBVc2VyIGV4dGVuZHMgRGVmYXVsdE1vZGVsIHtcbiAgY29uc3RydWN0b3IoKSB7XG4gICAgc3VwZXIoe21vZGVsOiBuZXcgdXNlck1vZGVsfSk7XG4gIH1cbn07XG5cbi8vIGNvbnN0IF9zY2hlbWEgPSBuZXcgU2NoZW1hKFxuLy8gICB7XG4vLyAgICAgdXNlcm5hbWU6IHt0eXBlOiBTdHJpbmcsIHVuaXF1ZTogdHJ1ZSwgcmVxdWlyZWQ6IHRydWUsIGRyb3BEdXBzOiB0cnVlfSxcbi8vICAgICBlbWFpbCAgIDoge3R5cGU6IFN0cmluZywgdW5pcXVlOiB0cnVlLCByZXF1aXJlZDogdHJ1ZSwgbG93ZXJjYXNlOiB0cnVlfSxcbi8vICAgICBwYXNzd29yZDoge3R5cGU6IFN0cmluZywgcmVxdWlyZWQ6IHRydWV9LFxuLy8gICAgIG5hbWUgICAgOiB7dHlwZTogU3RyaW5nLCByZXF1aXJlZDogZmFsc2V9LFxuICAgIFxuLy8gICAgIGlzX2FjdGl2ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IHRydWV9LFxuLy8gICAgIGlzX2RlbGV0ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbi8vICAgICBpc19zaWduZWQ6IHt0eXBlOiBCb29sZWFuLCBkZWZhdWx0OiBmYWxzZX0sXG4vLyAgICAgaXNfYWRtaW4gOiB7dHlwZTogQm9vbGVhbiwgZGVmYXVsdDogZmFsc2V9LFxuXG4vLyAgICAgY3JlYXRlZF9hdDoge3R5cGU6IERhdGUsIGRlZmF1bHQ6IERhdGUubm93fSxcbi8vICAgICB1cGRhdGVkX2F0OiB7dHlwZTogRGF0ZSwgZGVmYXVsdDogRGF0ZS5ub3d9LFxuLy8gICB9LFxuLy8gICB7XG4vLyAgICAgc3RyaWN0OiB0cnVlLFxuLy8gICAgIGNvbGxlY3Rpb246ICd1c2VycycsXG4vLyAgIH1cbi8vICk7XG5cbi8vIF9zY2hlbWEucHJlKCdzYXZlJywgZnVuY3Rpb24gKG5leHQpIHtcbi8vICAgbGV0IGN1cnJlbnRfZGF0ZSA9IG5ldyBEYXRlKCk7XG4vLyAgIHRoaXMudXBkYXRlZF9hdCA9IGN1cnJlbnRfZGF0ZTtcblxuLy8gICBpZiAoIXRoaXMuY3JlYXRlZF9hdCkge1xuLy8gICAgIHRoaXMuY3JlYXRlZF9hdCA9IGN1cnJlbnRfZGF0ZTtcbi8vICAgfVxuXG4vLyAgIGlmICh0aGlzLnBhc3N3b3JkKSB7XG4vLyAgICAgLy8gVE9ETyBwYXNzd29yZCBoYXNoZWRcbi8vICAgfVxuICBcbi8vICAgbmV4dCgpO1xuLy8gfSk7XG5cbi8vIF9zY2hlbWEucG9zdCgnc2F2ZScsIGZ1bmN0aW9uIChlcnJvciwgZG9jLCBuZXh0KSB7XG4vLyAgIGlmIChlcnJvci5uYW1lICE9PSAnTW9uZ29FcnJvcicpIHtcbi8vICAgICByZXR1cm4gbmV4dCgpO1xuLy8gICB9XG5cbi8vICAgbmV4dChlcnJvcik7XG4vLyB9KTtcblxuLy8gY29uc3QgdXNlck1vZGVsID0gZGIubW9kZWwoJ3VzZXJzJywgX3NjaGVtYSk7XG5cbi8vIGV4cG9ydCBkZWZhdWx0IGNsYXNzIFVzZXIgZXh0ZW5kcyBEZWZhdWx0TW9kZWwge1xuLy8gICBjb25zdHJ1Y3RvcigpIHtcbi8vICAgICBzdXBlcih7bW9kZWw6IG5ldyB1c2VyTW9kZWx9KTtcbi8vICAgfVxuLy8gfTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "userModel",
+        "db",
+        "model",
+        "Schema",
+        "username",
+        "type",
+        "String",
+        "unique",
+        "required",
+        "dropDups",
+        "email",
+        "lowercase",
+        "password",
+        "name",
+        "is_active",
+        "Boolean",
+        "default",
+        "is_delete",
+        "is_signed",
+        "is_admin",
+        "created_at",
+        "Date",
+        "now",
+        "updated_at",
+        "strict",
+        "collection",
+        "pre",
+        "next",
+        "current_date",
+        "post",
+        "error",
+        "doc",
+        "User",
+        "DefaultModel",
+        "constructor"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGA,MAAMA,YAAYC,mBAAGC,KAAH,CAAS,OAAT,EAChB,IAAIC,gBAAJ,CACE;AACEC,YAAU,EAACC,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CC,UAAU,IAAvD,EADZ;AAEEC,SAAU,EAACL,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CG,WAAW,IAAxD,EAFZ;AAGEC,YAAU,EAACP,MAAMC,MAAP,EAAeE,UAAU,IAAzB,EAHZ;AAIEK,QAAU,EAACR,MAAMC,MAAP,EAAeE,UAAU,KAAzB,EAJZ;;AAMEM,aAAW,EAACT,MAAMU,OAAP,EAAgBC,SAAS,IAAzB,EANb;AAOEC,aAAW,EAACZ,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EAPb;AAQEE,aAAW,EAACb,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EARb;AASEG,YAAW,EAACd,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EATb;;AAWEI,cAAY,EAACf,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B,EAXd;AAYEC,cAAY,EAAClB,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B;AAZd,CADF,EAeE;AACEE,UAAQ,IADV;AAEEC,cAAY;AAFd,CAfF,EAoBCC,GApBD,CAoBK,MApBL,EAoBa,UAAUC,IAAV,EAAgB;AAC3B,MAAIC,eAAe,IAAIP,IAAJ,EAAnB;AACA,OAAKE,UAAL,GAAkBK,YAAlB;;AAEA,MAAI,CAAC,KAAKR,UAAV,EAAsB;AACpB,SAAKA,UAAL,GAAkBQ,YAAlB;AACD;;AAED,MAAI,KAAKhB,QAAT,EAAmB;AACjB;AACD;;AAEDe;AACD,CAjCD,EAkCCE,IAlCD,CAkCM,MAlCN,EAkCc,UAAUC,KAAV,EAAiBC,GAAjB,EAAsBJ,IAAtB,EAA4B;AACxC,MAAIG,MAAMjB,IAAN,KAAe,YAAnB,EAAiC;AAC/B,WAAOc,MAAP;AACD;;AAEDA,OAAKG,KAAL;AACD,CAxCD,CADgB,CAAlB;;AA4Ce,MAAME,IAAN,SAAmBC,iBAAnB,CAAgC;AAC7CC,gBAAc;AACZ,UAAM,EAAChC,OAAO,IAAIF,SAAJ,EAAR,EAAN;AACD;AAH4C,C,kBAA1BgC,I;AAIpB;;AAED;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;;AAEA;;AAEA;AACA;AACA;AACA;AACA",
+      "file": "index.js",
+      "sourceRoot": "/app/server/models/user",
+      "sourcesContent": [
+        "import db, { Schema } from 'mongoose';\nimport DefaultModel        from '../default';\n\n\nconst userModel = db.model('users', \n  new Schema(\n    {\n      username: {type: String, unique: true, required: true, dropDups: true},\n      email   : {type: String, unique: true, required: true, lowercase: true},\n      password: {type: String, required: true},\n      name    : {type: String, required: false},\n      \n      is_active: {type: Boolean, default: true},\n      is_delete: {type: Boolean, default: false},\n      is_signed: {type: Boolean, default: false},\n      is_admin : {type: Boolean, default: false},\n\n      created_at: {type: Date, default: Date.now},\n      updated_at: {type: Date, default: Date.now},\n    },\n    {\n      strict: true,\n      collection: 'users',\n    }\n  )\n  .pre('save', function (next) {\n    let current_date = new Date();\n    this.updated_at = current_date;\n\n    if (!this.created_at) {\n      this.created_at = current_date;\n    }\n\n    if (this.password) {\n      // TODO password hashed\n    }\n    \n    next();\n  })\n  .post('save', function (error, doc, next) {\n    if (error.name !== 'MongoError') {\n      return next();\n    }\n  \n    next(error);\n  })\n);\n\nexport default class User extends DefaultModel {\n  constructor() {\n    super({model: new userModel});\n  }\n};\n\n// const _schema = new Schema(\n//   {\n//     username: {type: String, unique: true, required: true, dropDups: true},\n//     email   : {type: String, unique: true, required: true, lowercase: true},\n//     password: {type: String, required: true},\n//     name    : {type: String, required: false},\n    \n//     is_active: {type: Boolean, default: true},\n//     is_delete: {type: Boolean, default: false},\n//     is_signed: {type: Boolean, default: false},\n//     is_admin : {type: Boolean, default: false},\n\n//     created_at: {type: Date, default: Date.now},\n//     updated_at: {type: Date, default: Date.now},\n//   },\n//   {\n//     strict: true,\n//     collection: 'users',\n//   }\n// );\n\n// _schema.pre('save', function (next) {\n//   let current_date = new Date();\n//   this.updated_at = current_date;\n\n//   if (!this.created_at) {\n//     this.created_at = current_date;\n//   }\n\n//   if (this.password) {\n//     // TODO password hashed\n//   }\n  \n//   next();\n// });\n\n// _schema.post('save', function (error, doc, next) {\n//   if (error.name !== 'MongoError') {\n//     return next();\n//   }\n\n//   next(error);\n// });\n\n// const userModel = db.model('users', _schema);\n\n// export default class User extends DefaultModel {\n//   constructor() {\n//     super({model: new userModel});\n//   }\n// };"
+      ]
+    },
+    "mtime": 1691834572145
+  },
+  "{\"filename\":\"/app/server/models/default.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/models\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "DefaultModel"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "DefaultModel",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/models/default.js",
+      "filenameRelative": "/app/server/models/default.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "default.js",
+      "sourceFileName": "default.js",
+      "sourceRoot": "/app/server/models",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/models",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "default"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nclass DefaultModel {\n  constructor({ model = undefined }) {\n    this.model = model;\n  }\n\n  async select(query) {\n    return await this.model.collection.findOne(query);\n  }\n\n  selectMany() {\n    throw 'selectMany method not defined';\n  }\n\n  async save() {\n    return await this.model.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n}exports.default = DefaultModel;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiLCJtb2RlbCIsInVuZGVmaW5lZCIsInNlbGVjdCIsInF1ZXJ5IiwiY29sbGVjdGlvbiIsImZpbmRPbmUiLCJzZWxlY3RNYW55Iiwic2F2ZSIsInVwZGF0ZSIsImRlbGV0ZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFZSxNQUFNQSxZQUFOLENBQW1CO0FBQ2hDQyxjQUFZLEVBQUNDLFFBQVFDLFNBQVQsRUFBWixFQUFpQztBQUMvQixTQUFLRCxLQUFMLEdBQWFBLEtBQWI7QUFDRDs7QUFFRCxRQUFNRSxNQUFOLENBQWFDLEtBQWIsRUFBb0I7QUFDbEIsV0FBTyxNQUFNLEtBQUtILEtBQUwsQ0FBV0ksVUFBWCxDQUFzQkMsT0FBdEIsQ0FBOEJGLEtBQTlCLENBQWI7QUFDRDs7QUFFREcsZUFBYTtBQUNYLFVBQU0sK0JBQU47QUFDRDs7QUFFRCxRQUFNQyxJQUFOLEdBQWE7QUFDWCxXQUFPLE1BQU0sS0FBS1AsS0FBTCxDQUFXTyxJQUFYLEVBQWI7QUFDRDs7QUFFREMsV0FBUztBQUNQLFVBQU0sMkJBQU47QUFDRDs7QUFFREMsV0FBUztBQUNQLFVBQU0sMkJBQU47QUFDRDtBQXZCK0IsQyxrQkFBYlgsWTtBQXdCcEIiLCJmaWxlIjoiZGVmYXVsdC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci9tb2RlbHMiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgRGVmYXVsdE1vZGVsIHtcbiAgY29uc3RydWN0b3Ioe21vZGVsID0gdW5kZWZpbmVkfSkgeyBcbiAgICB0aGlzLm1vZGVsID0gbW9kZWw7XG4gIH1cbiAgXG4gIGFzeW5jIHNlbGVjdChxdWVyeSkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLmNvbGxlY3Rpb24uZmluZE9uZShxdWVyeSk7XG4gIH1cblxuICBzZWxlY3RNYW55KCkge1xuICAgIHRocm93ICdzZWxlY3RNYW55IG1ldGhvZCBub3QgZGVmaW5lZCc7XG4gIH1cblxuICBhc3luYyBzYXZlKCkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLnNhdmUoKTtcbiAgfVxuXG4gIHVwZGF0ZSgpIHtcbiAgICB0aHJvdyAndXBkYXRlIG1ldGhvZCBub3QgZGVmaW5lZCc7XG4gIH1cblxuICBkZWxldGUoKSB7XG4gICAgdGhyb3cgJ2RlbGV0ZSBtZXRob2Qgbm90IGRlZmluZWQnO1xuICB9XG59OyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "default.js"
+      ],
+      "names": [
+        "DefaultModel",
+        "constructor",
+        "model",
+        "undefined",
+        "select",
+        "query",
+        "collection",
+        "findOne",
+        "selectMany",
+        "save",
+        "update",
+        "delete"
+      ],
+      "mappings": ";;;;;AAEe,MAAMA,YAAN,CAAmB;AAChCC,cAAY,EAACC,QAAQC,SAAT,EAAZ,EAAiC;AAC/B,SAAKD,KAAL,GAAaA,KAAb;AACD;;AAED,QAAME,MAAN,CAAaC,KAAb,EAAoB;AAClB,WAAO,MAAM,KAAKH,KAAL,CAAWI,UAAX,CAAsBC,OAAtB,CAA8BF,KAA9B,CAAb;AACD;;AAEDG,eAAa;AACX,UAAM,+BAAN;AACD;;AAED,QAAMC,IAAN,GAAa;AACX,WAAO,MAAM,KAAKP,KAAL,CAAWO,IAAX,EAAb;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;AAvB+B,C,kBAAbX,Y;AAwBpB",
+      "file": "default.js",
+      "sourceRoot": "/app/server/models",
+      "sourcesContent": [
+        "\n\nexport default class DefaultModel {\n  constructor({model = undefined}) { \n    this.model = model;\n  }\n  \n  async select(query) {\n    return await this.model.collection.findOne(query);\n  }\n\n  selectMany() {\n    throw 'selectMany method not defined';\n  }\n\n  async save() {\n    return await this.model.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n};"
+      ]
+    },
+    "mtime": 1691835012863
+  },
+  "{\"filename\":\"/app/server/app-server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault",
+        "interopRequireWildcard"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "helmet",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "helmet"
+              }
+            ]
+          },
+          {
+            "source": "cors",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cors"
+              }
+            ]
+          },
+          {
+            "source": "http",
+            "imported": [
+              "*"
+            ],
+            "specifiers": [
+              {
+                "kind": "namespace",
+                "local": "http"
+              }
+            ]
+          },
+          {
+            "source": "http-errors",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "createError"
+              }
+            ]
+          },
+          {
+            "source": "morgan",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "morgan"
+              }
+            ]
+          },
+          {
+            "source": "mongoose",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "db"
+              }
+            ]
+          },
+          {
+            "source": "./config/index",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "config"
+              }
+            ]
+          },
+          {
+            "source": "./utils/error-handler",
+            "imported": [
+              "errorHandler",
+              "apiErrorHandler"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "errorHandler",
+                "local": "errorHandler"
+              },
+              {
+                "kind": "named",
+                "imported": "apiErrorHandler",
+                "local": "apiErrorHandler"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "APPServer"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "APPServer",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/app-server.js",
+      "filenameRelative": "/app/server/app-server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "app-server.js",
+      "sourceFileName": "app-server.js",
+      "sourceRoot": "/app/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "app-server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _helmet = require('helmet');\n\nvar _helmet2 = _interopRequireDefault(_helmet);\n\nvar _cors = require('cors');\n\nvar _cors2 = _interopRequireDefault(_cors);\n\nvar _http = require('http');\n\nvar http = _interopRequireWildcard(_http);\n\nvar _httpErrors = require('http-errors');\n\nvar _httpErrors2 = _interopRequireDefault(_httpErrors);\n\nvar _morgan = require('morgan');\n\nvar _morgan2 = _interopRequireDefault(_morgan);\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _index = require('./config/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _errorHandler = require('./utils/error-handler');\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass APPServer {\n\n  constructor(app) {\n    this._app = app;\n\n    this._app.use((0, _helmet2.default)({\n      xPoweredBy: true,\n      strictTransportSecurity: {\n        maxAge: 86400,\n        includeSubDomains: false\n      },\n      contentSecurityPolicy: true,\n      xXssProtection: true\n    }));\n    this._app.use((0, _morgan2.default)('dev'));\n    this._app.use(_express2.default.json());\n    this._app.use(_express2.default.urlencoded({ extended: false }));\n    this._app.use((0, _cors2.default)({\n      allowedHeaders: [\"Content-Type\", \"Token\", \"Authorization\"],\n      exposedHeaders: [\"Token\", \"Authorization\"],\n      origin: \"*\",\n      methods: [\"GET, HEAD, PUT, PATCH, POST, DELETE\"],\n      preflightContinue: false\n    }));\n  }\n\n  async connect() {\n    await _mongoose2.default.connect(`mongodb://${_index2.default.mongodb.host}:${_index2.default.mongodb.port}/${_index2.default.mongodb.name}`, _index2.default.mongodb.options, connected => console.info('database connection successful'), disconnected => console.info('database disconnect sucessful'), error => console.error(error));\n  }\n\n  setRouter(endpoints) {\n    endpoints(this._app);\n  }\n\n  errorHandler() {\n    this._app.use(_errorHandler.errorHandler);\n    this._app.use(_errorHandler.apiErrorHandler);\n  }\n\n  listen() {\n    const _server = http.createServer(this._app);\n    _server.listen(_index2.default.app.port);\n    _server.on('error', error => {\n      if (error.syscall !== 'listen') {\n        throw error;\n      }\n\n      let bind = typeof port === 'string' ? `Pipe ${_index2.default.app.port}` : `Port ${_index2.default.app.port}`;\n\n      let message = undefined;\n      switch (error.code) {\n        case 'EACCES':\n          message = `${bind} requires elevated privileges`;\n          break;\n        case 'EADDRINUSE':\n          message = `${bind} is already in use`;\n          break;\n      }\n\n      if (message) {\n        console.error(message);\n        process.exit(1);\n      }\n\n      throw error;\n    });\n\n    _server.on('listening', () => {\n      const addr = _server.address();\n      const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;\n\n      console.info(`server listening on ${bind}`);\n    });\n  }\n}exports.default = APPServer;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZXJ2ZXIuanMiXSwibmFtZXMiOlsiaHR0cCIsIkFQUFNlcnZlciIsImNvbnN0cnVjdG9yIiwiYXBwIiwiX2FwcCIsInVzZSIsInhQb3dlcmVkQnkiLCJzdHJpY3RUcmFuc3BvcnRTZWN1cml0eSIsIm1heEFnZSIsImluY2x1ZGVTdWJEb21haW5zIiwiY29udGVudFNlY3VyaXR5UG9saWN5IiwieFhzc1Byb3RlY3Rpb24iLCJleHByZXNzIiwianNvbiIsInVybGVuY29kZWQiLCJleHRlbmRlZCIsImFsbG93ZWRIZWFkZXJzIiwiZXhwb3NlZEhlYWRlcnMiLCJvcmlnaW4iLCJtZXRob2RzIiwicHJlZmxpZ2h0Q29udGludWUiLCJjb25uZWN0IiwiZGIiLCJjb25maWciLCJtb25nb2RiIiwiaG9zdCIsInBvcnQiLCJuYW1lIiwib3B0aW9ucyIsImNvbm5lY3RlZCIsImNvbnNvbGUiLCJpbmZvIiwiZGlzY29ubmVjdGVkIiwiZXJyb3IiLCJzZXRSb3V0ZXIiLCJlbmRwb2ludHMiLCJlcnJvckhhbmRsZXIiLCJhcGlFcnJvckhhbmRsZXIiLCJsaXN0ZW4iLCJfc2VydmVyIiwiY3JlYXRlU2VydmVyIiwib24iLCJzeXNjYWxsIiwiYmluZCIsIm1lc3NhZ2UiLCJ1bmRlZmluZWQiLCJjb2RlIiwicHJvY2VzcyIsImV4aXQiLCJhZGRyIiwiYWRkcmVzcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7O0lBQVlBLEk7O0FBQ1o7Ozs7QUFDQTs7OztBQUNBOzs7O0FBRUE7Ozs7QUFDQTs7Ozs7O0FBT2UsTUFBTUMsU0FBTixDQUFnQjs7QUFFM0JDLGNBQVlDLEdBQVosRUFBaUI7QUFDZixTQUFLQyxJQUFMLEdBQVlELEdBQVo7O0FBRUEsU0FBS0MsSUFBTCxDQUFVQyxHQUFWLENBQWMsc0JBQU87QUFDbkJDLGtCQUFZLElBRE87QUFFbkJDLCtCQUF5QjtBQUN2QkMsZ0JBQVEsS0FEZTtBQUV2QkMsMkJBQW1CO0FBRkksT0FGTjtBQU1uQkMsNkJBQXVCLElBTko7QUFPbkJDLHNCQUFnQjtBQVBHLEtBQVAsQ0FBZDtBQVNBLFNBQUtQLElBQUwsQ0FBVUMsR0FBVixDQUFjLHNCQUFPLEtBQVAsQ0FBZDtBQUNBLFNBQUtELElBQUwsQ0FBVUMsR0FBVixDQUFjTyxrQkFBUUMsSUFBUixFQUFkO0FBQ0EsU0FBS1QsSUFBTCxDQUFVQyxHQUFWLENBQWNPLGtCQUFRRSxVQUFSLENBQW1CLEVBQUNDLFVBQVUsS0FBWCxFQUFuQixDQUFkO0FBQ0EsU0FBS1gsSUFBTCxDQUFVQyxHQUFWLENBQWMsb0JBQUs7QUFDakJXLHNCQUFnQixDQUFDLGNBQUQsRUFBaUIsT0FBakIsRUFBMEIsZUFBMUIsQ0FEQztBQUVqQkMsc0JBQWdCLENBQUMsT0FBRCxFQUFVLGVBQVYsQ0FGQztBQUdqQkMsY0FBUSxHQUhTO0FBSWpCQyxlQUFTLENBQUMscUNBQUQsQ0FKUTtBQUtqQkMseUJBQW1CO0FBTEYsS0FBTCxDQUFkO0FBT0Q7O0FBRUQsUUFBTUMsT0FBTixHQUFnQjtBQUNkLFVBQU1DLG1CQUFHRCxPQUFILENBQ0gsYUFBWUUsZ0JBQU9DLE9BQVAsQ0FBZUMsSUFBSyxJQUFHRixnQkFBT0MsT0FBUCxDQUFlRSxJQUFLLElBQUdILGdCQUFPQyxPQUFQLENBQWVHLElBQUssRUFEM0UsRUFFSkosZ0JBQU9DLE9BQVAsQ0FBZUksT0FGWCxFQUdKQyxhQUFhQyxRQUFRQyxJQUFSLENBQWEsZ0NBQWIsQ0FIVCxFQUlKQyxnQkFBZ0JGLFFBQVFDLElBQVIsQ0FBYSwrQkFBYixDQUpaLEVBS0pFLFNBQVNILFFBQVFHLEtBQVIsQ0FBY0EsS0FBZCxDQUxMLENBQU47QUFPRDs7QUFFREMsWUFBVUMsU0FBVixFQUFxQjtBQUNuQkEsY0FBVSxLQUFLL0IsSUFBZjtBQUNEOztBQUVEZ0MsaUJBQWU7QUFDYixTQUFLaEMsSUFBTCxDQUFVQyxHQUFWLENBQWMrQiwwQkFBZDtBQUNBLFNBQUtoQyxJQUFMLENBQVVDLEdBQVYsQ0FBY2dDLDZCQUFkO0FBQ0Q7O0FBRURDLFdBQVM7QUFDUCxVQUFNQyxVQUFVdkMsS0FBS3dDLFlBQUwsQ0FBa0IsS0FBS3BDLElBQXZCLENBQWhCO0FBQ0FtQyxZQUFRRCxNQUFSLENBQWVmLGdCQUFPcEIsR0FBUCxDQUFXdUIsSUFBMUI7QUFDQWEsWUFBUUUsRUFBUixDQUFXLE9BQVgsRUFBcUJSLEtBQUQsSUFBVztBQUM3QixVQUFJQSxNQUFNUyxPQUFOLEtBQWtCLFFBQXRCLEVBQWdDO0FBQzlCLGNBQU1ULEtBQU47QUFDRDs7QUFFRCxVQUFJVSxPQUFPLE9BQU9qQixJQUFQLEtBQWdCLFFBQWhCLEdBQ04sUUFBT0gsZ0JBQU9wQixHQUFQLENBQVd1QixJQUFLLEVBRGpCLEdBRU4sUUFBT0gsZ0JBQU9wQixHQUFQLENBQVd1QixJQUFLLEVBRjVCOztBQUlBLFVBQUlrQixVQUFVQyxTQUFkO0FBQ0EsY0FBUVosTUFBTWEsSUFBZDtBQUNFLGFBQUssUUFBTDtBQUNFRixvQkFBVyxHQUFFRCxJQUFLLCtCQUFsQjtBQUNBO0FBQ0YsYUFBSyxZQUFMO0FBQ0VDLG9CQUFXLEdBQUVELElBQUssb0JBQWxCO0FBQ0E7QUFOSjs7QUFTQSxVQUFJQyxPQUFKLEVBQWE7QUFDWGQsZ0JBQVFHLEtBQVIsQ0FBY1csT0FBZDtBQUNBRyxnQkFBUUMsSUFBUixDQUFhLENBQWI7QUFDRDs7QUFFRCxZQUFNZixLQUFOO0FBQ0QsS0F6QkQ7O0FBMkJBTSxZQUFRRSxFQUFSLENBQVcsV0FBWCxFQUF3QixNQUFNO0FBQzVCLFlBQU1RLE9BQU9WLFFBQVFXLE9BQVIsRUFBYjtBQUNBLFlBQU1QLE9BQU8sT0FBT00sSUFBUCxLQUFnQixRQUFoQixHQUNSLFFBQU9BLElBQUssRUFESixHQUVSLFFBQU9BLEtBQUt2QixJQUFLLEVBRnRCOztBQUlBSSxjQUFRQyxJQUFSLENBQWMsdUJBQXNCWSxJQUFLLEVBQXpDO0FBQ0QsS0FQRDtBQVFEO0FBbkYwQixDLGtCQUFWMUMsUztBQW9GbEIiLCJmaWxlIjoiYXBwLXNlcnZlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzICAgICBmcm9tICdleHByZXNzJztcbmltcG9ydCBoZWxtZXQgICAgICBmcm9tICdoZWxtZXQnO1xuaW1wb3J0IGNvcnMgICAgICAgIGZyb20gJ2NvcnMnO1xuaW1wb3J0ICogYXMgaHR0cCAgIGZyb20gJ2h0dHAnO1xuaW1wb3J0IGNyZWF0ZUVycm9yIGZyb20gJ2h0dHAtZXJyb3JzJztcbmltcG9ydCBtb3JnYW4gICAgICBmcm9tICdtb3JnYW4nO1xuaW1wb3J0IGRiICAgICAgICAgIGZyb20gJ21vbmdvb3NlJztcblxuaW1wb3J0IGNvbmZpZyAgICAgICBmcm9tICcuL2NvbmZpZy9pbmRleCc7XG5pbXBvcnQge1xuICBlcnJvckhhbmRsZXIsIFxuICBhcGlFcnJvckhhbmRsZXIgXG59ICAgICAgICAgICAgICAgICAgIGZyb20gJy4vdXRpbHMvZXJyb3ItaGFuZGxlcic7XG5cblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBBUFBTZXJ2ZXIge1xuICBcbiAgICBjb25zdHJ1Y3RvcihhcHApIHtcbiAgICAgIHRoaXMuX2FwcCA9IGFwcDtcblxuICAgICAgdGhpcy5fYXBwLnVzZShoZWxtZXQoe1xuICAgICAgICB4UG93ZXJlZEJ5OiB0cnVlLFxuICAgICAgICBzdHJpY3RUcmFuc3BvcnRTZWN1cml0eToge1xuICAgICAgICAgIG1heEFnZTogODY0MDAsXG4gICAgICAgICAgaW5jbHVkZVN1YkRvbWFpbnM6IGZhbHNlLFxuICAgICAgICB9LFxuICAgICAgICBjb250ZW50U2VjdXJpdHlQb2xpY3k6IHRydWUsXG4gICAgICAgIHhYc3NQcm90ZWN0aW9uOiB0cnVlLFxuICAgICAgfSkpO1xuICAgICAgdGhpcy5fYXBwLnVzZShtb3JnYW4oJ2RldicpKTtcbiAgICAgIHRoaXMuX2FwcC51c2UoZXhwcmVzcy5qc29uKCkpOyAgICAgIFxuICAgICAgdGhpcy5fYXBwLnVzZShleHByZXNzLnVybGVuY29kZWQoe2V4dGVuZGVkOiBmYWxzZX0pKTtcbiAgICAgIHRoaXMuX2FwcC51c2UoY29ycyh7XG4gICAgICAgIGFsbG93ZWRIZWFkZXJzOiBbXCJDb250ZW50LVR5cGVcIiwgXCJUb2tlblwiLCBcIkF1dGhvcml6YXRpb25cIl0sXG4gICAgICAgIGV4cG9zZWRIZWFkZXJzOiBbXCJUb2tlblwiLCBcIkF1dGhvcml6YXRpb25cIl0sXG4gICAgICAgIG9yaWdpbjogXCIqXCIsXG4gICAgICAgIG1ldGhvZHM6IFtcIkdFVCwgSEVBRCwgUFVULCBQQVRDSCwgUE9TVCwgREVMRVRFXCJdLFxuICAgICAgICBwcmVmbGlnaHRDb250aW51ZTogZmFsc2UsXG4gICAgICB9KSk7XG4gICAgfVxuICAgIFxuICAgIGFzeW5jIGNvbm5lY3QoKSB7XG4gICAgICBhd2FpdCBkYi5jb25uZWN0KFxuICAgICAgICBgbW9uZ29kYjovLyR7Y29uZmlnLm1vbmdvZGIuaG9zdH06JHtjb25maWcubW9uZ29kYi5wb3J0fS8ke2NvbmZpZy5tb25nb2RiLm5hbWV9YCxcbiAgICAgICAgY29uZmlnLm1vbmdvZGIub3B0aW9ucyxcbiAgICAgICAgY29ubmVjdGVkID0+IGNvbnNvbGUuaW5mbygnZGF0YWJhc2UgY29ubmVjdGlvbiBzdWNjZXNzZnVsJyksXG4gICAgICAgIGRpc2Nvbm5lY3RlZCA9PiBjb25zb2xlLmluZm8oJ2RhdGFiYXNlIGRpc2Nvbm5lY3Qgc3VjZXNzZnVsJyksXG4gICAgICAgIGVycm9yID0+IGNvbnNvbGUuZXJyb3IoZXJyb3IpLFxuICAgICAgKTtcbiAgICB9XG5cbiAgICBzZXRSb3V0ZXIoZW5kcG9pbnRzKSB7XG4gICAgICBlbmRwb2ludHModGhpcy5fYXBwKTtcbiAgICB9XG5cbiAgICBlcnJvckhhbmRsZXIoKSB7XG4gICAgICB0aGlzLl9hcHAudXNlKGVycm9ySGFuZGxlcik7XG4gICAgICB0aGlzLl9hcHAudXNlKGFwaUVycm9ySGFuZGxlcik7XG4gICAgfVxuICBcbiAgICBsaXN0ZW4oKSB7XG4gICAgICBjb25zdCBfc2VydmVyID0gaHR0cC5jcmVhdGVTZXJ2ZXIodGhpcy5fYXBwKTtcbiAgICAgIF9zZXJ2ZXIubGlzdGVuKGNvbmZpZy5hcHAucG9ydCk7XG4gICAgICBfc2VydmVyLm9uKCdlcnJvcicsIChlcnJvcikgPT4ge1xuICAgICAgICBpZiAoZXJyb3Iuc3lzY2FsbCAhPT0gJ2xpc3RlbicpIHtcbiAgICAgICAgICB0aHJvdyBlcnJvcjtcbiAgICAgICAgfVxuICBcbiAgICAgICAgbGV0IGJpbmQgPSB0eXBlb2YgcG9ydCA9PT0gJ3N0cmluZycgXG4gICAgICAgICAgPyBgUGlwZSAke2NvbmZpZy5hcHAucG9ydH1gIFxuICAgICAgICAgIDogYFBvcnQgJHtjb25maWcuYXBwLnBvcnR9YFxuICAgICAgICBcbiAgICAgICAgbGV0IG1lc3NhZ2UgPSB1bmRlZmluZWQ7XG4gICAgICAgIHN3aXRjaCAoZXJyb3IuY29kZSkge1xuICAgICAgICAgIGNhc2UgJ0VBQ0NFUyc6XG4gICAgICAgICAgICBtZXNzYWdlID0gYCR7YmluZH0gcmVxdWlyZXMgZWxldmF0ZWQgcHJpdmlsZWdlc2A7XG4gICAgICAgICAgICBicmVhaztcbiAgICAgICAgICBjYXNlICdFQUREUklOVVNFJzpcbiAgICAgICAgICAgIG1lc3NhZ2UgPSBgJHtiaW5kfSBpcyBhbHJlYWR5IGluIHVzZWA7XG4gICAgICAgICAgICBicmVhazsgICAgICAgIFxuICAgICAgICB9XG4gIFxuICAgICAgICBpZiAobWVzc2FnZSkge1xuICAgICAgICAgIGNvbnNvbGUuZXJyb3IobWVzc2FnZSk7XG4gICAgICAgICAgcHJvY2Vzcy5leGl0KDEpO1xuICAgICAgICB9XG4gIFxuICAgICAgICB0aHJvdyBlcnJvcjtcbiAgICAgIH0pO1xuICAgICAgXG4gICAgICBfc2VydmVyLm9uKCdsaXN0ZW5pbmcnLCAoKSA9PiB7XG4gICAgICAgIGNvbnN0IGFkZHIgPSBfc2VydmVyLmFkZHJlc3MoKTtcbiAgICAgICAgY29uc3QgYmluZCA9IHR5cGVvZiBhZGRyID09PSAnc3RyaW5nJyBcbiAgICAgICAgICA/IGBwaXBlICR7YWRkcn1gXG4gICAgICAgICAgOiBgcG9ydCAke2FkZHIucG9ydH1gXG4gICAgICAgIFxuICAgICAgICBjb25zb2xlLmluZm8oYHNlcnZlciBsaXN0ZW5pbmcgb24gJHtiaW5kfWApO1xuICAgICAgfSk7XG4gICAgfVxuICB9OyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "app-server.js"
+      ],
+      "names": [
+        "http",
+        "APPServer",
+        "constructor",
+        "app",
+        "_app",
+        "use",
+        "xPoweredBy",
+        "strictTransportSecurity",
+        "maxAge",
+        "includeSubDomains",
+        "contentSecurityPolicy",
+        "xXssProtection",
+        "express",
+        "json",
+        "urlencoded",
+        "extended",
+        "allowedHeaders",
+        "exposedHeaders",
+        "origin",
+        "methods",
+        "preflightContinue",
+        "connect",
+        "db",
+        "config",
+        "mongodb",
+        "host",
+        "port",
+        "name",
+        "options",
+        "connected",
+        "console",
+        "info",
+        "disconnected",
+        "error",
+        "setRouter",
+        "endpoints",
+        "errorHandler",
+        "apiErrorHandler",
+        "listen",
+        "_server",
+        "createServer",
+        "on",
+        "syscall",
+        "bind",
+        "message",
+        "undefined",
+        "code",
+        "process",
+        "exit",
+        "addr",
+        "address"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;AACA;;IAAYA,I;;AACZ;;;;AACA;;;;AACA;;;;AAEA;;;;AACA;;;;;;AAOe,MAAMC,SAAN,CAAgB;;AAE3BC,cAAYC,GAAZ,EAAiB;AACf,SAAKC,IAAL,GAAYD,GAAZ;;AAEA,SAAKC,IAAL,CAAUC,GAAV,CAAc,sBAAO;AACnBC,kBAAY,IADO;AAEnBC,+BAAyB;AACvBC,gBAAQ,KADe;AAEvBC,2BAAmB;AAFI,OAFN;AAMnBC,6BAAuB,IANJ;AAOnBC,sBAAgB;AAPG,KAAP,CAAd;AASA,SAAKP,IAAL,CAAUC,GAAV,CAAc,sBAAO,KAAP,CAAd;AACA,SAAKD,IAAL,CAAUC,GAAV,CAAcO,kBAAQC,IAAR,EAAd;AACA,SAAKT,IAAL,CAAUC,GAAV,CAAcO,kBAAQE,UAAR,CAAmB,EAACC,UAAU,KAAX,EAAnB,CAAd;AACA,SAAKX,IAAL,CAAUC,GAAV,CAAc,oBAAK;AACjBW,sBAAgB,CAAC,cAAD,EAAiB,OAAjB,EAA0B,eAA1B,CADC;AAEjBC,sBAAgB,CAAC,OAAD,EAAU,eAAV,CAFC;AAGjBC,cAAQ,GAHS;AAIjBC,eAAS,CAAC,qCAAD,CAJQ;AAKjBC,yBAAmB;AALF,KAAL,CAAd;AAOD;;AAED,QAAMC,OAAN,GAAgB;AACd,UAAMC,mBAAGD,OAAH,CACH,aAAYE,gBAAOC,OAAP,CAAeC,IAAK,IAAGF,gBAAOC,OAAP,CAAeE,IAAK,IAAGH,gBAAOC,OAAP,CAAeG,IAAK,EAD3E,EAEJJ,gBAAOC,OAAP,CAAeI,OAFX,EAGJC,aAAaC,QAAQC,IAAR,CAAa,gCAAb,CAHT,EAIJC,gBAAgBF,QAAQC,IAAR,CAAa,+BAAb,CAJZ,EAKJE,SAASH,QAAQG,KAAR,CAAcA,KAAd,CALL,CAAN;AAOD;;AAEDC,YAAUC,SAAV,EAAqB;AACnBA,cAAU,KAAK/B,IAAf;AACD;;AAEDgC,iBAAe;AACb,SAAKhC,IAAL,CAAUC,GAAV,CAAc+B,0BAAd;AACA,SAAKhC,IAAL,CAAUC,GAAV,CAAcgC,6BAAd;AACD;;AAEDC,WAAS;AACP,UAAMC,UAAUvC,KAAKwC,YAAL,CAAkB,KAAKpC,IAAvB,CAAhB;AACAmC,YAAQD,MAAR,CAAef,gBAAOpB,GAAP,CAAWuB,IAA1B;AACAa,YAAQE,EAAR,CAAW,OAAX,EAAqBR,KAAD,IAAW;AAC7B,UAAIA,MAAMS,OAAN,KAAkB,QAAtB,EAAgC;AAC9B,cAAMT,KAAN;AACD;;AAED,UAAIU,OAAO,OAAOjB,IAAP,KAAgB,QAAhB,GACN,QAAOH,gBAAOpB,GAAP,CAAWuB,IAAK,EADjB,GAEN,QAAOH,gBAAOpB,GAAP,CAAWuB,IAAK,EAF5B;;AAIA,UAAIkB,UAAUC,SAAd;AACA,cAAQZ,MAAMa,IAAd;AACE,aAAK,QAAL;AACEF,oBAAW,GAAED,IAAK,+BAAlB;AACA;AACF,aAAK,YAAL;AACEC,oBAAW,GAAED,IAAK,oBAAlB;AACA;AANJ;;AASA,UAAIC,OAAJ,EAAa;AACXd,gBAAQG,KAAR,CAAcW,OAAd;AACAG,gBAAQC,IAAR,CAAa,CAAb;AACD;;AAED,YAAMf,KAAN;AACD,KAzBD;;AA2BAM,YAAQE,EAAR,CAAW,WAAX,EAAwB,MAAM;AAC5B,YAAMQ,OAAOV,QAAQW,OAAR,EAAb;AACA,YAAMP,OAAO,OAAOM,IAAP,KAAgB,QAAhB,GACR,QAAOA,IAAK,EADJ,GAER,QAAOA,KAAKvB,IAAK,EAFtB;;AAIAI,cAAQC,IAAR,CAAc,uBAAsBY,IAAK,EAAzC;AACD,KAPD;AAQD;AAnF0B,C,kBAAV1C,S;AAoFlB",
+      "file": "app-server.js",
+      "sourceRoot": "/app/server",
+      "sourcesContent": [
+        "import express     from 'express';\nimport helmet      from 'helmet';\nimport cors        from 'cors';\nimport * as http   from 'http';\nimport createError from 'http-errors';\nimport morgan      from 'morgan';\nimport db          from 'mongoose';\n\nimport config       from './config/index';\nimport {\n  errorHandler, \n  apiErrorHandler \n}                   from './utils/error-handler';\n\n\n\nexport default class APPServer {\n  \n    constructor(app) {\n      this._app = app;\n\n      this._app.use(helmet({\n        xPoweredBy: true,\n        strictTransportSecurity: {\n          maxAge: 86400,\n          includeSubDomains: false,\n        },\n        contentSecurityPolicy: true,\n        xXssProtection: true,\n      }));\n      this._app.use(morgan('dev'));\n      this._app.use(express.json());      \n      this._app.use(express.urlencoded({extended: false}));\n      this._app.use(cors({\n        allowedHeaders: [\"Content-Type\", \"Token\", \"Authorization\"],\n        exposedHeaders: [\"Token\", \"Authorization\"],\n        origin: \"*\",\n        methods: [\"GET, HEAD, PUT, PATCH, POST, DELETE\"],\n        preflightContinue: false,\n      }));\n    }\n    \n    async connect() {\n      await db.connect(\n        `mongodb://${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.name}`,\n        config.mongodb.options,\n        connected => console.info('database connection successful'),\n        disconnected => console.info('database disconnect sucessful'),\n        error => console.error(error),\n      );\n    }\n\n    setRouter(endpoints) {\n      endpoints(this._app);\n    }\n\n    errorHandler() {\n      this._app.use(errorHandler);\n      this._app.use(apiErrorHandler);\n    }\n  \n    listen() {\n      const _server = http.createServer(this._app);\n      _server.listen(config.app.port);\n      _server.on('error', (error) => {\n        if (error.syscall !== 'listen') {\n          throw error;\n        }\n  \n        let bind = typeof port === 'string' \n          ? `Pipe ${config.app.port}` \n          : `Port ${config.app.port}`\n        \n        let message = undefined;\n        switch (error.code) {\n          case 'EACCES':\n            message = `${bind} requires elevated privileges`;\n            break;\n          case 'EADDRINUSE':\n            message = `${bind} is already in use`;\n            break;        \n        }\n  \n        if (message) {\n          console.error(message);\n          process.exit(1);\n        }\n  \n        throw error;\n      });\n      \n      _server.on('listening', () => {\n        const addr = _server.address();\n        const bind = typeof addr === 'string' \n          ? `pipe ${addr}`\n          : `port ${addr.port}`\n        \n        console.info(`server listening on ${bind}`);\n      });\n    }\n  };"
+      ]
+    },
+    "mtime": 1691830310191
+  },
+  "{\"filename\":\"/app/server/views/user/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": ".",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "UserView"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/views/user/router.js",
+      "filenameRelative": "/app/server/views/user/router.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "router.js",
+      "sourceFileName": "router.js",
+      "sourceRoot": "/app/server/views/user",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/views/user",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "router"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _ = require('.');\n\nvar _2 = _interopRequireDefault(_);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express2.default.Router();\n\nrouter.get('/:id', (request, response, next) => {\n  const user = new _2.default(request.params.id);\n\n  response.send(user);\n});\n\nrouter.post('/', (request, response, next) => {\n  const user = new _2.default({ next: next });\n\n  response.send(user.insert(request.body));\n});\n\nrouter.put('/:id', (request, response, next) => {\n  response.send('put');\n});\n\nrouter.delete('/:id', (request, response, next) => {\n  response.send('delete');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJleHByZXNzIiwiUm91dGVyIiwiZ2V0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwibmV4dCIsInVzZXIiLCJVc2VyVmlldyIsInBhcmFtcyIsImlkIiwic2VuZCIsInBvc3QiLCJpbnNlcnQiLCJib2R5IiwicHV0IiwiZGVsZXRlIiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUVBOzs7Ozs7QUFHQSxNQUFNQSxTQUFTQyxrQkFBUUMsTUFBUixFQUFmOztBQUVBRixPQUFPRyxHQUFQLENBQVcsTUFBWCxFQUFtQixDQUFDQyxPQUFELEVBQVVDLFFBQVYsRUFBb0JDLElBQXBCLEtBQTZCO0FBQzlDLFFBQU1DLE9BQU8sSUFBSUMsVUFBSixDQUFhSixRQUFRSyxNQUFSLENBQWVDLEVBQTVCLENBQWI7O0FBRUFMLFdBQVNNLElBQVQsQ0FBY0osSUFBZDtBQUNELENBSkQ7O0FBTUFQLE9BQU9ZLElBQVAsQ0FBWSxHQUFaLEVBQWlCLENBQUNSLE9BQUQsRUFBVUMsUUFBVixFQUFvQkMsSUFBcEIsS0FBNkI7QUFDNUMsUUFBTUMsT0FBTyxJQUFJQyxVQUFKLENBQWEsRUFBQ0YsTUFBTUEsSUFBUCxFQUFiLENBQWI7O0FBRUFELFdBQVNNLElBQVQsQ0FBY0osS0FBS00sTUFBTCxDQUFZVCxRQUFRVSxJQUFwQixDQUFkO0FBQ0QsQ0FKRDs7QUFNQWQsT0FBT2UsR0FBUCxDQUFXLE1BQVgsRUFBbUIsQ0FBQ1gsT0FBRCxFQUFVQyxRQUFWLEVBQW9CQyxJQUFwQixLQUE2QjtBQUM1Q0QsV0FBU00sSUFBVCxDQUFjLEtBQWQ7QUFDSCxDQUZEOztBQUlBWCxPQUFPZ0IsTUFBUCxDQUFjLE1BQWQsRUFBc0IsQ0FBQ1osT0FBRCxFQUFVQyxRQUFWLEVBQW9CQyxJQUFwQixLQUE2QjtBQUMvQ0QsV0FBU00sSUFBVCxDQUFjLFFBQWQ7QUFDSCxDQUZEOztBQUlBTSxPQUFPQyxPQUFQLEdBQWlCbEIsTUFBakIiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL3ZpZXdzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxuaW1wb3J0IFVzZXJWaWV3IGZyb20gJy4nO1xuXG5cbmNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XG5cbnJvdXRlci5nZXQoJy86aWQnLCAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgY29uc3QgdXNlciA9IG5ldyBVc2VyVmlldyhyZXF1ZXN0LnBhcmFtcy5pZCk7XG5cbiAgcmVzcG9uc2Uuc2VuZCh1c2VyKTtcbn0pO1xuXG5yb3V0ZXIucG9zdCgnLycsIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICBjb25zdCB1c2VyID0gbmV3IFVzZXJWaWV3KHtuZXh0OiBuZXh0fSk7XG4gIFxuICByZXNwb25zZS5zZW5kKHVzZXIuaW5zZXJ0KHJlcXVlc3QuYm9keSkpO1xufSk7XG5cbnJvdXRlci5wdXQoJy86aWQnLCAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgICByZXNwb25zZS5zZW5kKCdwdXQnKTtcbn0pO1xuXG5yb3V0ZXIuZGVsZXRlKCcvOmlkJywgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gICAgcmVzcG9uc2Uuc2VuZCgnZGVsZXRlJyk7XG59KTtcblxubW9kdWxlLmV4cG9ydHMgPSByb3V0ZXI7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "router.js"
+      ],
+      "names": [
+        "router",
+        "express",
+        "Router",
+        "get",
+        "request",
+        "response",
+        "next",
+        "user",
+        "UserView",
+        "params",
+        "id",
+        "send",
+        "post",
+        "insert",
+        "body",
+        "put",
+        "delete",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA;;;;AAEA;;;;;;AAGA,MAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAEAF,OAAOG,GAAP,CAAW,MAAX,EAAmB,CAACC,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC9C,QAAMC,OAAO,IAAIC,UAAJ,CAAaJ,QAAQK,MAAR,CAAeC,EAA5B,CAAb;;AAEAL,WAASM,IAAT,CAAcJ,IAAd;AACD,CAJD;;AAMAP,OAAOY,IAAP,CAAY,GAAZ,EAAiB,CAACR,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC5C,QAAMC,OAAO,IAAIC,UAAJ,CAAa,EAACF,MAAMA,IAAP,EAAb,CAAb;;AAEAD,WAASM,IAAT,CAAcJ,KAAKM,MAAL,CAAYT,QAAQU,IAApB,CAAd;AACD,CAJD;;AAMAd,OAAOe,GAAP,CAAW,MAAX,EAAmB,CAACX,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC5CD,WAASM,IAAT,CAAc,KAAd;AACH,CAFD;;AAIAX,OAAOgB,MAAP,CAAc,MAAd,EAAsB,CAACZ,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC/CD,WAASM,IAAT,CAAc,QAAd;AACH,CAFD;;AAIAM,OAAOC,OAAP,GAAiBlB,MAAjB",
+      "file": "router.js",
+      "sourceRoot": "/app/server/views/user",
+      "sourcesContent": [
+        "import express from 'express';\n\nimport UserView from '.';\n\n\nconst router = express.Router();\n\nrouter.get('/:id', (request, response, next) => {\n  const user = new UserView(request.params.id);\n\n  response.send(user);\n});\n\nrouter.post('/', (request, response, next) => {\n  const user = new UserView({next: next});\n  \n  response.send(user.insert(request.body));\n});\n\nrouter.put('/:id', (request, response, next) => {\n    response.send('put');\n});\n\nrouter.delete('/:id', (request, response, next) => {\n    response.send('delete');\n});\n\nmodule.exports = router;"
+      ]
+    },
+    "mtime": 1691733905519
+  },
+  "{\"filename\":\"/app/server/views/users/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views/users\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/views/users/router.js",
+      "filenameRelative": "/app/server/views/users/router.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "router.js",
+      "sourceFileName": "router.js",
+      "sourceRoot": "/app/server/views/users",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/views/users",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "router"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express2.default.Router();\n\nrouter.get('/', (request, response, next) => {\n  response.send({});\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJleHByZXNzIiwiUm91dGVyIiwiZ2V0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwibmV4dCIsInNlbmQiLCJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiOztBQUFBOzs7Ozs7QUFFQSxNQUFNQSxTQUFTQyxrQkFBUUMsTUFBUixFQUFmOztBQUVBRixPQUFPRyxHQUFQLENBQVcsR0FBWCxFQUFnQixDQUFDQyxPQUFELEVBQVVDLFFBQVYsRUFBb0JDLElBQXBCLEtBQTZCO0FBQzNDRCxXQUFTRSxJQUFULENBQWMsRUFBZDtBQUNELENBRkQ7O0FBS0FDLE9BQU9DLE9BQVAsR0FBaUJULE1BQWpCIiwiZmlsZSI6InJvdXRlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci92aWV3cy91c2VycyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuXG5jb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpO1xuXG5yb3V0ZXIuZ2V0KCcvJywgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIHJlc3BvbnNlLnNlbmQoe30pO1xufSk7XG5cblxubW9kdWxlLmV4cG9ydHMgPSByb3V0ZXI7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "router.js"
+      ],
+      "names": [
+        "router",
+        "express",
+        "Router",
+        "get",
+        "request",
+        "response",
+        "next",
+        "send",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA;;;;;;AAEA,MAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAEAF,OAAOG,GAAP,CAAW,GAAX,EAAgB,CAACC,OAAD,EAAUC,QAAV,EAAoBC,IAApB,KAA6B;AAC3CD,WAASE,IAAT,CAAc,EAAd;AACD,CAFD;;AAKAC,OAAOC,OAAP,GAAiBT,MAAjB",
+      "file": "router.js",
+      "sourceRoot": "/app/server/views/users",
+      "sourcesContent": [
+        "import express from 'express';\n\nconst router = express.Router();\n\nrouter.get('/', (request, response, next) => {\n  response.send({});\n});\n\n\nmodule.exports = router;"
+      ]
+    },
+    "mtime": 1691391311756
+  },
+  "{\"filename\":\"/app/server/controllers/user/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/controllers/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../../models/user",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "User"
+              }
+            ]
+          },
+          {
+            "source": "../default",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "DefaultController"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "UserController"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "UserController",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/controllers/user/index.js",
+      "filenameRelative": "/app/server/controllers/user/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/controllers/user",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/controllers/user",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _user = require(\"../../models/user\");\n\nvar _user2 = _interopRequireDefault(_user);\n\nvar _default = require(\"../default\");\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass UserController extends _default2.default {\n  constructor({ username = undefined, email = undefined, password = undefined }) {\n    super({ model: new _user2.default() });\n\n    if (username) this.model.model.username = username;\n    if (email) this.model.model.email = email;\n    if (password) this.model.model.password = password;\n  }\n}\nexports.default = UserController;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIlVzZXJDb250cm9sbGVyIiwiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsInVzZXJuYW1lIiwidW5kZWZpbmVkIiwiZW1haWwiLCJwYXNzd29yZCIsIm1vZGVsIiwiVXNlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7Ozs7O0FBR2UsTUFBTUEsY0FBTixTQUE2QkMsaUJBQTdCLENBQStDO0FBQzVEQyxjQUFZLEVBQUNDLFdBQVdDLFNBQVosRUFBdUJDLFFBQVFELFNBQS9CLEVBQTBDRSxXQUFXRixTQUFyRCxFQUFaLEVBQTZFO0FBQzNFLFVBQU0sRUFBQ0csT0FBTyxJQUFJQyxjQUFKLEVBQVIsRUFBTjs7QUFFQSxRQUFJTCxRQUFKLEVBQWdCLEtBQUtJLEtBQUwsQ0FBV0EsS0FBWCxDQUFpQkosUUFBakIsR0FBNEJBLFFBQTVCO0FBQ2hCLFFBQUlFLEtBQUosRUFBZ0IsS0FBS0UsS0FBTCxDQUFXQSxLQUFYLENBQWlCRixLQUFqQixHQUF5QkEsS0FBekI7QUFDaEIsUUFBSUMsUUFBSixFQUFnQixLQUFLQyxLQUFMLENBQVdBLEtBQVgsQ0FBaUJELFFBQWpCLEdBQTRCQSxRQUE1QjtBQUNqQjtBQVAyRDtrQkFBekNOLGMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvY29udHJvbGxlcnMvdXNlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBVc2VyIGZyb20gXCIuLi8uLi9tb2RlbHMvdXNlclwiO1xuaW1wb3J0IERlZmF1bHRDb250cm9sbGVyIGZyb20gXCIuLi9kZWZhdWx0XCI7XG5cblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVXNlckNvbnRyb2xsZXIgZXh0ZW5kcyBEZWZhdWx0Q29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHt1c2VybmFtZSA9IHVuZGVmaW5lZCwgZW1haWwgPSB1bmRlZmluZWQsIHBhc3N3b3JkID0gdW5kZWZpbmVkfSkge1xuICAgIHN1cGVyKHttb2RlbDogbmV3IFVzZXIoKX0pO1xuICAgIFxuICAgIGlmICh1c2VybmFtZSkgICB0aGlzLm1vZGVsLm1vZGVsLnVzZXJuYW1lID0gdXNlcm5hbWU7XG4gICAgaWYgKGVtYWlsKSAgICAgIHRoaXMubW9kZWwubW9kZWwuZW1haWwgPSBlbWFpbDtcbiAgICBpZiAocGFzc3dvcmQpICAgdGhpcy5tb2RlbC5tb2RlbC5wYXNzd29yZCA9IHBhc3N3b3JkO1xuICB9XG59Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "UserController",
+        "DefaultController",
+        "constructor",
+        "username",
+        "undefined",
+        "email",
+        "password",
+        "model",
+        "User"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGe,MAAMA,cAAN,SAA6BC,iBAA7B,CAA+C;AAC5DC,cAAY,EAACC,WAAWC,SAAZ,EAAuBC,QAAQD,SAA/B,EAA0CE,WAAWF,SAArD,EAAZ,EAA6E;AAC3E,UAAM,EAACG,OAAO,IAAIC,cAAJ,EAAR,EAAN;;AAEA,QAAIL,QAAJ,EAAgB,KAAKI,KAAL,CAAWA,KAAX,CAAiBJ,QAAjB,GAA4BA,QAA5B;AAChB,QAAIE,KAAJ,EAAgB,KAAKE,KAAL,CAAWA,KAAX,CAAiBF,KAAjB,GAAyBA,KAAzB;AAChB,QAAIC,QAAJ,EAAgB,KAAKC,KAAL,CAAWA,KAAX,CAAiBD,QAAjB,GAA4BA,QAA5B;AACjB;AAP2D;kBAAzCN,c",
+      "file": "index.js",
+      "sourceRoot": "/app/server/controllers/user",
+      "sourcesContent": [
+        "import User from \"../../models/user\";\nimport DefaultController from \"../default\";\n\n\nexport default class UserController extends DefaultController {\n  constructor({username = undefined, email = undefined, password = undefined}) {\n    super({model: new User()});\n    \n    if (username)   this.model.model.username = username;\n    if (email)      this.model.model.email = email;\n    if (password)   this.model.model.password = password;\n  }\n}"
+      ]
+    },
+    "mtime": 1691835681216
+  },
+  "{\"filename\":\"/app/server/controllers/default.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/controllers\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "mongoose",
+            "imported": [
+              "Types"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "Types",
+                "local": "Types"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "DefaultController"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "DefaultController",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/controllers/default.js",
+      "filenameRelative": "/app/server/controllers/default.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "default.js",
+      "sourceFileName": "default.js",
+      "sourceRoot": "/app/server/controllers",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/controllers",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "default"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require(\"mongoose\");\n\nclass DefaultController {\n  constructor({ model: model }) {\n    this.model = model;\n    this._types = _mongoose.Types;\n  }\n\n  async select() {\n    return await this.model.select(this.query);\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n}exports.default = DefaultController;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsIm1vZGVsIiwiX3R5cGVzIiwiVHlwZXMiLCJzZWxlY3QiLCJxdWVyeSIsInNhdmUiLCJib2R5Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7QUFHZSxNQUFNQSxpQkFBTixDQUF3QjtBQUNyQ0MsY0FBWSxFQUFDQyxPQUFPQSxLQUFSLEVBQVosRUFBNEI7QUFDMUIsU0FBS0EsS0FBTCxHQUFhQSxLQUFiO0FBQ0EsU0FBS0MsTUFBTCxHQUFjQyxlQUFkO0FBQ0Q7O0FBRUQsUUFBTUMsTUFBTixHQUFlO0FBQ2IsV0FBTyxNQUFNLEtBQUtILEtBQUwsQ0FBV0csTUFBWCxDQUFrQixLQUFLQyxLQUF2QixDQUFiO0FBQ0Q7O0FBRUQsUUFBTUMsSUFBTixDQUFXQyxJQUFYLEVBQWlCO0FBQ2YsV0FBTyxNQUFNLEtBQUtOLEtBQUwsQ0FBV0ssSUFBWCxDQUFnQkMsSUFBaEIsQ0FBYjtBQUNEO0FBWm9DLEMsa0JBQWxCUixpQjtBQWFwQiIsImZpbGUiOiJkZWZhdWx0LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL2NvbnRyb2xsZXJzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVHlwZXMgfSBmcm9tIFwibW9uZ29vc2VcIjtcblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBEZWZhdWx0Q29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHttb2RlbDogbW9kZWx9KSB7XG4gICAgdGhpcy5tb2RlbCA9IG1vZGVsO1xuICAgIHRoaXMuX3R5cGVzID0gVHlwZXM7XG4gIH1cblxuICBhc3luYyBzZWxlY3QoKSB7XG4gICAgcmV0dXJuIGF3YWl0IHRoaXMubW9kZWwuc2VsZWN0KHRoaXMucXVlcnkpO1xuICB9XG5cbiAgYXN5bmMgc2F2ZShib2R5KSB7XG4gICAgcmV0dXJuIGF3YWl0IHRoaXMubW9kZWwuc2F2ZShib2R5KTtcbiAgfVxufTsiXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "default.js"
+      ],
+      "names": [
+        "DefaultController",
+        "constructor",
+        "model",
+        "_types",
+        "Types",
+        "select",
+        "query",
+        "save",
+        "body"
+      ],
+      "mappings": ";;;;;;AAAA;;AAGe,MAAMA,iBAAN,CAAwB;AACrCC,cAAY,EAACC,OAAOA,KAAR,EAAZ,EAA4B;AAC1B,SAAKA,KAAL,GAAaA,KAAb;AACA,SAAKC,MAAL,GAAcC,eAAd;AACD;;AAED,QAAMC,MAAN,GAAe;AACb,WAAO,MAAM,KAAKH,KAAL,CAAWG,MAAX,CAAkB,KAAKC,KAAvB,CAAb;AACD;;AAED,QAAMC,IAAN,CAAWC,IAAX,EAAiB;AACf,WAAO,MAAM,KAAKN,KAAL,CAAWK,IAAX,CAAgBC,IAAhB,CAAb;AACD;AAZoC,C,kBAAlBR,iB;AAapB",
+      "file": "default.js",
+      "sourceRoot": "/app/server/controllers",
+      "sourcesContent": [
+        "import { Types } from \"mongoose\";\n\n\nexport default class DefaultController {\n  constructor({model: model}) {\n    this.model = model;\n    this._types = Types;\n  }\n\n  async select() {\n    return await this.model.select(this.query);\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n};"
+      ]
+    },
+    "mtime": 1691835733581
+  },
+  "{\"filename\":\"/app/server/views/user/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../default",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "DefaultView"
+              }
+            ]
+          },
+          {
+            "source": "../../controllers/user",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "UserController"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "UserView"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "UserView",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/views/user/index.js",
+      "filenameRelative": "/app/server/views/user/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/views/user",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/views/user",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _default = require('../default');\n\nvar _default2 = _interopRequireDefault(_default);\n\nvar _user = require('../../controllers/user');\n\nvar _user2 = _interopRequireDefault(_user);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass UserView extends _default2.default {\n  constructor(userId) {\n    super(new _user2.default(userId));\n  }\n}\nexports.default = UserView;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIlVzZXJWaWV3IiwiRGVmYXVsdFZpZXciLCJjb25zdHJ1Y3RvciIsInVzZXJJZCIsIlVzZXJDb250cm9sbGVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7OztBQUNBOzs7Ozs7QUFHZSxNQUFNQSxRQUFOLFNBQXVCQyxpQkFBdkIsQ0FBbUM7QUFDakRDLGNBQVlDLE1BQVosRUFBb0I7QUFDakIsVUFBTSxJQUFJQyxjQUFKLENBQW1CRCxNQUFuQixDQUFOO0FBQ0Q7QUFIK0M7a0JBQTdCSCxRIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL3ZpZXdzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgRGVmYXVsdFZpZXcgZnJvbSAnLi4vZGVmYXVsdCc7XG5pbXBvcnQgVXNlckNvbnRyb2xsZXIgZnJvbSAnLi4vLi4vY29udHJvbGxlcnMvdXNlcic7XG5cblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVXNlclZpZXcgZXh0ZW5kcyBEZWZhdWx0VmlldyB7XG5cdGNvbnN0cnVjdG9yKHVzZXJJZCkge1xuICAgIHN1cGVyKG5ldyBVc2VyQ29udHJvbGxlcih1c2VySWQpKTtcbiAgfVxufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "UserView",
+        "DefaultView",
+        "constructor",
+        "userId",
+        "UserController"
+      ],
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGe,MAAMA,QAAN,SAAuBC,iBAAvB,CAAmC;AACjDC,cAAYC,MAAZ,EAAoB;AACjB,UAAM,IAAIC,cAAJ,CAAmBD,MAAnB,CAAN;AACD;AAH+C;kBAA7BH,Q",
+      "file": "index.js",
+      "sourceRoot": "/app/server/views/user",
+      "sourcesContent": [
+        "import DefaultView from '../default';\nimport UserController from '../../controllers/user';\n\n\nexport default class UserView extends DefaultView {\n\tconstructor(userId) {\n    super(new UserController(userId));\n  }\n}"
+      ]
+    },
+    "mtime": 1691682125540
+  },
+  "{\"filename\":\"/app/server/views/default.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "DefaultView"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "DefaultView",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/views/default.js",
+      "filenameRelative": "/app/server/views/default.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "default.js",
+      "sourceFileName": "default.js",
+      "sourceRoot": "/app/server/views",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/views",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "default"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nclass DefaultView {\n  constructor(controller) {\n    this.controller = controller;\n  }\n\n  select(_id) {\n    return this.controller.select(_id);\n  }\n\n  insert(body) {\n    return this.controller.insert(body);\n  }\n}exports.default = DefaultView;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdFZpZXciLCJjb25zdHJ1Y3RvciIsImNvbnRyb2xsZXIiLCJzZWxlY3QiLCJfaWQiLCJpbnNlcnQiLCJib2R5Il0sIm1hcHBpbmdzIjoiOzs7OztBQUNlLE1BQU1BLFdBQU4sQ0FBa0I7QUFDL0JDLGNBQVlDLFVBQVosRUFBd0I7QUFDdEIsU0FBS0EsVUFBTCxHQUFrQkEsVUFBbEI7QUFDRDs7QUFFREMsU0FBT0MsR0FBUCxFQUFZO0FBQ1YsV0FBTyxLQUFLRixVQUFMLENBQWdCQyxNQUFoQixDQUF1QkMsR0FBdkIsQ0FBUDtBQUNEOztBQUVEQyxTQUFPQyxJQUFQLEVBQWE7QUFDWCxXQUFPLEtBQUtKLFVBQUwsQ0FBZ0JHLE1BQWhCLENBQXVCQyxJQUF2QixDQUFQO0FBQ0Q7QUFYOEIsQyxrQkFBWk4sVztBQVlwQiIsImZpbGUiOiJkZWZhdWx0LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL3ZpZXdzIiwic291cmNlc0NvbnRlbnQiOlsiXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBEZWZhdWx0VmlldyB7XG4gIGNvbnN0cnVjdG9yKGNvbnRyb2xsZXIpIHtcbiAgICB0aGlzLmNvbnRyb2xsZXIgPSBjb250cm9sbGVyO1xuICB9XG5cbiAgc2VsZWN0KF9pZCkge1xuICAgIHJldHVybiB0aGlzLmNvbnRyb2xsZXIuc2VsZWN0KF9pZCk7XG4gIH1cblxuICBpbnNlcnQoYm9keSkge1xuICAgIHJldHVybiB0aGlzLmNvbnRyb2xsZXIuaW5zZXJ0KGJvZHkpO1xuICB9XG59OyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "default.js"
+      ],
+      "names": [
+        "DefaultView",
+        "constructor",
+        "controller",
+        "select",
+        "_id",
+        "insert",
+        "body"
+      ],
+      "mappings": ";;;;;AACe,MAAMA,WAAN,CAAkB;AAC/BC,cAAYC,UAAZ,EAAwB;AACtB,SAAKA,UAAL,GAAkBA,UAAlB;AACD;;AAEDC,SAAOC,GAAP,EAAY;AACV,WAAO,KAAKF,UAAL,CAAgBC,MAAhB,CAAuBC,GAAvB,CAAP;AACD;;AAEDC,SAAOC,IAAP,EAAa;AACX,WAAO,KAAKJ,UAAL,CAAgBG,MAAhB,CAAuBC,IAAvB,CAAP;AACD;AAX8B,C,kBAAZN,W;AAYpB",
+      "file": "default.js",
+      "sourceRoot": "/app/server/views",
+      "sourcesContent": [
+        "\nexport default class DefaultView {\n  constructor(controller) {\n    this.controller = controller;\n  }\n\n  select(_id) {\n    return this.controller.select(_id);\n  }\n\n  insert(body) {\n    return this.controller.insert(body);\n  }\n};"
+      ]
+    },
+    "mtime": 1691682336678
+  },
+  "{\"filename\":\"/app/server/utils/error-handler.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/utils\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "errorHandler",
+            "apiErrorHandler"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "errorHandler",
+              "exported": "errorHandler"
+            },
+            {
+              "kind": "local",
+              "local": "apiErrorHandler",
+              "exported": "apiErrorHandler"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/utils/error-handler.js",
+      "filenameRelative": "/app/server/utils/error-handler.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "error-handler.js",
+      "sourceFileName": "error-handler.js",
+      "sourceRoot": "/app/server/utils",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/utils",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "error-handler"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nconst errorHandler = (error, request, response, next) => {\n  if (process.env.DEBUG) {\n    console.log(error);\n  }\n\n  let result = {};\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`);\n      }\n\n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response.status(error.status || 500).send(error);\n};\n\nexports.errorHandler = errorHandler;\nexports.apiErrorHandler = apiErrorHandler;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVycm9yLWhhbmRsZXIuanMiXSwibmFtZXMiOlsiZXJyb3JIYW5kbGVyIiwiZXJyb3IiLCJyZXF1ZXN0IiwicmVzcG9uc2UiLCJuZXh0IiwicHJvY2VzcyIsImVudiIsIkRFQlVHIiwiY29uc29sZSIsImxvZyIsInJlc3VsdCIsIm5hbWUiLCJjb2RlIiwibXNnIiwia2V5Iiwia2V5VmFsdWUiLCJwdXNoIiwic3RhdHVzIiwibWVzc2FnZSIsImpvaW4iLCJhcGlFcnJvckhhbmRsZXIiLCJsb2NhbHMiLCJzZW5kIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxNQUFNQSxlQUFlLENBQUNDLEtBQUQsRUFBUUMsT0FBUixFQUFpQkMsUUFBakIsRUFBMkJDLElBQTNCLEtBQW9DO0FBQ3ZELE1BQUlDLFFBQVFDLEdBQVIsQ0FBWUMsS0FBaEIsRUFBdUI7QUFDckJDLFlBQVFDLEdBQVIsQ0FBWVIsS0FBWjtBQUNEOztBQUVELE1BQUlTLFNBQVMsRUFBYjs7QUFFQSxNQUFJLE9BQU9ULEtBQVAsS0FBaUIsUUFBakIsSUFBNkJBLE1BQU1VLElBQU4sS0FBZSxZQUFoRCxFQUE4RDtBQUM1RCxRQUFJVixNQUFNVyxJQUFOLEtBQWUsS0FBbkIsRUFBMEI7QUFDeEIsVUFBSUMsTUFBTSxFQUFWO0FBQ0EsV0FBSyxJQUFJQyxHQUFULElBQWdCYixNQUFNYyxRQUF0QixFQUFnQztBQUM5QkYsWUFBSUcsSUFBSixDQUFVLEdBQUVGLEdBQUksS0FBSWIsTUFBTWMsUUFBTixDQUFlRCxHQUFmLENBQW9CLGtCQUF4QztBQUNEOztBQUVESixlQUFTLEVBQUVPLFFBQVEsR0FBVixFQUFlQyxTQUFTTCxJQUFJTSxJQUFKLENBQVMsR0FBVCxDQUF4QixFQUFUO0FBQ0Q7QUFDRjs7QUFFRCxNQUFJVCxNQUFKLEVBQVk7QUFDVixXQUFPTixLQUFLTSxNQUFMLENBQVA7QUFDRDs7QUFFRE4sT0FBS0gsS0FBTDtBQUNELENBdkJEOztBQXlCQSxNQUFNbUIsa0JBQWtCLENBQUNuQixLQUFELEVBQVFDLE9BQVIsRUFBaUJDLFFBQWpCLEVBQTJCQyxJQUEzQixLQUFvQztBQUMxREQsV0FBU2tCLE1BQVQsQ0FBZ0JILE9BQWhCLEdBQTBCakIsTUFBTWlCLE9BQWhDO0FBQ0FmLFdBQVNrQixNQUFULENBQWdCcEIsS0FBaEIsR0FBd0JBLEtBQXhCOztBQUVBRSxXQUNHYyxNQURILENBQ1VoQixNQUFNZ0IsTUFBTixJQUFnQixHQUQxQixFQUVHSyxJQUZILENBRVFyQixLQUZSO0FBR0QsQ0FQRDs7UUFVRUQsWSxHQUFBQSxZO1FBQ0FvQixlLEdBQUFBLGUiLCJmaWxlIjoiZXJyb3ItaGFuZGxlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci91dGlscyIsInNvdXJjZXNDb250ZW50IjpbIlxuY29uc3QgZXJyb3JIYW5kbGVyID0gKGVycm9yLCByZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICBpZiAocHJvY2Vzcy5lbnYuREVCVUcpIHtcbiAgICBjb25zb2xlLmxvZyhlcnJvcik7XG4gIH1cblxuICBsZXQgcmVzdWx0ID0ge307XG5cbiAgaWYgKHR5cGVvZiBlcnJvciA9PT0gJ29iamVjdCcgJiYgZXJyb3IubmFtZSA9PT0gJ01vbmdvRXJyb3InKSB7XG4gICAgaWYgKGVycm9yLmNvZGUgPT09IDExMDAwKSB7XG4gICAgICBsZXQgbXNnID0gW107XG4gICAgICBmb3IgKGxldCBrZXkgaW4gZXJyb3Iua2V5VmFsdWUpIHtcbiAgICAgICAgbXNnLnB1c2goYCR7a2V5fSAnJHtlcnJvci5rZXlWYWx1ZVtrZXldfScgYWxyZWFkeSBleGlzdHNgKVxuICAgICAgfVxuICAgICAgXG4gICAgICByZXN1bHQgPSB7IHN0YXR1czogNDA5LCBtZXNzYWdlOiBtc2cuam9pbignLCcpIH07XG4gICAgfVxuICB9XG5cbiAgaWYgKHJlc3VsdCkge1xuICAgIHJldHVybiBuZXh0KHJlc3VsdCk7XG4gIH1cblxuICBuZXh0KGVycm9yKTtcbn07XG5cbmNvbnN0IGFwaUVycm9ySGFuZGxlciA9IChlcnJvciwgcmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2UubG9jYWxzLm1lc3NhZ2UgPSBlcnJvci5tZXNzYWdlO1xuICByZXNwb25zZS5sb2NhbHMuZXJyb3IgPSBlcnJvcjtcblxuICByZXNwb25zZVxuICAgIC5zdGF0dXMoZXJyb3Iuc3RhdHVzIHx8IDUwMClcbiAgICAuc2VuZChlcnJvcik7XG59O1xuXG5leHBvcnQge1xuICBlcnJvckhhbmRsZXIsXG4gIGFwaUVycm9ySGFuZGxlclxufVxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "error-handler.js"
+      ],
+      "names": [
+        "errorHandler",
+        "error",
+        "request",
+        "response",
+        "next",
+        "process",
+        "env",
+        "DEBUG",
+        "console",
+        "log",
+        "result",
+        "name",
+        "code",
+        "msg",
+        "key",
+        "keyValue",
+        "push",
+        "status",
+        "message",
+        "join",
+        "apiErrorHandler",
+        "locals",
+        "send"
+      ],
+      "mappings": ";;;;;;AACA,MAAMA,eAAe,CAACC,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;AACvD,MAAIC,QAAQC,GAAR,CAAYC,KAAhB,EAAuB;AACrBC,YAAQC,GAAR,CAAYR,KAAZ;AACD;;AAED,MAAIS,SAAS,EAAb;;AAEA,MAAI,OAAOT,KAAP,KAAiB,QAAjB,IAA6BA,MAAMU,IAAN,KAAe,YAAhD,EAA8D;AAC5D,QAAIV,MAAMW,IAAN,KAAe,KAAnB,EAA0B;AACxB,UAAIC,MAAM,EAAV;AACA,WAAK,IAAIC,GAAT,IAAgBb,MAAMc,QAAtB,EAAgC;AAC9BF,YAAIG,IAAJ,CAAU,GAAEF,GAAI,KAAIb,MAAMc,QAAN,CAAeD,GAAf,CAAoB,kBAAxC;AACD;;AAEDJ,eAAS,EAAEO,QAAQ,GAAV,EAAeC,SAASL,IAAIM,IAAJ,CAAS,GAAT,CAAxB,EAAT;AACD;AACF;;AAED,MAAIT,MAAJ,EAAY;AACV,WAAON,KAAKM,MAAL,CAAP;AACD;;AAEDN,OAAKH,KAAL;AACD,CAvBD;;AAyBA,MAAMmB,kBAAkB,CAACnB,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;AAC1DD,WAASkB,MAAT,CAAgBH,OAAhB,GAA0BjB,MAAMiB,OAAhC;AACAf,WAASkB,MAAT,CAAgBpB,KAAhB,GAAwBA,KAAxB;;AAEAE,WACGc,MADH,CACUhB,MAAMgB,MAAN,IAAgB,GAD1B,EAEGK,IAFH,CAEQrB,KAFR;AAGD,CAPD;;QAUED,Y,GAAAA,Y;QACAoB,e,GAAAA,e",
+      "file": "error-handler.js",
+      "sourceRoot": "/app/server/utils",
+      "sourcesContent": [
+        "\nconst errorHandler = (error, request, response, next) => {\n  if (process.env.DEBUG) {\n    console.log(error);\n  }\n\n  let result = {};\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`)\n      }\n      \n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response\n    .status(error.status || 500)\n    .send(error);\n};\n\nexport {\n  errorHandler,\n  apiErrorHandler\n}\n"
+      ]
+    },
+    "mtime": 1691834271058
+  },
+  "{\"filename\":\"/app/server/controllers/user/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/controllers/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": ".",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "UserController"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/controllers/user/router.js",
+      "filenameRelative": "/app/server/controllers/user/router.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "router.js",
+      "sourceFileName": "router.js",
+      "sourceRoot": "/app/server/controllers/user",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/controllers/user",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "router"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _ = require('.');\n\nvar _2 = _interopRequireDefault(_);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express2.default.Router();\n\nrouter.post('/', async (request, response, next) => {\n  const user = new _2.default(request.body);\n  try {\n    const result = await user.save();\n    response.send(result);\n  } catch (err) {\n    console.log(err);\n    next(err);\n  }\n});\n\nrouter.post('/:id', async (request, response, next) => {\n  response.send('test');\n});\n\nrouter.get('/:id', async (request, response, next) => {\n  const user = new _2.default({ username: request.params.id });\n  const result = await user.select();\n  response.send(result);\n});\n\nrouter.put('/:id', async (request, response, next) => {\n  response.send('put');\n});\n\nrouter.delete('/:id', async (request, response, next) => {\n  response.send('delete');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJleHByZXNzIiwiUm91dGVyIiwicG9zdCIsInJlcXVlc3QiLCJyZXNwb25zZSIsIm5leHQiLCJ1c2VyIiwiVXNlckNvbnRyb2xsZXIiLCJib2R5IiwicmVzdWx0Iiwic2F2ZSIsInNlbmQiLCJlcnIiLCJjb25zb2xlIiwibG9nIiwiZ2V0IiwidXNlcm5hbWUiLCJwYXJhbXMiLCJpZCIsInNlbGVjdCIsInB1dCIsImRlbGV0ZSIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFFQTs7Ozs7O0FBR0EsTUFBTUEsU0FBU0Msa0JBQVFDLE1BQVIsRUFBZjs7QUFHQUYsT0FBT0csSUFBUCxDQUFZLEdBQVosRUFBaUIsT0FBT0MsT0FBUCxFQUFnQkMsUUFBaEIsRUFBMEJDLElBQTFCLEtBQW1DO0FBQ2xELFFBQU1DLE9BQU8sSUFBSUMsVUFBSixDQUFtQkosUUFBUUssSUFBM0IsQ0FBYjtBQUNBLE1BQUk7QUFDRixVQUFNQyxTQUFTLE1BQU1ILEtBQUtJLElBQUwsRUFBckI7QUFDQU4sYUFBU08sSUFBVCxDQUFjRixNQUFkO0FBQ0QsR0FIRCxDQUdFLE9BQU9HLEdBQVAsRUFBWTtBQUNaQyxZQUFRQyxHQUFSLENBQVlGLEdBQVo7QUFDQVAsU0FBS08sR0FBTDtBQUNEO0FBQ0YsQ0FURDs7QUFZQWIsT0FBT0csSUFBUCxDQUFZLE1BQVosRUFBb0IsT0FBT0MsT0FBUCxFQUFnQkMsUUFBaEIsRUFBMEJDLElBQTFCLEtBQW1DO0FBQ3JERCxXQUFTTyxJQUFULENBQWMsTUFBZDtBQUNELENBRkQ7O0FBS0FaLE9BQU9nQixHQUFQLENBQVcsTUFBWCxFQUFtQixPQUFPWixPQUFQLEVBQWdCQyxRQUFoQixFQUEwQkMsSUFBMUIsS0FBbUM7QUFDcEQsUUFBTUMsT0FBTyxJQUFJQyxVQUFKLENBQW1CLEVBQUNTLFVBQVViLFFBQVFjLE1BQVIsQ0FBZUMsRUFBMUIsRUFBbkIsQ0FBYjtBQUNBLFFBQU1ULFNBQVMsTUFBTUgsS0FBS2EsTUFBTCxFQUFyQjtBQUNBZixXQUFTTyxJQUFULENBQWNGLE1BQWQ7QUFDRCxDQUpEOztBQU9BVixPQUFPcUIsR0FBUCxDQUFXLE1BQVgsRUFBbUIsT0FBT2pCLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUNwREQsV0FBU08sSUFBVCxDQUFjLEtBQWQ7QUFDRCxDQUZEOztBQUtBWixPQUFPc0IsTUFBUCxDQUFjLE1BQWQsRUFBc0IsT0FBT2xCLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUN2REQsV0FBU08sSUFBVCxDQUFjLFFBQWQ7QUFDRCxDQUZEOztBQUtBVyxPQUFPQyxPQUFQLEdBQWlCeEIsTUFBakIiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL2NvbnRyb2xsZXJzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxuaW1wb3J0IFVzZXJDb250cm9sbGVyIGZyb20gJy4nO1xuXG5cbmNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XG5cblxucm91dGVyLnBvc3QoJy8nLCBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgY29uc3QgdXNlciA9IG5ldyBVc2VyQ29udHJvbGxlcihyZXF1ZXN0LmJvZHkpXG4gIHRyeSB7XG4gICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgdXNlci5zYXZlKCk7XG4gICAgcmVzcG9uc2Uuc2VuZChyZXN1bHQpO1xuICB9IGNhdGNoIChlcnIpIHtcbiAgICBjb25zb2xlLmxvZyhlcnIpO1xuICAgIG5leHQoZXJyKTtcbiAgfSAgXG59KTtcblxuXG5yb3V0ZXIucG9zdCgnLzppZCcsIGFzeW5jIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICByZXNwb25zZS5zZW5kKCd0ZXN0Jyk7XG59KTtcblxuXG5yb3V0ZXIuZ2V0KCcvOmlkJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIGNvbnN0IHVzZXIgPSBuZXcgVXNlckNvbnRyb2xsZXIoe3VzZXJuYW1lOiByZXF1ZXN0LnBhcmFtcy5pZH0pO1xuICBjb25zdCByZXN1bHQgPSBhd2FpdCB1c2VyLnNlbGVjdCgpXG4gIHJlc3BvbnNlLnNlbmQocmVzdWx0KTtcbn0pO1xuXG5cbnJvdXRlci5wdXQoJy86aWQnLCBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2Uuc2VuZCgncHV0Jyk7XG59KTtcblxuXG5yb3V0ZXIuZGVsZXRlKCcvOmlkJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIHJlc3BvbnNlLnNlbmQoJ2RlbGV0ZScpO1xufSk7XG5cblxubW9kdWxlLmV4cG9ydHMgPSByb3V0ZXI7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "router.js"
+      ],
+      "names": [
+        "router",
+        "express",
+        "Router",
+        "post",
+        "request",
+        "response",
+        "next",
+        "user",
+        "UserController",
+        "body",
+        "result",
+        "save",
+        "send",
+        "err",
+        "console",
+        "log",
+        "get",
+        "username",
+        "params",
+        "id",
+        "select",
+        "put",
+        "delete",
+        "module",
+        "exports"
+      ],
+      "mappings": ";;AAAA;;;;AAEA;;;;;;AAGA,MAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAGAF,OAAOG,IAAP,CAAY,GAAZ,EAAiB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AAClD,QAAMC,OAAO,IAAIC,UAAJ,CAAmBJ,QAAQK,IAA3B,CAAb;AACA,MAAI;AACF,UAAMC,SAAS,MAAMH,KAAKI,IAAL,EAArB;AACAN,aAASO,IAAT,CAAcF,MAAd;AACD,GAHD,CAGE,OAAOG,GAAP,EAAY;AACZC,YAAQC,GAAR,CAAYF,GAAZ;AACAP,SAAKO,GAAL;AACD;AACF,CATD;;AAYAb,OAAOG,IAAP,CAAY,MAAZ,EAAoB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACrDD,WAASO,IAAT,CAAc,MAAd;AACD,CAFD;;AAKAZ,OAAOgB,GAAP,CAAW,MAAX,EAAmB,OAAOZ,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpD,QAAMC,OAAO,IAAIC,UAAJ,CAAmB,EAACS,UAAUb,QAAQc,MAAR,CAAeC,EAA1B,EAAnB,CAAb;AACA,QAAMT,SAAS,MAAMH,KAAKa,MAAL,EAArB;AACAf,WAASO,IAAT,CAAcF,MAAd;AACD,CAJD;;AAOAV,OAAOqB,GAAP,CAAW,MAAX,EAAmB,OAAOjB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpDD,WAASO,IAAT,CAAc,KAAd;AACD,CAFD;;AAKAZ,OAAOsB,MAAP,CAAc,MAAd,EAAsB,OAAOlB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACvDD,WAASO,IAAT,CAAc,QAAd;AACD,CAFD;;AAKAW,OAAOC,OAAP,GAAiBxB,MAAjB",
+      "file": "router.js",
+      "sourceRoot": "/app/server/controllers/user",
+      "sourcesContent": [
+        "import express from 'express';\n\nimport UserController from '.';\n\n\nconst router = express.Router();\n\n\nrouter.post('/', async (request, response, next) => {\n  const user = new UserController(request.body)\n  try {\n    const result = await user.save();\n    response.send(result);\n  } catch (err) {\n    console.log(err);\n    next(err);\n  }  \n});\n\n\nrouter.post('/:id', async (request, response, next) => {\n  response.send('test');\n});\n\n\nrouter.get('/:id', async (request, response, next) => {\n  const user = new UserController({username: request.params.id});\n  const result = await user.select()\n  response.send(result);\n});\n\n\nrouter.put('/:id', async (request, response, next) => {\n  response.send('put');\n});\n\n\nrouter.delete('/:id', async (request, response, next) => {\n  response.send('delete');\n});\n\n\nmodule.exports = router;"
+      ]
+    },
+    "mtime": 1691834846245
+  },
+  "{\"filename\":\"/app/server/utils/api-error-handler.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/utils\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/utils/api-error-handler.js",
+      "filenameRelative": "/app/server/utils/api-error-handler.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "api-error-handler.js",
+      "sourceFileName": "api-error-handler.js",
+      "sourceRoot": "/app/server/utils",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/utils",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "api-error-handler"
+    },
+    "ignored": false,
+    "code": "\"use strict\";\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcGktZXJyb3ItaGFuZGxlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci91dGlscyIsInNvdXJjZXNDb250ZW50IjpbXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [],
+      "names": [],
+      "mappings": "",
+      "file": "api-error-handler.js",
+      "sourceRoot": "/app/server/utils",
+      "sourcesContent": []
+    },
+    "mtime": 1691829101617
+  }
+}

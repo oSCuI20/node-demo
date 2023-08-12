@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  nodejs:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./compose/develop/nodejs/Dockerfile
+      target: nodejs-build
+      args:
+        APP_HOME: /app
+        NODE_VERSION: 18
+    # depends_on:
+    #   mongodb:
+    #     condition: service_healthy
+    env_file:
+      - ./.envs/develop/.env
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/app
+  
+  mongodb:
+    restart: always
+    healthcheck:
+      test: []
+      interval: 5s
+      timeout: 5s
+        #      restries: 30
+    build:
+      context: .
+      dockerfile: ./compose/develop/mongodb/Dockerfile
+      target: mongodb-build
+    env_file:
+      - ./.envs/develop/.env
+    volumes:
+      - ./mongodb:/app
