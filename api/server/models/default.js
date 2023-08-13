@@ -2,9 +2,8 @@
 
 export default class DefaultModel {
   constructor({model = undefined}) { 
-    this.object = new model();
+    this.object = new model({username: 'testing'});
     this.model  = model;
-    console.log(this);
   }
   
   async select(query) {
@@ -22,8 +21,8 @@ export default class DefaultModel {
     return await this.object.save();
   }
 
-  update() {
-    throw 'update method not defined';
+  async update(condition, values) {
+    return await this.model.updateOne(condition, values);
   }
 
   delete() {

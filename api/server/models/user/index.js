@@ -5,8 +5,8 @@ import DefaultModel        from '../default';
 const userModel = db.model('users', 
   new Schema(
     {
-      username: {type: String, unique: true, required: true, dropDups: true},
-      email   : {type: String, unique: true, required: true, lowercase: true},
+      username: {type: String, unique: true, index: true, required: true, dropDups: true},
+      email   : {type: String, unique: true, index: true, required: true, lowercase: true},
       password: {type: String, required: true},
       name    : {type: String, required: false},
       
@@ -15,15 +15,16 @@ const userModel = db.model('users',
       is_signed: {type: Boolean, default: false},
       is_admin : {type: Boolean, default: false},
 
-      created_at: {type: Date, default: Date.now},
-      updated_at: {type: Date, default: Date.now},
+      created_at: {type: Date, index: true,  default: Date.now},
+      updated_at: {type: Date, index: true, default: Date.now},
     },
     {
       strict: true,
       collection: 'users',
     }
   )
-  .pre('create', function (next) {
+  // hooks for creation users
+  .pre('save', function (next) {
     let current_date = new Date();
     this.updated_at = current_date;
 
@@ -37,12 +38,18 @@ const userModel = db.model('users',
     
     next();
   })
-  .post('create', function (error, doc, next) {
+  .post('save', function (error, doc, next) {
     if (typeof error === 'object' && error.name !== 'MongoError') {
       return next();
     }
   
     next(error);
+  })
+  .pre('updateOne', function (next) {
+    let current_date = new Date();
+    this.updated_at = current_date;
+
+    next();
   })
 );
 

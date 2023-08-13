@@ -3,15 +3,15 @@ import { Types } from "mongoose";
 
 export default class DefaultController {
   constructor({model: model}) {
-    this.model = model;
+    this.model  = model;
     this._types = Types;
 
-    if (typeof this.page === 'undefined')   this.page = 0;
+    if (typeof this.page  === 'undefined')  this.page = 0;
     if (typeof this.limit === 'undefined')  this.limit = 0;
   }
 
   async select() {
-    return await this.model.select();
+    return await this.model.select(this.query);
   }
 
   async find() {
@@ -22,7 +22,7 @@ export default class DefaultController {
     });
   }
 
-  async save(body) {
-    return await this.model.save(body);
+  async save() {
+    return await this.model.save();
   }
 };
