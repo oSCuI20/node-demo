@@ -1,10 +1,9 @@
 
 const errorHandler = (error, request, response, next) => {
-  if (process.env.DEBUG) {
-    console.log(error);
-  }
+  
+  console.log(error);
 
-  let result = {};
+  let result = undefined;
 
   if (typeof error === 'object' && error.name === 'MongoError') {
     if (error.code === 11000) {

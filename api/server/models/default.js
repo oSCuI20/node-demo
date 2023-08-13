@@ -2,19 +2,24 @@
 
 export default class DefaultModel {
   constructor({model = undefined}) { 
-    this.model = model;
+    this.object = new model();
+    this.model  = model;
+    console.log(this);
   }
   
   async select(query) {
-    return await this.model.collection.findOne(query);
+    return await this.model.findOne(query);
   }
 
-  selectMany() {
-    throw 'selectMany method not defined';
+  async find({query = {}, page = 1, limit = 10}) {
+    return await this.model.find(query)
+                           .limit(limit * 1)
+                           .skip((page - 1) * limit)
+                           .exec();
   }
 
   async save() {
-    return await this.model.save();
+    return await this.object.save();
   }
 
   update() {

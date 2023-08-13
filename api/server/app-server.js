@@ -1,9 +1,4 @@
-import express     from 'express';
-import helmet      from 'helmet';
-import cors        from 'cors';
 import * as http   from 'http';
-import createError from 'http-errors';
-import morgan      from 'morgan';
 import db          from 'mongoose';
 
 import config       from './config/index';
@@ -16,28 +11,12 @@ import {
 
 export default class APPServer {
   
-    constructor(app) {
-      this._app = app;
+    constructor({app = undefined}) {
+      this._app = app();
 
-      this._app.use(helmet({
-        xPoweredBy: true,
-        strictTransportSecurity: {
-          maxAge: 86400,
-          includeSubDomains: false,
-        },
-        contentSecurityPolicy: true,
-        xXssProtection: true,
-      }));
-      this._app.use(morgan('dev'));
-      this._app.use(express.json());      
-      this._app.use(express.urlencoded({extended: false}));
-      this._app.use(cors({
-        allowedHeaders: ["Content-Type", "Token", "Authorization"],
-        exposedHeaders: ["Token", "Authorization"],
-        origin: "*",
-        methods: ["GET, HEAD, PUT, PATCH, POST, DELETE"],
-        preflightContinue: false,
-      }));
+      this._app.use(app.json());      
+      this._app.use(app.urlencoded({extended: false}));
+
     }
     
     async connect() {
@@ -48,6 +27,10 @@ export default class APPServer {
         disconnected => console.info('database disconnect sucessful'),
         error => console.error(error),
       );
+    }
+
+    setMiddleware(middleware) {
+      middleware(this._app);
     }
 
     setRouter(endpoints) {

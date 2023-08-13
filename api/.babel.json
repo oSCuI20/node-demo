@@ -34,6 +34,19 @@
             ]
           },
           {
+            "source": "./middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "middleware"
+              }
+            ]
+          },
+          {
             "source": "./router",
             "imported": [
               "default"
@@ -90,7 +103,7 @@
       "basename": "app"
     },
     "ignored": false,
-    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _appServer = require('./app-server');\n\nvar _appServer2 = _interopRequireDefault(_appServer);\n\nvar _router = require('./router');\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst server = new _appServer2.default((0, _express2.default)());\n\nserver.setRouter(_router2.default);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6WyJzZXJ2ZXIiLCJBUFBTZXJ2ZXIiLCJzZXRSb3V0ZXIiLCJyb3V0ZXIiLCJlcnJvckhhbmRsZXIiLCJsaXN0ZW4iLCJjb25uZWN0Il0sIm1hcHBpbmdzIjoiOztBQUFBOzs7O0FBRUE7Ozs7QUFDQTs7Ozs7O0FBR0EsTUFBTUEsU0FBUyxJQUFJQyxtQkFBSixDQUFjLHdCQUFkLENBQWY7O0FBRUFELE9BQU9FLFNBQVAsQ0FBaUJDLGdCQUFqQjtBQUNBSCxPQUFPSSxZQUFQO0FBQ0FKLE9BQU9LLE1BQVA7QUFDQUwsT0FBT00sT0FBUCIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxuaW1wb3J0IEFQUFNlcnZlciBmcm9tICcuL2FwcC1zZXJ2ZXInO1xuaW1wb3J0IHJvdXRlciAgICBmcm9tICcuL3JvdXRlcic7XG5cblxuY29uc3Qgc2VydmVyID0gbmV3IEFQUFNlcnZlcihleHByZXNzKCkpO1xuXG5zZXJ2ZXIuc2V0Um91dGVyKHJvdXRlcik7XG5zZXJ2ZXIuZXJyb3JIYW5kbGVyKCk7XG5zZXJ2ZXIubGlzdGVuKCk7XG5zZXJ2ZXIuY29ubmVjdCgpO1xuIl19",
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _appServer = require('./app-server');\n\nvar _appServer2 = _interopRequireDefault(_appServer);\n\nvar _middleware = require('./middleware');\n\nvar _middleware2 = _interopRequireDefault(_middleware);\n\nvar _router = require('./router');\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst server = new _appServer2.default({ app: _express2.default });\n\nserver.setMiddleware(_middleware2.default);\nserver.setRouter(_router2.default);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6WyJzZXJ2ZXIiLCJBUFBTZXJ2ZXIiLCJhcHAiLCJleHByZXNzIiwic2V0TWlkZGxld2FyZSIsIm1pZGRsZXdhcmUiLCJzZXRSb3V0ZXIiLCJyb3V0ZXIiLCJlcnJvckhhbmRsZXIiLCJsaXN0ZW4iLCJjb25uZWN0Il0sIm1hcHBpbmdzIjoiOztBQUFBOzs7O0FBRUE7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7QUFHQSxNQUFNQSxTQUFTLElBQUlDLG1CQUFKLENBQWMsRUFBQ0MsS0FBS0MsaUJBQU4sRUFBZCxDQUFmOztBQUVBSCxPQUFPSSxhQUFQLENBQXFCQyxvQkFBckI7QUFDQUwsT0FBT00sU0FBUCxDQUFpQkMsZ0JBQWpCO0FBQ0FQLE9BQU9RLFlBQVA7QUFDQVIsT0FBT1MsTUFBUDtBQUNBVCxPQUFPVSxPQUFQIiwiZmlsZSI6ImFwcC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuXG5pbXBvcnQgQVBQU2VydmVyICBmcm9tICcuL2FwcC1zZXJ2ZXInO1xuaW1wb3J0IG1pZGRsZXdhcmUgZnJvbSAnLi9taWRkbGV3YXJlJztcbmltcG9ydCByb3V0ZXIgICAgIGZyb20gJy4vcm91dGVyJztcblxuXG5jb25zdCBzZXJ2ZXIgPSBuZXcgQVBQU2VydmVyKHthcHA6IGV4cHJlc3N9KTtcblxuc2VydmVyLnNldE1pZGRsZXdhcmUobWlkZGxld2FyZSk7XG5zZXJ2ZXIuc2V0Um91dGVyKHJvdXRlcik7XG5zZXJ2ZXIuZXJyb3JIYW5kbGVyKCk7XG5zZXJ2ZXIubGlzdGVuKCk7XG5zZXJ2ZXIuY29ubmVjdCgpO1xuIl19",
     "ast": null,
     "map": {
       "version": 3,
@@ -100,20 +113,24 @@
       "names": [
         "server",
         "APPServer",
+        "app",
+        "express",
+        "setMiddleware",
+        "middleware",
         "setRouter",
         "router",
         "errorHandler",
         "listen",
         "connect"
       ],
-      "mappings": ";;AAAA;;;;AAEA;;;;AACA;;;;;;AAGA,MAAMA,SAAS,IAAIC,mBAAJ,CAAc,wBAAd,CAAf;;AAEAD,OAAOE,SAAP,CAAiBC,gBAAjB;AACAH,OAAOI,YAAP;AACAJ,OAAOK,MAAP;AACAL,OAAOM,OAAP",
+      "mappings": ";;AAAA;;;;AAEA;;;;AACA;;;;AACA;;;;;;AAGA,MAAMA,SAAS,IAAIC,mBAAJ,CAAc,EAACC,KAAKC,iBAAN,EAAd,CAAf;;AAEAH,OAAOI,aAAP,CAAqBC,oBAArB;AACAL,OAAOM,SAAP,CAAiBC,gBAAjB;AACAP,OAAOQ,YAAP;AACAR,OAAOS,MAAP;AACAT,OAAOU,OAAP",
       "file": "app.js",
       "sourceRoot": "/app/server",
       "sourcesContent": [
-        "import express from 'express';\n\nimport APPServer from './app-server';\nimport router    from './router';\n\n\nconst server = new APPServer(express());\n\nserver.setRouter(router);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n"
+        "import express from 'express';\n\nimport APPServer  from './app-server';\nimport middleware from './middleware';\nimport router     from './router';\n\n\nconst server = new APPServer({app: express});\n\nserver.setMiddleware(middleware);\nserver.setRouter(router);\nserver.errorHandler();\nserver.listen();\nserver.connect();\n"
       ]
     },
-    "mtime": 1691830419332
+    "mtime": 1691921537583
   },
   "{\"filename\":\"/app/server/routes/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -545,7 +562,7 @@
       "basename": "router"
     },
     "ignored": false,
-    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n   value: true\n});\nexports.default = router;\n\nvar _config = require(\"./config\");\n\nvar _config2 = _interopRequireDefault(_config);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userRouter = require(`${_config2.default.app.rootfs}/server/controllers/user/router`);\n\nfunction router(app) {\n   app.use('/user', userRouter);\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJ1c2VyUm91dGVyIiwicmVxdWlyZSIsImNvbmZpZyIsImFwcCIsInJvb3RmcyIsInVzZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBSXdCQSxNOztBQUp4Qjs7Ozs7O0FBRUEsTUFBTUMsYUFBY0MsUUFBUyxHQUFFQyxpQkFBT0MsR0FBUCxDQUFXQyxNQUFPLGlDQUE3QixDQUFwQjs7QUFFZSxTQUFTTCxNQUFULENBQWdCSSxHQUFoQixFQUFxQjtBQUNqQ0EsT0FBSUUsR0FBSixDQUFRLE9BQVIsRUFBaUJMLFVBQWpCO0FBQ0YiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNvbmZpZyBmcm9tIFwiLi9jb25maWdcIjtcblxuY29uc3QgdXNlclJvdXRlciAgPSByZXF1aXJlKGAke2NvbmZpZy5hcHAucm9vdGZzfS9zZXJ2ZXIvY29udHJvbGxlcnMvdXNlci9yb3V0ZXJgKTtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gcm91dGVyKGFwcCkge1xuICAgYXBwLnVzZSgnL3VzZXInLCB1c2VyUm91dGVyKTtcbn0iXX0=",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n   value: true\n});\nexports.default = router;\n\nvar _config = require('./config');\n\nvar _config2 = _interopRequireDefault(_config);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userRouter = require(`${_config2.default.app.rootfs}/server/controllers/user/router`);\n\nfunction router(app) {\n   app.use(['/user', '/users'], userRouter());\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJ1c2VyUm91dGVyIiwicmVxdWlyZSIsImNvbmZpZyIsImFwcCIsInJvb3RmcyIsInVzZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBS3dCQSxNOztBQUx4Qjs7Ozs7O0FBRUEsTUFBTUMsYUFBYUMsUUFBUyxHQUFFQyxpQkFBT0MsR0FBUCxDQUFXQyxNQUFPLGlDQUE3QixDQUFuQjs7QUFHZSxTQUFTTCxNQUFULENBQWdCSSxHQUFoQixFQUFxQjtBQUNqQ0EsT0FBSUUsR0FBSixDQUFRLENBQUMsT0FBRCxFQUFVLFFBQVYsQ0FBUixFQUE2QkwsWUFBN0I7QUFDRiIsImZpbGUiOiJyb3V0ZXIuanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgY29uZmlnIGZyb20gXCIuL2NvbmZpZ1wiO1xuXG5jb25zdCB1c2VyUm91dGVyID0gcmVxdWlyZShgJHtjb25maWcuYXBwLnJvb3Rmc30vc2VydmVyL2NvbnRyb2xsZXJzL3VzZXIvcm91dGVyYCk7XG5cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gcm91dGVyKGFwcCkge1xuICAgYXBwLnVzZShbJy91c2VyJywgJy91c2VycyddLCB1c2VyUm91dGVyKCkpO1xufSJdfQ==",
     "ast": null,
     "map": {
       "version": 3,
@@ -561,14 +578,14 @@
         "rootfs",
         "use"
       ],
-      "mappings": ";;;;;kBAIwBA,M;;AAJxB;;;;;;AAEA,MAAMC,aAAcC,QAAS,GAAEC,iBAAOC,GAAP,CAAWC,MAAO,iCAA7B,CAApB;;AAEe,SAASL,MAAT,CAAgBI,GAAhB,EAAqB;AACjCA,OAAIE,GAAJ,CAAQ,OAAR,EAAiBL,UAAjB;AACF",
+      "mappings": ";;;;;kBAKwBA,M;;AALxB;;;;;;AAEA,MAAMC,aAAaC,QAAS,GAAEC,iBAAOC,GAAP,CAAWC,MAAO,iCAA7B,CAAnB;;AAGe,SAASL,MAAT,CAAgBI,GAAhB,EAAqB;AACjCA,OAAIE,GAAJ,CAAQ,CAAC,OAAD,EAAU,QAAV,CAAR,EAA6BL,YAA7B;AACF",
       "file": "router.js",
       "sourceRoot": "/app/server",
       "sourcesContent": [
-        "import config from \"./config\";\n\nconst userRouter  = require(`${config.app.rootfs}/server/controllers/user/router`);\n\nexport default function router(app) {\n   app.use('/user', userRouter);\n}"
+        "import config from \"./config\";\n\nconst userRouter = require(`${config.app.rootfs}/server/controllers/user/router`);\n\n\nexport default function router(app) {\n   app.use(['/user', '/users'], userRouter());\n}"
       ]
     },
-    "mtime": 1691734537680
+    "mtime": 1691923584847
   },
   "{\"filename\":\"/app/server/config/config.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/config\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -802,7 +819,7 @@
         "const path = require('path');\n\nfunction config() {\n  return {\n    app: {\n      host: process.env.APP_HOST,\n      port: process.env.APP_PORT || '3000',\n      admin: process.env.APP_ADMIN_URL,\n      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)\n    },\n    mongodb: {\n      host: process.env.MONGO_HOST,\n      port: process.env.MONGO_PORT,\n      name: process.env.MONGO_NAME,\n      options: {\n        user: process.env.MONGO_USER,\n        pass: process.env.MONGO_PASS,\n        useNewUrlParser: true,\n        useCreateIndex: true,\n        useUnifiedTopology: true,\n        useFindAndModify: false,\n        poolSize: process.env.MONGO_POOL_SIZE || 10,\n        //bufferMaxEntries: process.env.MONGO_BUFFER_MAX_ENTRIES || 0\n      },\n    },\n    mail: {\n      admin: process.env.MAIL_ADMIN,\n      from: process.env.MAIL_FROM,\n      credentials: {\n        host: process.env.MAIL_CREDENTIALS_HOST,\n        port: process.env.MAIL_CREDENTIALS_PORT || 587,\n        auth: {\n          user: process.env.MAIL_CREDENTIALS_AUTH_USER,\n          pass: process.env.MAIL_CREDENTIALS_AUTH_PASS,\n        },\n        tls: process.env.MAIL_CREDENTIALS_TLS_OPTIONS || {rejectUnauthorized: false}\n      }\n    }\n  };\n};\n\nexport default config();"
       ]
     },
-    "mtime": 1691423012563
+    "mtime": 1691916335029
   },
   "{\"filename\":\"/app/server/models/user/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/models/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -896,7 +913,7 @@
       "basename": "index"
     },
     "ignored": false,
-    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _default = require('../default');\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userModel = _mongoose2.default.model('users', new _mongoose.Schema({\n  username: { type: String, unique: true, required: true, dropDups: true },\n  email: { type: String, unique: true, required: true, lowercase: true },\n  password: { type: String, required: true },\n  name: { type: String, required: false },\n\n  is_active: { type: Boolean, default: true },\n  is_delete: { type: Boolean, default: false },\n  is_signed: { type: Boolean, default: false },\n  is_admin: { type: Boolean, default: false },\n\n  created_at: { type: Date, default: Date.now },\n  updated_at: { type: Date, default: Date.now }\n}, {\n  strict: true,\n  collection: 'users'\n}).pre('save', function (next) {\n  let current_date = new Date();\n  this.updated_at = current_date;\n\n  if (!this.created_at) {\n    this.created_at = current_date;\n  }\n\n  if (this.password) {\n    // TODO password hashed\n  }\n\n  next();\n}).post('save', function (error, doc, next) {\n  if (error.name !== 'MongoError') {\n    return next();\n  }\n\n  next(error);\n}));\n\nclass User extends _default2.default {\n  constructor() {\n    super({ model: new userModel() });\n  }\n}exports.default = User;\n;\n\n// const _schema = new Schema(\n//   {\n//     username: {type: String, unique: true, required: true, dropDups: true},\n//     email   : {type: String, unique: true, required: true, lowercase: true},\n//     password: {type: String, required: true},\n//     name    : {type: String, required: false},\n\n//     is_active: {type: Boolean, default: true},\n//     is_delete: {type: Boolean, default: false},\n//     is_signed: {type: Boolean, default: false},\n//     is_admin : {type: Boolean, default: false},\n\n//     created_at: {type: Date, default: Date.now},\n//     updated_at: {type: Date, default: Date.now},\n//   },\n//   {\n//     strict: true,\n//     collection: 'users',\n//   }\n// );\n\n// _schema.pre('save', function (next) {\n//   let current_date = new Date();\n//   this.updated_at = current_date;\n\n//   if (!this.created_at) {\n//     this.created_at = current_date;\n//   }\n\n//   if (this.password) {\n//     // TODO password hashed\n//   }\n\n//   next();\n// });\n\n// _schema.post('save', function (error, doc, next) {\n//   if (error.name !== 'MongoError') {\n//     return next();\n//   }\n\n//   next(error);\n// });\n\n// const userModel = db.model('users', _schema);\n\n// export default class User extends DefaultModel {\n//   constructor() {\n//     super({model: new userModel});\n//   }\n// };\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInVzZXJNb2RlbCIsImRiIiwibW9kZWwiLCJTY2hlbWEiLCJ1c2VybmFtZSIsInR5cGUiLCJTdHJpbmciLCJ1bmlxdWUiLCJyZXF1aXJlZCIsImRyb3BEdXBzIiwiZW1haWwiLCJsb3dlcmNhc2UiLCJwYXNzd29yZCIsIm5hbWUiLCJpc19hY3RpdmUiLCJCb29sZWFuIiwiZGVmYXVsdCIsImlzX2RlbGV0ZSIsImlzX3NpZ25lZCIsImlzX2FkbWluIiwiY3JlYXRlZF9hdCIsIkRhdGUiLCJub3ciLCJ1cGRhdGVkX2F0Iiwic3RyaWN0IiwiY29sbGVjdGlvbiIsInByZSIsIm5leHQiLCJjdXJyZW50X2RhdGUiLCJwb3N0IiwiZXJyb3IiLCJkb2MiLCJVc2VyIiwiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7OztBQUdBLE1BQU1BLFlBQVlDLG1CQUFHQyxLQUFILENBQVMsT0FBVCxFQUNoQixJQUFJQyxnQkFBSixDQUNFO0FBQ0VDLFlBQVUsRUFBQ0MsTUFBTUMsTUFBUCxFQUFlQyxRQUFRLElBQXZCLEVBQTZCQyxVQUFVLElBQXZDLEVBQTZDQyxVQUFVLElBQXZELEVBRFo7QUFFRUMsU0FBVSxFQUFDTCxNQUFNQyxNQUFQLEVBQWVDLFFBQVEsSUFBdkIsRUFBNkJDLFVBQVUsSUFBdkMsRUFBNkNHLFdBQVcsSUFBeEQsRUFGWjtBQUdFQyxZQUFVLEVBQUNQLE1BQU1DLE1BQVAsRUFBZUUsVUFBVSxJQUF6QixFQUhaO0FBSUVLLFFBQVUsRUFBQ1IsTUFBTUMsTUFBUCxFQUFlRSxVQUFVLEtBQXpCLEVBSlo7O0FBTUVNLGFBQVcsRUFBQ1QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxJQUF6QixFQU5iO0FBT0VDLGFBQVcsRUFBQ1osTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVBiO0FBUUVFLGFBQVcsRUFBQ2IsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVJiO0FBU0VHLFlBQVcsRUFBQ2QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVRiOztBQVdFSSxjQUFZLEVBQUNmLE1BQU1nQixJQUFQLEVBQWFMLFNBQVNLLEtBQUtDLEdBQTNCLEVBWGQ7QUFZRUMsY0FBWSxFQUFDbEIsTUFBTWdCLElBQVAsRUFBYUwsU0FBU0ssS0FBS0MsR0FBM0I7QUFaZCxDQURGLEVBZUU7QUFDRUUsVUFBUSxJQURWO0FBRUVDLGNBQVk7QUFGZCxDQWZGLEVBb0JDQyxHQXBCRCxDQW9CSyxNQXBCTCxFQW9CYSxVQUFVQyxJQUFWLEVBQWdCO0FBQzNCLE1BQUlDLGVBQWUsSUFBSVAsSUFBSixFQUFuQjtBQUNBLE9BQUtFLFVBQUwsR0FBa0JLLFlBQWxCOztBQUVBLE1BQUksQ0FBQyxLQUFLUixVQUFWLEVBQXNCO0FBQ3BCLFNBQUtBLFVBQUwsR0FBa0JRLFlBQWxCO0FBQ0Q7O0FBRUQsTUFBSSxLQUFLaEIsUUFBVCxFQUFtQjtBQUNqQjtBQUNEOztBQUVEZTtBQUNELENBakNELEVBa0NDRSxJQWxDRCxDQWtDTSxNQWxDTixFQWtDYyxVQUFVQyxLQUFWLEVBQWlCQyxHQUFqQixFQUFzQkosSUFBdEIsRUFBNEI7QUFDeEMsTUFBSUcsTUFBTWpCLElBQU4sS0FBZSxZQUFuQixFQUFpQztBQUMvQixXQUFPYyxNQUFQO0FBQ0Q7O0FBRURBLE9BQUtHLEtBQUw7QUFDRCxDQXhDRCxDQURnQixDQUFsQjs7QUE0Q2UsTUFBTUUsSUFBTixTQUFtQkMsaUJBQW5CLENBQWdDO0FBQzdDQyxnQkFBYztBQUNaLFVBQU0sRUFBQ2hDLE9BQU8sSUFBSUYsU0FBSixFQUFSLEVBQU47QUFDRDtBQUg0QyxDLGtCQUExQmdDLEk7QUFJcEI7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvbW9kZWxzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZGIsIHsgU2NoZW1hIH0gZnJvbSAnbW9uZ29vc2UnO1xuaW1wb3J0IERlZmF1bHRNb2RlbCAgICAgICAgZnJvbSAnLi4vZGVmYXVsdCc7XG5cblxuY29uc3QgdXNlck1vZGVsID0gZGIubW9kZWwoJ3VzZXJzJywgXG4gIG5ldyBTY2hlbWEoXG4gICAge1xuICAgICAgdXNlcm5hbWU6IHt0eXBlOiBTdHJpbmcsIHVuaXF1ZTogdHJ1ZSwgcmVxdWlyZWQ6IHRydWUsIGRyb3BEdXBzOiB0cnVlfSxcbiAgICAgIGVtYWlsICAgOiB7dHlwZTogU3RyaW5nLCB1bmlxdWU6IHRydWUsIHJlcXVpcmVkOiB0cnVlLCBsb3dlcmNhc2U6IHRydWV9LFxuICAgICAgcGFzc3dvcmQ6IHt0eXBlOiBTdHJpbmcsIHJlcXVpcmVkOiB0cnVlfSxcbiAgICAgIG5hbWUgICAgOiB7dHlwZTogU3RyaW5nLCByZXF1aXJlZDogZmFsc2V9LFxuICAgICAgXG4gICAgICBpc19hY3RpdmU6IHt0eXBlOiBCb29sZWFuLCBkZWZhdWx0OiB0cnVlfSxcbiAgICAgIGlzX2RlbGV0ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbiAgICAgIGlzX3NpZ25lZDoge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbiAgICAgIGlzX2FkbWluIDoge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcblxuICAgICAgY3JlYXRlZF9hdDoge3R5cGU6IERhdGUsIGRlZmF1bHQ6IERhdGUubm93fSxcbiAgICAgIHVwZGF0ZWRfYXQ6IHt0eXBlOiBEYXRlLCBkZWZhdWx0OiBEYXRlLm5vd30sXG4gICAgfSxcbiAgICB7XG4gICAgICBzdHJpY3Q6IHRydWUsXG4gICAgICBjb2xsZWN0aW9uOiAndXNlcnMnLFxuICAgIH1cbiAgKVxuICAucHJlKCdzYXZlJywgZnVuY3Rpb24gKG5leHQpIHtcbiAgICBsZXQgY3VycmVudF9kYXRlID0gbmV3IERhdGUoKTtcbiAgICB0aGlzLnVwZGF0ZWRfYXQgPSBjdXJyZW50X2RhdGU7XG5cbiAgICBpZiAoIXRoaXMuY3JlYXRlZF9hdCkge1xuICAgICAgdGhpcy5jcmVhdGVkX2F0ID0gY3VycmVudF9kYXRlO1xuICAgIH1cblxuICAgIGlmICh0aGlzLnBhc3N3b3JkKSB7XG4gICAgICAvLyBUT0RPIHBhc3N3b3JkIGhhc2hlZFxuICAgIH1cbiAgICBcbiAgICBuZXh0KCk7XG4gIH0pXG4gIC5wb3N0KCdzYXZlJywgZnVuY3Rpb24gKGVycm9yLCBkb2MsIG5leHQpIHtcbiAgICBpZiAoZXJyb3IubmFtZSAhPT0gJ01vbmdvRXJyb3InKSB7XG4gICAgICByZXR1cm4gbmV4dCgpO1xuICAgIH1cbiAgXG4gICAgbmV4dChlcnJvcik7XG4gIH0pXG4pO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBVc2VyIGV4dGVuZHMgRGVmYXVsdE1vZGVsIHtcbiAgY29uc3RydWN0b3IoKSB7XG4gICAgc3VwZXIoe21vZGVsOiBuZXcgdXNlck1vZGVsfSk7XG4gIH1cbn07XG5cbi8vIGNvbnN0IF9zY2hlbWEgPSBuZXcgU2NoZW1hKFxuLy8gICB7XG4vLyAgICAgdXNlcm5hbWU6IHt0eXBlOiBTdHJpbmcsIHVuaXF1ZTogdHJ1ZSwgcmVxdWlyZWQ6IHRydWUsIGRyb3BEdXBzOiB0cnVlfSxcbi8vICAgICBlbWFpbCAgIDoge3R5cGU6IFN0cmluZywgdW5pcXVlOiB0cnVlLCByZXF1aXJlZDogdHJ1ZSwgbG93ZXJjYXNlOiB0cnVlfSxcbi8vICAgICBwYXNzd29yZDoge3R5cGU6IFN0cmluZywgcmVxdWlyZWQ6IHRydWV9LFxuLy8gICAgIG5hbWUgICAgOiB7dHlwZTogU3RyaW5nLCByZXF1aXJlZDogZmFsc2V9LFxuICAgIFxuLy8gICAgIGlzX2FjdGl2ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IHRydWV9LFxuLy8gICAgIGlzX2RlbGV0ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IGZhbHNlfSxcbi8vICAgICBpc19zaWduZWQ6IHt0eXBlOiBCb29sZWFuLCBkZWZhdWx0OiBmYWxzZX0sXG4vLyAgICAgaXNfYWRtaW4gOiB7dHlwZTogQm9vbGVhbiwgZGVmYXVsdDogZmFsc2V9LFxuXG4vLyAgICAgY3JlYXRlZF9hdDoge3R5cGU6IERhdGUsIGRlZmF1bHQ6IERhdGUubm93fSxcbi8vICAgICB1cGRhdGVkX2F0OiB7dHlwZTogRGF0ZSwgZGVmYXVsdDogRGF0ZS5ub3d9LFxuLy8gICB9LFxuLy8gICB7XG4vLyAgICAgc3RyaWN0OiB0cnVlLFxuLy8gICAgIGNvbGxlY3Rpb246ICd1c2VycycsXG4vLyAgIH1cbi8vICk7XG5cbi8vIF9zY2hlbWEucHJlKCdzYXZlJywgZnVuY3Rpb24gKG5leHQpIHtcbi8vICAgbGV0IGN1cnJlbnRfZGF0ZSA9IG5ldyBEYXRlKCk7XG4vLyAgIHRoaXMudXBkYXRlZF9hdCA9IGN1cnJlbnRfZGF0ZTtcblxuLy8gICBpZiAoIXRoaXMuY3JlYXRlZF9hdCkge1xuLy8gICAgIHRoaXMuY3JlYXRlZF9hdCA9IGN1cnJlbnRfZGF0ZTtcbi8vICAgfVxuXG4vLyAgIGlmICh0aGlzLnBhc3N3b3JkKSB7XG4vLyAgICAgLy8gVE9ETyBwYXNzd29yZCBoYXNoZWRcbi8vICAgfVxuICBcbi8vICAgbmV4dCgpO1xuLy8gfSk7XG5cbi8vIF9zY2hlbWEucG9zdCgnc2F2ZScsIGZ1bmN0aW9uIChlcnJvciwgZG9jLCBuZXh0KSB7XG4vLyAgIGlmIChlcnJvci5uYW1lICE9PSAnTW9uZ29FcnJvcicpIHtcbi8vICAgICByZXR1cm4gbmV4dCgpO1xuLy8gICB9XG5cbi8vICAgbmV4dChlcnJvcik7XG4vLyB9KTtcblxuLy8gY29uc3QgdXNlck1vZGVsID0gZGIubW9kZWwoJ3VzZXJzJywgX3NjaGVtYSk7XG5cbi8vIGV4cG9ydCBkZWZhdWx0IGNsYXNzIFVzZXIgZXh0ZW5kcyBEZWZhdWx0TW9kZWwge1xuLy8gICBjb25zdHJ1Y3RvcigpIHtcbi8vICAgICBzdXBlcih7bW9kZWw6IG5ldyB1c2VyTW9kZWx9KTtcbi8vICAgfVxuLy8gfTsiXX0=",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _default = require('../default');\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst userModel = _mongoose2.default.model('users', new _mongoose.Schema({\n  username: { type: String, unique: true, required: true, dropDups: true },\n  email: { type: String, unique: true, required: true, lowercase: true },\n  password: { type: String, required: true },\n  name: { type: String, required: false },\n\n  is_active: { type: Boolean, default: true },\n  is_delete: { type: Boolean, default: false },\n  is_signed: { type: Boolean, default: false },\n  is_admin: { type: Boolean, default: false },\n\n  created_at: { type: Date, default: Date.now },\n  updated_at: { type: Date, default: Date.now }\n}, {\n  strict: true,\n  collection: 'users'\n}).pre('create', function (next) {\n  let current_date = new Date();\n  this.updated_at = current_date;\n\n  if (!this.created_at) {\n    this.created_at = current_date;\n  }\n\n  if (this.password) {\n    // TODO password hashed\n  }\n\n  next();\n}).post('create', function (error, doc, next) {\n  if (typeof error === 'object' && error.name !== 'MongoError') {\n    return next();\n  }\n\n  next(error);\n}));\n\nclass User extends _default2.default {\n  constructor() {\n    super({ model: userModel });\n  }\n}exports.default = User;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInVzZXJNb2RlbCIsImRiIiwibW9kZWwiLCJTY2hlbWEiLCJ1c2VybmFtZSIsInR5cGUiLCJTdHJpbmciLCJ1bmlxdWUiLCJyZXF1aXJlZCIsImRyb3BEdXBzIiwiZW1haWwiLCJsb3dlcmNhc2UiLCJwYXNzd29yZCIsIm5hbWUiLCJpc19hY3RpdmUiLCJCb29sZWFuIiwiZGVmYXVsdCIsImlzX2RlbGV0ZSIsImlzX3NpZ25lZCIsImlzX2FkbWluIiwiY3JlYXRlZF9hdCIsIkRhdGUiLCJub3ciLCJ1cGRhdGVkX2F0Iiwic3RyaWN0IiwiY29sbGVjdGlvbiIsInByZSIsIm5leHQiLCJjdXJyZW50X2RhdGUiLCJwb3N0IiwiZXJyb3IiLCJkb2MiLCJVc2VyIiwiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7OztBQUdBLE1BQU1BLFlBQVlDLG1CQUFHQyxLQUFILENBQVMsT0FBVCxFQUNoQixJQUFJQyxnQkFBSixDQUNFO0FBQ0VDLFlBQVUsRUFBQ0MsTUFBTUMsTUFBUCxFQUFlQyxRQUFRLElBQXZCLEVBQTZCQyxVQUFVLElBQXZDLEVBQTZDQyxVQUFVLElBQXZELEVBRFo7QUFFRUMsU0FBVSxFQUFDTCxNQUFNQyxNQUFQLEVBQWVDLFFBQVEsSUFBdkIsRUFBNkJDLFVBQVUsSUFBdkMsRUFBNkNHLFdBQVcsSUFBeEQsRUFGWjtBQUdFQyxZQUFVLEVBQUNQLE1BQU1DLE1BQVAsRUFBZUUsVUFBVSxJQUF6QixFQUhaO0FBSUVLLFFBQVUsRUFBQ1IsTUFBTUMsTUFBUCxFQUFlRSxVQUFVLEtBQXpCLEVBSlo7O0FBTUVNLGFBQVcsRUFBQ1QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxJQUF6QixFQU5iO0FBT0VDLGFBQVcsRUFBQ1osTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVBiO0FBUUVFLGFBQVcsRUFBQ2IsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVJiO0FBU0VHLFlBQVcsRUFBQ2QsTUFBTVUsT0FBUCxFQUFnQkMsU0FBUyxLQUF6QixFQVRiOztBQVdFSSxjQUFZLEVBQUNmLE1BQU1nQixJQUFQLEVBQWFMLFNBQVNLLEtBQUtDLEdBQTNCLEVBWGQ7QUFZRUMsY0FBWSxFQUFDbEIsTUFBTWdCLElBQVAsRUFBYUwsU0FBU0ssS0FBS0MsR0FBM0I7QUFaZCxDQURGLEVBZUU7QUFDRUUsVUFBUSxJQURWO0FBRUVDLGNBQVk7QUFGZCxDQWZGLEVBb0JDQyxHQXBCRCxDQW9CSyxRQXBCTCxFQW9CZSxVQUFVQyxJQUFWLEVBQWdCO0FBQzdCLE1BQUlDLGVBQWUsSUFBSVAsSUFBSixFQUFuQjtBQUNBLE9BQUtFLFVBQUwsR0FBa0JLLFlBQWxCOztBQUVBLE1BQUksQ0FBQyxLQUFLUixVQUFWLEVBQXNCO0FBQ3BCLFNBQUtBLFVBQUwsR0FBa0JRLFlBQWxCO0FBQ0Q7O0FBRUQsTUFBSSxLQUFLaEIsUUFBVCxFQUFtQjtBQUNqQjtBQUNEOztBQUVEZTtBQUNELENBakNELEVBa0NDRSxJQWxDRCxDQWtDTSxRQWxDTixFQWtDZ0IsVUFBVUMsS0FBVixFQUFpQkMsR0FBakIsRUFBc0JKLElBQXRCLEVBQTRCO0FBQzFDLE1BQUksT0FBT0csS0FBUCxLQUFpQixRQUFqQixJQUE2QkEsTUFBTWpCLElBQU4sS0FBZSxZQUFoRCxFQUE4RDtBQUM1RCxXQUFPYyxNQUFQO0FBQ0Q7O0FBRURBLE9BQUtHLEtBQUw7QUFDRCxDQXhDRCxDQURnQixDQUFsQjs7QUE0Q2UsTUFBTUUsSUFBTixTQUFtQkMsaUJBQW5CLENBQWdDO0FBQzdDQyxnQkFBYztBQUNaLFVBQU0sRUFBQ2hDLE9BQU9GLFNBQVIsRUFBTjtBQUNEO0FBSDRDLEMsa0JBQTFCZ0MsSTtBQUlwQiIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci9tb2RlbHMvdXNlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBkYiwgeyBTY2hlbWEgfSBmcm9tICdtb25nb29zZSc7XG5pbXBvcnQgRGVmYXVsdE1vZGVsICAgICAgICBmcm9tICcuLi9kZWZhdWx0JztcblxuXG5jb25zdCB1c2VyTW9kZWwgPSBkYi5tb2RlbCgndXNlcnMnLCBcbiAgbmV3IFNjaGVtYShcbiAgICB7XG4gICAgICB1c2VybmFtZToge3R5cGU6IFN0cmluZywgdW5pcXVlOiB0cnVlLCByZXF1aXJlZDogdHJ1ZSwgZHJvcER1cHM6IHRydWV9LFxuICAgICAgZW1haWwgICA6IHt0eXBlOiBTdHJpbmcsIHVuaXF1ZTogdHJ1ZSwgcmVxdWlyZWQ6IHRydWUsIGxvd2VyY2FzZTogdHJ1ZX0sXG4gICAgICBwYXNzd29yZDoge3R5cGU6IFN0cmluZywgcmVxdWlyZWQ6IHRydWV9LFxuICAgICAgbmFtZSAgICA6IHt0eXBlOiBTdHJpbmcsIHJlcXVpcmVkOiBmYWxzZX0sXG4gICAgICBcbiAgICAgIGlzX2FjdGl2ZToge3R5cGU6IEJvb2xlYW4sIGRlZmF1bHQ6IHRydWV9LFxuICAgICAgaXNfZGVsZXRlOiB7dHlwZTogQm9vbGVhbiwgZGVmYXVsdDogZmFsc2V9LFxuICAgICAgaXNfc2lnbmVkOiB7dHlwZTogQm9vbGVhbiwgZGVmYXVsdDogZmFsc2V9LFxuICAgICAgaXNfYWRtaW4gOiB7dHlwZTogQm9vbGVhbiwgZGVmYXVsdDogZmFsc2V9LFxuXG4gICAgICBjcmVhdGVkX2F0OiB7dHlwZTogRGF0ZSwgZGVmYXVsdDogRGF0ZS5ub3d9LFxuICAgICAgdXBkYXRlZF9hdDoge3R5cGU6IERhdGUsIGRlZmF1bHQ6IERhdGUubm93fSxcbiAgICB9LFxuICAgIHtcbiAgICAgIHN0cmljdDogdHJ1ZSxcbiAgICAgIGNvbGxlY3Rpb246ICd1c2VycycsXG4gICAgfVxuICApXG4gIC5wcmUoJ2NyZWF0ZScsIGZ1bmN0aW9uIChuZXh0KSB7XG4gICAgbGV0IGN1cnJlbnRfZGF0ZSA9IG5ldyBEYXRlKCk7XG4gICAgdGhpcy51cGRhdGVkX2F0ID0gY3VycmVudF9kYXRlO1xuXG4gICAgaWYgKCF0aGlzLmNyZWF0ZWRfYXQpIHtcbiAgICAgIHRoaXMuY3JlYXRlZF9hdCA9IGN1cnJlbnRfZGF0ZTtcbiAgICB9XG5cbiAgICBpZiAodGhpcy5wYXNzd29yZCkge1xuICAgICAgLy8gVE9ETyBwYXNzd29yZCBoYXNoZWRcbiAgICB9XG4gICAgXG4gICAgbmV4dCgpO1xuICB9KVxuICAucG9zdCgnY3JlYXRlJywgZnVuY3Rpb24gKGVycm9yLCBkb2MsIG5leHQpIHtcbiAgICBpZiAodHlwZW9mIGVycm9yID09PSAnb2JqZWN0JyAmJiBlcnJvci5uYW1lICE9PSAnTW9uZ29FcnJvcicpIHtcbiAgICAgIHJldHVybiBuZXh0KCk7XG4gICAgfVxuICBcbiAgICBuZXh0KGVycm9yKTtcbiAgfSlcbik7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFVzZXIgZXh0ZW5kcyBEZWZhdWx0TW9kZWwge1xuICBjb25zdHJ1Y3RvcigpIHtcbiAgICBzdXBlcih7bW9kZWw6IHVzZXJNb2RlbH0pO1xuICB9XG59O1xuIl19",
     "ast": null,
     "map": {
       "version": 3,
@@ -940,14 +957,14 @@
         "DefaultModel",
         "constructor"
       ],
-      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGA,MAAMA,YAAYC,mBAAGC,KAAH,CAAS,OAAT,EAChB,IAAIC,gBAAJ,CACE;AACEC,YAAU,EAACC,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CC,UAAU,IAAvD,EADZ;AAEEC,SAAU,EAACL,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CG,WAAW,IAAxD,EAFZ;AAGEC,YAAU,EAACP,MAAMC,MAAP,EAAeE,UAAU,IAAzB,EAHZ;AAIEK,QAAU,EAACR,MAAMC,MAAP,EAAeE,UAAU,KAAzB,EAJZ;;AAMEM,aAAW,EAACT,MAAMU,OAAP,EAAgBC,SAAS,IAAzB,EANb;AAOEC,aAAW,EAACZ,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EAPb;AAQEE,aAAW,EAACb,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EARb;AASEG,YAAW,EAACd,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EATb;;AAWEI,cAAY,EAACf,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B,EAXd;AAYEC,cAAY,EAAClB,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B;AAZd,CADF,EAeE;AACEE,UAAQ,IADV;AAEEC,cAAY;AAFd,CAfF,EAoBCC,GApBD,CAoBK,MApBL,EAoBa,UAAUC,IAAV,EAAgB;AAC3B,MAAIC,eAAe,IAAIP,IAAJ,EAAnB;AACA,OAAKE,UAAL,GAAkBK,YAAlB;;AAEA,MAAI,CAAC,KAAKR,UAAV,EAAsB;AACpB,SAAKA,UAAL,GAAkBQ,YAAlB;AACD;;AAED,MAAI,KAAKhB,QAAT,EAAmB;AACjB;AACD;;AAEDe;AACD,CAjCD,EAkCCE,IAlCD,CAkCM,MAlCN,EAkCc,UAAUC,KAAV,EAAiBC,GAAjB,EAAsBJ,IAAtB,EAA4B;AACxC,MAAIG,MAAMjB,IAAN,KAAe,YAAnB,EAAiC;AAC/B,WAAOc,MAAP;AACD;;AAEDA,OAAKG,KAAL;AACD,CAxCD,CADgB,CAAlB;;AA4Ce,MAAME,IAAN,SAAmBC,iBAAnB,CAAgC;AAC7CC,gBAAc;AACZ,UAAM,EAAChC,OAAO,IAAIF,SAAJ,EAAR,EAAN;AACD;AAH4C,C,kBAA1BgC,I;AAIpB;;AAED;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;AACA;;AAEA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;;AAEA;;AAEA;AACA;AACA;AACA;AACA",
+      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGA,MAAMA,YAAYC,mBAAGC,KAAH,CAAS,OAAT,EAChB,IAAIC,gBAAJ,CACE;AACEC,YAAU,EAACC,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CC,UAAU,IAAvD,EADZ;AAEEC,SAAU,EAACL,MAAMC,MAAP,EAAeC,QAAQ,IAAvB,EAA6BC,UAAU,IAAvC,EAA6CG,WAAW,IAAxD,EAFZ;AAGEC,YAAU,EAACP,MAAMC,MAAP,EAAeE,UAAU,IAAzB,EAHZ;AAIEK,QAAU,EAACR,MAAMC,MAAP,EAAeE,UAAU,KAAzB,EAJZ;;AAMEM,aAAW,EAACT,MAAMU,OAAP,EAAgBC,SAAS,IAAzB,EANb;AAOEC,aAAW,EAACZ,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EAPb;AAQEE,aAAW,EAACb,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EARb;AASEG,YAAW,EAACd,MAAMU,OAAP,EAAgBC,SAAS,KAAzB,EATb;;AAWEI,cAAY,EAACf,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B,EAXd;AAYEC,cAAY,EAAClB,MAAMgB,IAAP,EAAaL,SAASK,KAAKC,GAA3B;AAZd,CADF,EAeE;AACEE,UAAQ,IADV;AAEEC,cAAY;AAFd,CAfF,EAoBCC,GApBD,CAoBK,QApBL,EAoBe,UAAUC,IAAV,EAAgB;AAC7B,MAAIC,eAAe,IAAIP,IAAJ,EAAnB;AACA,OAAKE,UAAL,GAAkBK,YAAlB;;AAEA,MAAI,CAAC,KAAKR,UAAV,EAAsB;AACpB,SAAKA,UAAL,GAAkBQ,YAAlB;AACD;;AAED,MAAI,KAAKhB,QAAT,EAAmB;AACjB;AACD;;AAEDe;AACD,CAjCD,EAkCCE,IAlCD,CAkCM,QAlCN,EAkCgB,UAAUC,KAAV,EAAiBC,GAAjB,EAAsBJ,IAAtB,EAA4B;AAC1C,MAAI,OAAOG,KAAP,KAAiB,QAAjB,IAA6BA,MAAMjB,IAAN,KAAe,YAAhD,EAA8D;AAC5D,WAAOc,MAAP;AACD;;AAEDA,OAAKG,KAAL;AACD,CAxCD,CADgB,CAAlB;;AA4Ce,MAAME,IAAN,SAAmBC,iBAAnB,CAAgC;AAC7CC,gBAAc;AACZ,UAAM,EAAChC,OAAOF,SAAR,EAAN;AACD;AAH4C,C,kBAA1BgC,I;AAIpB",
       "file": "index.js",
       "sourceRoot": "/app/server/models/user",
       "sourcesContent": [
-        "import db, { Schema } from 'mongoose';\nimport DefaultModel        from '../default';\n\n\nconst userModel = db.model('users', \n  new Schema(\n    {\n      username: {type: String, unique: true, required: true, dropDups: true},\n      email   : {type: String, unique: true, required: true, lowercase: true},\n      password: {type: String, required: true},\n      name    : {type: String, required: false},\n      \n      is_active: {type: Boolean, default: true},\n      is_delete: {type: Boolean, default: false},\n      is_signed: {type: Boolean, default: false},\n      is_admin : {type: Boolean, default: false},\n\n      created_at: {type: Date, default: Date.now},\n      updated_at: {type: Date, default: Date.now},\n    },\n    {\n      strict: true,\n      collection: 'users',\n    }\n  )\n  .pre('save', function (next) {\n    let current_date = new Date();\n    this.updated_at = current_date;\n\n    if (!this.created_at) {\n      this.created_at = current_date;\n    }\n\n    if (this.password) {\n      // TODO password hashed\n    }\n    \n    next();\n  })\n  .post('save', function (error, doc, next) {\n    if (error.name !== 'MongoError') {\n      return next();\n    }\n  \n    next(error);\n  })\n);\n\nexport default class User extends DefaultModel {\n  constructor() {\n    super({model: new userModel});\n  }\n};\n\n// const _schema = new Schema(\n//   {\n//     username: {type: String, unique: true, required: true, dropDups: true},\n//     email   : {type: String, unique: true, required: true, lowercase: true},\n//     password: {type: String, required: true},\n//     name    : {type: String, required: false},\n    \n//     is_active: {type: Boolean, default: true},\n//     is_delete: {type: Boolean, default: false},\n//     is_signed: {type: Boolean, default: false},\n//     is_admin : {type: Boolean, default: false},\n\n//     created_at: {type: Date, default: Date.now},\n//     updated_at: {type: Date, default: Date.now},\n//   },\n//   {\n//     strict: true,\n//     collection: 'users',\n//   }\n// );\n\n// _schema.pre('save', function (next) {\n//   let current_date = new Date();\n//   this.updated_at = current_date;\n\n//   if (!this.created_at) {\n//     this.created_at = current_date;\n//   }\n\n//   if (this.password) {\n//     // TODO password hashed\n//   }\n  \n//   next();\n// });\n\n// _schema.post('save', function (error, doc, next) {\n//   if (error.name !== 'MongoError') {\n//     return next();\n//   }\n\n//   next(error);\n// });\n\n// const userModel = db.model('users', _schema);\n\n// export default class User extends DefaultModel {\n//   constructor() {\n//     super({model: new userModel});\n//   }\n// };"
+        "import db, { Schema } from 'mongoose';\nimport DefaultModel        from '../default';\n\n\nconst userModel = db.model('users', \n  new Schema(\n    {\n      username: {type: String, unique: true, required: true, dropDups: true},\n      email   : {type: String, unique: true, required: true, lowercase: true},\n      password: {type: String, required: true},\n      name    : {type: String, required: false},\n      \n      is_active: {type: Boolean, default: true},\n      is_delete: {type: Boolean, default: false},\n      is_signed: {type: Boolean, default: false},\n      is_admin : {type: Boolean, default: false},\n\n      created_at: {type: Date, default: Date.now},\n      updated_at: {type: Date, default: Date.now},\n    },\n    {\n      strict: true,\n      collection: 'users',\n    }\n  )\n  .pre('create', function (next) {\n    let current_date = new Date();\n    this.updated_at = current_date;\n\n    if (!this.created_at) {\n      this.created_at = current_date;\n    }\n\n    if (this.password) {\n      // TODO password hashed\n    }\n    \n    next();\n  })\n  .post('create', function (error, doc, next) {\n    if (typeof error === 'object' && error.name !== 'MongoError') {\n      return next();\n    }\n  \n    next(error);\n  })\n);\n\nexport default class User extends DefaultModel {\n  constructor() {\n    super({model: userModel});\n  }\n};\n"
       ]
     },
-    "mtime": 1691834572145
+    "mtime": 1691923734748
   },
   "{\"filename\":\"/app/server/models/default.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/models\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -1006,7 +1023,7 @@
       "basename": "default"
     },
     "ignored": false,
-    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nclass DefaultModel {\n  constructor({ model = undefined }) {\n    this.model = model;\n  }\n\n  async select(query) {\n    return await this.model.collection.findOne(query);\n  }\n\n  selectMany() {\n    throw 'selectMany method not defined';\n  }\n\n  async save() {\n    return await this.model.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n}exports.default = DefaultModel;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiLCJtb2RlbCIsInVuZGVmaW5lZCIsInNlbGVjdCIsInF1ZXJ5IiwiY29sbGVjdGlvbiIsImZpbmRPbmUiLCJzZWxlY3RNYW55Iiwic2F2ZSIsInVwZGF0ZSIsImRlbGV0ZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFZSxNQUFNQSxZQUFOLENBQW1CO0FBQ2hDQyxjQUFZLEVBQUNDLFFBQVFDLFNBQVQsRUFBWixFQUFpQztBQUMvQixTQUFLRCxLQUFMLEdBQWFBLEtBQWI7QUFDRDs7QUFFRCxRQUFNRSxNQUFOLENBQWFDLEtBQWIsRUFBb0I7QUFDbEIsV0FBTyxNQUFNLEtBQUtILEtBQUwsQ0FBV0ksVUFBWCxDQUFzQkMsT0FBdEIsQ0FBOEJGLEtBQTlCLENBQWI7QUFDRDs7QUFFREcsZUFBYTtBQUNYLFVBQU0sK0JBQU47QUFDRDs7QUFFRCxRQUFNQyxJQUFOLEdBQWE7QUFDWCxXQUFPLE1BQU0sS0FBS1AsS0FBTCxDQUFXTyxJQUFYLEVBQWI7QUFDRDs7QUFFREMsV0FBUztBQUNQLFVBQU0sMkJBQU47QUFDRDs7QUFFREMsV0FBUztBQUNQLFVBQU0sMkJBQU47QUFDRDtBQXZCK0IsQyxrQkFBYlgsWTtBQXdCcEIiLCJmaWxlIjoiZGVmYXVsdC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci9tb2RlbHMiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgRGVmYXVsdE1vZGVsIHtcbiAgY29uc3RydWN0b3Ioe21vZGVsID0gdW5kZWZpbmVkfSkgeyBcbiAgICB0aGlzLm1vZGVsID0gbW9kZWw7XG4gIH1cbiAgXG4gIGFzeW5jIHNlbGVjdChxdWVyeSkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLmNvbGxlY3Rpb24uZmluZE9uZShxdWVyeSk7XG4gIH1cblxuICBzZWxlY3RNYW55KCkge1xuICAgIHRocm93ICdzZWxlY3RNYW55IG1ldGhvZCBub3QgZGVmaW5lZCc7XG4gIH1cblxuICBhc3luYyBzYXZlKCkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLnNhdmUoKTtcbiAgfVxuXG4gIHVwZGF0ZSgpIHtcbiAgICB0aHJvdyAndXBkYXRlIG1ldGhvZCBub3QgZGVmaW5lZCc7XG4gIH1cblxuICBkZWxldGUoKSB7XG4gICAgdGhyb3cgJ2RlbGV0ZSBtZXRob2Qgbm90IGRlZmluZWQnO1xuICB9XG59OyJdfQ==",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nclass DefaultModel {\n  constructor({ model = undefined }) {\n    this.object = new model();\n    this.model = model;\n    console.log(this);\n  }\n\n  async select(query) {\n    return await this.model.findOne(query);\n  }\n\n  async find({ query = {}, page = 1, limit = 10 }) {\n    return await this.model.find(query).limit(limit * 1).skip((page - 1) * limit).exec();\n  }\n\n  async save() {\n    return await this.object.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n}exports.default = DefaultModel;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdE1vZGVsIiwiY29uc3RydWN0b3IiLCJtb2RlbCIsInVuZGVmaW5lZCIsIm9iamVjdCIsImNvbnNvbGUiLCJsb2ciLCJzZWxlY3QiLCJxdWVyeSIsImZpbmRPbmUiLCJmaW5kIiwicGFnZSIsImxpbWl0Iiwic2tpcCIsImV4ZWMiLCJzYXZlIiwidXBkYXRlIiwiZGVsZXRlIl0sIm1hcHBpbmdzIjoiOzs7OztBQUVlLE1BQU1BLFlBQU4sQ0FBbUI7QUFDaENDLGNBQVksRUFBQ0MsUUFBUUMsU0FBVCxFQUFaLEVBQWlDO0FBQy9CLFNBQUtDLE1BQUwsR0FBYyxJQUFJRixLQUFKLEVBQWQ7QUFDQSxTQUFLQSxLQUFMLEdBQWNBLEtBQWQ7QUFDQUcsWUFBUUMsR0FBUixDQUFZLElBQVo7QUFDRDs7QUFFRCxRQUFNQyxNQUFOLENBQWFDLEtBQWIsRUFBb0I7QUFDbEIsV0FBTyxNQUFNLEtBQUtOLEtBQUwsQ0FBV08sT0FBWCxDQUFtQkQsS0FBbkIsQ0FBYjtBQUNEOztBQUVELFFBQU1FLElBQU4sQ0FBVyxFQUFDRixRQUFRLEVBQVQsRUFBYUcsT0FBTyxDQUFwQixFQUF1QkMsUUFBUSxFQUEvQixFQUFYLEVBQStDO0FBQzdDLFdBQU8sTUFBTSxLQUFLVixLQUFMLENBQVdRLElBQVgsQ0FBZ0JGLEtBQWhCLEVBQ1dJLEtBRFgsQ0FDaUJBLFFBQVEsQ0FEekIsRUFFV0MsSUFGWCxDQUVnQixDQUFDRixPQUFPLENBQVIsSUFBYUMsS0FGN0IsRUFHV0UsSUFIWCxFQUFiO0FBSUQ7O0FBRUQsUUFBTUMsSUFBTixHQUFhO0FBQ1gsV0FBTyxNQUFNLEtBQUtYLE1BQUwsQ0FBWVcsSUFBWixFQUFiO0FBQ0Q7O0FBRURDLFdBQVM7QUFDUCxVQUFNLDJCQUFOO0FBQ0Q7O0FBRURDLFdBQVM7QUFDUCxVQUFNLDJCQUFOO0FBQ0Q7QUE1QitCLEMsa0JBQWJqQixZO0FBNkJwQiIsImZpbGUiOiJkZWZhdWx0LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL21vZGVscyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBEZWZhdWx0TW9kZWwge1xuICBjb25zdHJ1Y3Rvcih7bW9kZWwgPSB1bmRlZmluZWR9KSB7IFxuICAgIHRoaXMub2JqZWN0ID0gbmV3IG1vZGVsKCk7XG4gICAgdGhpcy5tb2RlbCAgPSBtb2RlbDtcbiAgICBjb25zb2xlLmxvZyh0aGlzKTtcbiAgfVxuICBcbiAgYXN5bmMgc2VsZWN0KHF1ZXJ5KSB7XG4gICAgcmV0dXJuIGF3YWl0IHRoaXMubW9kZWwuZmluZE9uZShxdWVyeSk7XG4gIH1cblxuICBhc3luYyBmaW5kKHtxdWVyeSA9IHt9LCBwYWdlID0gMSwgbGltaXQgPSAxMH0pIHtcbiAgICByZXR1cm4gYXdhaXQgdGhpcy5tb2RlbC5maW5kKHF1ZXJ5KVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgLmxpbWl0KGxpbWl0ICogMSlcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIC5za2lwKChwYWdlIC0gMSkgKiBsaW1pdClcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIC5leGVjKCk7XG4gIH1cblxuICBhc3luYyBzYXZlKCkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm9iamVjdC5zYXZlKCk7XG4gIH1cblxuICB1cGRhdGUoKSB7XG4gICAgdGhyb3cgJ3VwZGF0ZSBtZXRob2Qgbm90IGRlZmluZWQnO1xuICB9XG5cbiAgZGVsZXRlKCkge1xuICAgIHRocm93ICdkZWxldGUgbWV0aG9kIG5vdCBkZWZpbmVkJztcbiAgfVxufTsiXX0=",
     "ast": null,
     "map": {
       "version": 3,
@@ -1018,72 +1035,39 @@
         "constructor",
         "model",
         "undefined",
+        "object",
+        "console",
+        "log",
         "select",
         "query",
-        "collection",
         "findOne",
-        "selectMany",
+        "find",
+        "page",
+        "limit",
+        "skip",
+        "exec",
         "save",
         "update",
         "delete"
       ],
-      "mappings": ";;;;;AAEe,MAAMA,YAAN,CAAmB;AAChCC,cAAY,EAACC,QAAQC,SAAT,EAAZ,EAAiC;AAC/B,SAAKD,KAAL,GAAaA,KAAb;AACD;;AAED,QAAME,MAAN,CAAaC,KAAb,EAAoB;AAClB,WAAO,MAAM,KAAKH,KAAL,CAAWI,UAAX,CAAsBC,OAAtB,CAA8BF,KAA9B,CAAb;AACD;;AAEDG,eAAa;AACX,UAAM,+BAAN;AACD;;AAED,QAAMC,IAAN,GAAa;AACX,WAAO,MAAM,KAAKP,KAAL,CAAWO,IAAX,EAAb;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;AAvB+B,C,kBAAbX,Y;AAwBpB",
+      "mappings": ";;;;;AAEe,MAAMA,YAAN,CAAmB;AAChCC,cAAY,EAACC,QAAQC,SAAT,EAAZ,EAAiC;AAC/B,SAAKC,MAAL,GAAc,IAAIF,KAAJ,EAAd;AACA,SAAKA,KAAL,GAAcA,KAAd;AACAG,YAAQC,GAAR,CAAY,IAAZ;AACD;;AAED,QAAMC,MAAN,CAAaC,KAAb,EAAoB;AAClB,WAAO,MAAM,KAAKN,KAAL,CAAWO,OAAX,CAAmBD,KAAnB,CAAb;AACD;;AAED,QAAME,IAAN,CAAW,EAACF,QAAQ,EAAT,EAAaG,OAAO,CAApB,EAAuBC,QAAQ,EAA/B,EAAX,EAA+C;AAC7C,WAAO,MAAM,KAAKV,KAAL,CAAWQ,IAAX,CAAgBF,KAAhB,EACWI,KADX,CACiBA,QAAQ,CADzB,EAEWC,IAFX,CAEgB,CAACF,OAAO,CAAR,IAAaC,KAF7B,EAGWE,IAHX,EAAb;AAID;;AAED,QAAMC,IAAN,GAAa;AACX,WAAO,MAAM,KAAKX,MAAL,CAAYW,IAAZ,EAAb;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;;AAEDC,WAAS;AACP,UAAM,2BAAN;AACD;AA5B+B,C,kBAAbjB,Y;AA6BpB",
       "file": "default.js",
       "sourceRoot": "/app/server/models",
       "sourcesContent": [
-        "\n\nexport default class DefaultModel {\n  constructor({model = undefined}) { \n    this.model = model;\n  }\n  \n  async select(query) {\n    return await this.model.collection.findOne(query);\n  }\n\n  selectMany() {\n    throw 'selectMany method not defined';\n  }\n\n  async save() {\n    return await this.model.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n};"
+        "\n\nexport default class DefaultModel {\n  constructor({model = undefined}) { \n    this.object = new model();\n    this.model  = model;\n    console.log(this);\n  }\n  \n  async select(query) {\n    return await this.model.findOne(query);\n  }\n\n  async find({query = {}, page = 1, limit = 10}) {\n    return await this.model.find(query)\n                           .limit(limit * 1)\n                           .skip((page - 1) * limit)\n                           .exec();\n  }\n\n  async save() {\n    return await this.object.save();\n  }\n\n  update() {\n    throw 'update method not defined';\n  }\n\n  delete() {\n    throw 'delete method not defined';\n  }\n};"
       ]
     },
-    "mtime": 1691835012863
+    "mtime": 1691926391989
   },
   "{\"filename\":\"/app/server/app-server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
       "usedHelpers": [
-        "interopRequireDefault",
-        "interopRequireWildcard"
+        "interopRequireWildcard",
+        "interopRequireDefault"
       ],
       "marked": [],
       "modules": {
         "imports": [
-          {
-            "source": "express",
-            "imported": [
-              "default"
-            ],
-            "specifiers": [
-              {
-                "kind": "named",
-                "imported": "default",
-                "local": "express"
-              }
-            ]
-          },
-          {
-            "source": "helmet",
-            "imported": [
-              "default"
-            ],
-            "specifiers": [
-              {
-                "kind": "named",
-                "imported": "default",
-                "local": "helmet"
-              }
-            ]
-          },
-          {
-            "source": "cors",
-            "imported": [
-              "default"
-            ],
-            "specifiers": [
-              {
-                "kind": "named",
-                "imported": "default",
-                "local": "cors"
-              }
-            ]
-          },
           {
             "source": "http",
             "imported": [
@@ -1093,32 +1077,6 @@
               {
                 "kind": "namespace",
                 "local": "http"
-              }
-            ]
-          },
-          {
-            "source": "http-errors",
-            "imported": [
-              "default"
-            ],
-            "specifiers": [
-              {
-                "kind": "named",
-                "imported": "default",
-                "local": "createError"
-              }
-            ]
-          },
-          {
-            "source": "morgan",
-            "imported": [
-              "default"
-            ],
-            "specifiers": [
-              {
-                "kind": "named",
-                "imported": "default",
-                "local": "morgan"
               }
             ]
           },
@@ -1219,7 +1177,7 @@
       "basename": "app-server"
     },
     "ignored": false,
-    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _helmet = require('helmet');\n\nvar _helmet2 = _interopRequireDefault(_helmet);\n\nvar _cors = require('cors');\n\nvar _cors2 = _interopRequireDefault(_cors);\n\nvar _http = require('http');\n\nvar http = _interopRequireWildcard(_http);\n\nvar _httpErrors = require('http-errors');\n\nvar _httpErrors2 = _interopRequireDefault(_httpErrors);\n\nvar _morgan = require('morgan');\n\nvar _morgan2 = _interopRequireDefault(_morgan);\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _index = require('./config/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _errorHandler = require('./utils/error-handler');\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass APPServer {\n\n  constructor(app) {\n    this._app = app;\n\n    this._app.use((0, _helmet2.default)({\n      xPoweredBy: true,\n      strictTransportSecurity: {\n        maxAge: 86400,\n        includeSubDomains: false\n      },\n      contentSecurityPolicy: true,\n      xXssProtection: true\n    }));\n    this._app.use((0, _morgan2.default)('dev'));\n    this._app.use(_express2.default.json());\n    this._app.use(_express2.default.urlencoded({ extended: false }));\n    this._app.use((0, _cors2.default)({\n      allowedHeaders: [\"Content-Type\", \"Token\", \"Authorization\"],\n      exposedHeaders: [\"Token\", \"Authorization\"],\n      origin: \"*\",\n      methods: [\"GET, HEAD, PUT, PATCH, POST, DELETE\"],\n      preflightContinue: false\n    }));\n  }\n\n  async connect() {\n    await _mongoose2.default.connect(`mongodb://${_index2.default.mongodb.host}:${_index2.default.mongodb.port}/${_index2.default.mongodb.name}`, _index2.default.mongodb.options, connected => console.info('database connection successful'), disconnected => console.info('database disconnect sucessful'), error => console.error(error));\n  }\n\n  setRouter(endpoints) {\n    endpoints(this._app);\n  }\n\n  errorHandler() {\n    this._app.use(_errorHandler.errorHandler);\n    this._app.use(_errorHandler.apiErrorHandler);\n  }\n\n  listen() {\n    const _server = http.createServer(this._app);\n    _server.listen(_index2.default.app.port);\n    _server.on('error', error => {\n      if (error.syscall !== 'listen') {\n        throw error;\n      }\n\n      let bind = typeof port === 'string' ? `Pipe ${_index2.default.app.port}` : `Port ${_index2.default.app.port}`;\n\n      let message = undefined;\n      switch (error.code) {\n        case 'EACCES':\n          message = `${bind} requires elevated privileges`;\n          break;\n        case 'EADDRINUSE':\n          message = `${bind} is already in use`;\n          break;\n      }\n\n      if (message) {\n        console.error(message);\n        process.exit(1);\n      }\n\n      throw error;\n    });\n\n    _server.on('listening', () => {\n      const addr = _server.address();\n      const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;\n\n      console.info(`server listening on ${bind}`);\n    });\n  }\n}exports.default = APPServer;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZXJ2ZXIuanMiXSwibmFtZXMiOlsiaHR0cCIsIkFQUFNlcnZlciIsImNvbnN0cnVjdG9yIiwiYXBwIiwiX2FwcCIsInVzZSIsInhQb3dlcmVkQnkiLCJzdHJpY3RUcmFuc3BvcnRTZWN1cml0eSIsIm1heEFnZSIsImluY2x1ZGVTdWJEb21haW5zIiwiY29udGVudFNlY3VyaXR5UG9saWN5IiwieFhzc1Byb3RlY3Rpb24iLCJleHByZXNzIiwianNvbiIsInVybGVuY29kZWQiLCJleHRlbmRlZCIsImFsbG93ZWRIZWFkZXJzIiwiZXhwb3NlZEhlYWRlcnMiLCJvcmlnaW4iLCJtZXRob2RzIiwicHJlZmxpZ2h0Q29udGludWUiLCJjb25uZWN0IiwiZGIiLCJjb25maWciLCJtb25nb2RiIiwiaG9zdCIsInBvcnQiLCJuYW1lIiwib3B0aW9ucyIsImNvbm5lY3RlZCIsImNvbnNvbGUiLCJpbmZvIiwiZGlzY29ubmVjdGVkIiwiZXJyb3IiLCJzZXRSb3V0ZXIiLCJlbmRwb2ludHMiLCJlcnJvckhhbmRsZXIiLCJhcGlFcnJvckhhbmRsZXIiLCJsaXN0ZW4iLCJfc2VydmVyIiwiY3JlYXRlU2VydmVyIiwib24iLCJzeXNjYWxsIiwiYmluZCIsIm1lc3NhZ2UiLCJ1bmRlZmluZWQiLCJjb2RlIiwicHJvY2VzcyIsImV4aXQiLCJhZGRyIiwiYWRkcmVzcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7O0lBQVlBLEk7O0FBQ1o7Ozs7QUFDQTs7OztBQUNBOzs7O0FBRUE7Ozs7QUFDQTs7Ozs7O0FBT2UsTUFBTUMsU0FBTixDQUFnQjs7QUFFM0JDLGNBQVlDLEdBQVosRUFBaUI7QUFDZixTQUFLQyxJQUFMLEdBQVlELEdBQVo7O0FBRUEsU0FBS0MsSUFBTCxDQUFVQyxHQUFWLENBQWMsc0JBQU87QUFDbkJDLGtCQUFZLElBRE87QUFFbkJDLCtCQUF5QjtBQUN2QkMsZ0JBQVEsS0FEZTtBQUV2QkMsMkJBQW1CO0FBRkksT0FGTjtBQU1uQkMsNkJBQXVCLElBTko7QUFPbkJDLHNCQUFnQjtBQVBHLEtBQVAsQ0FBZDtBQVNBLFNBQUtQLElBQUwsQ0FBVUMsR0FBVixDQUFjLHNCQUFPLEtBQVAsQ0FBZDtBQUNBLFNBQUtELElBQUwsQ0FBVUMsR0FBVixDQUFjTyxrQkFBUUMsSUFBUixFQUFkO0FBQ0EsU0FBS1QsSUFBTCxDQUFVQyxHQUFWLENBQWNPLGtCQUFRRSxVQUFSLENBQW1CLEVBQUNDLFVBQVUsS0FBWCxFQUFuQixDQUFkO0FBQ0EsU0FBS1gsSUFBTCxDQUFVQyxHQUFWLENBQWMsb0JBQUs7QUFDakJXLHNCQUFnQixDQUFDLGNBQUQsRUFBaUIsT0FBakIsRUFBMEIsZUFBMUIsQ0FEQztBQUVqQkMsc0JBQWdCLENBQUMsT0FBRCxFQUFVLGVBQVYsQ0FGQztBQUdqQkMsY0FBUSxHQUhTO0FBSWpCQyxlQUFTLENBQUMscUNBQUQsQ0FKUTtBQUtqQkMseUJBQW1CO0FBTEYsS0FBTCxDQUFkO0FBT0Q7O0FBRUQsUUFBTUMsT0FBTixHQUFnQjtBQUNkLFVBQU1DLG1CQUFHRCxPQUFILENBQ0gsYUFBWUUsZ0JBQU9DLE9BQVAsQ0FBZUMsSUFBSyxJQUFHRixnQkFBT0MsT0FBUCxDQUFlRSxJQUFLLElBQUdILGdCQUFPQyxPQUFQLENBQWVHLElBQUssRUFEM0UsRUFFSkosZ0JBQU9DLE9BQVAsQ0FBZUksT0FGWCxFQUdKQyxhQUFhQyxRQUFRQyxJQUFSLENBQWEsZ0NBQWIsQ0FIVCxFQUlKQyxnQkFBZ0JGLFFBQVFDLElBQVIsQ0FBYSwrQkFBYixDQUpaLEVBS0pFLFNBQVNILFFBQVFHLEtBQVIsQ0FBY0EsS0FBZCxDQUxMLENBQU47QUFPRDs7QUFFREMsWUFBVUMsU0FBVixFQUFxQjtBQUNuQkEsY0FBVSxLQUFLL0IsSUFBZjtBQUNEOztBQUVEZ0MsaUJBQWU7QUFDYixTQUFLaEMsSUFBTCxDQUFVQyxHQUFWLENBQWMrQiwwQkFBZDtBQUNBLFNBQUtoQyxJQUFMLENBQVVDLEdBQVYsQ0FBY2dDLDZCQUFkO0FBQ0Q7O0FBRURDLFdBQVM7QUFDUCxVQUFNQyxVQUFVdkMsS0FBS3dDLFlBQUwsQ0FBa0IsS0FBS3BDLElBQXZCLENBQWhCO0FBQ0FtQyxZQUFRRCxNQUFSLENBQWVmLGdCQUFPcEIsR0FBUCxDQUFXdUIsSUFBMUI7QUFDQWEsWUFBUUUsRUFBUixDQUFXLE9BQVgsRUFBcUJSLEtBQUQsSUFBVztBQUM3QixVQUFJQSxNQUFNUyxPQUFOLEtBQWtCLFFBQXRCLEVBQWdDO0FBQzlCLGNBQU1ULEtBQU47QUFDRDs7QUFFRCxVQUFJVSxPQUFPLE9BQU9qQixJQUFQLEtBQWdCLFFBQWhCLEdBQ04sUUFBT0gsZ0JBQU9wQixHQUFQLENBQVd1QixJQUFLLEVBRGpCLEdBRU4sUUFBT0gsZ0JBQU9wQixHQUFQLENBQVd1QixJQUFLLEVBRjVCOztBQUlBLFVBQUlrQixVQUFVQyxTQUFkO0FBQ0EsY0FBUVosTUFBTWEsSUFBZDtBQUNFLGFBQUssUUFBTDtBQUNFRixvQkFBVyxHQUFFRCxJQUFLLCtCQUFsQjtBQUNBO0FBQ0YsYUFBSyxZQUFMO0FBQ0VDLG9CQUFXLEdBQUVELElBQUssb0JBQWxCO0FBQ0E7QUFOSjs7QUFTQSxVQUFJQyxPQUFKLEVBQWE7QUFDWGQsZ0JBQVFHLEtBQVIsQ0FBY1csT0FBZDtBQUNBRyxnQkFBUUMsSUFBUixDQUFhLENBQWI7QUFDRDs7QUFFRCxZQUFNZixLQUFOO0FBQ0QsS0F6QkQ7O0FBMkJBTSxZQUFRRSxFQUFSLENBQVcsV0FBWCxFQUF3QixNQUFNO0FBQzVCLFlBQU1RLE9BQU9WLFFBQVFXLE9BQVIsRUFBYjtBQUNBLFlBQU1QLE9BQU8sT0FBT00sSUFBUCxLQUFnQixRQUFoQixHQUNSLFFBQU9BLElBQUssRUFESixHQUVSLFFBQU9BLEtBQUt2QixJQUFLLEVBRnRCOztBQUlBSSxjQUFRQyxJQUFSLENBQWMsdUJBQXNCWSxJQUFLLEVBQXpDO0FBQ0QsS0FQRDtBQVFEO0FBbkYwQixDLGtCQUFWMUMsUztBQW9GbEIiLCJmaWxlIjoiYXBwLXNlcnZlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzICAgICBmcm9tICdleHByZXNzJztcbmltcG9ydCBoZWxtZXQgICAgICBmcm9tICdoZWxtZXQnO1xuaW1wb3J0IGNvcnMgICAgICAgIGZyb20gJ2NvcnMnO1xuaW1wb3J0ICogYXMgaHR0cCAgIGZyb20gJ2h0dHAnO1xuaW1wb3J0IGNyZWF0ZUVycm9yIGZyb20gJ2h0dHAtZXJyb3JzJztcbmltcG9ydCBtb3JnYW4gICAgICBmcm9tICdtb3JnYW4nO1xuaW1wb3J0IGRiICAgICAgICAgIGZyb20gJ21vbmdvb3NlJztcblxuaW1wb3J0IGNvbmZpZyAgICAgICBmcm9tICcuL2NvbmZpZy9pbmRleCc7XG5pbXBvcnQge1xuICBlcnJvckhhbmRsZXIsIFxuICBhcGlFcnJvckhhbmRsZXIgXG59ICAgICAgICAgICAgICAgICAgIGZyb20gJy4vdXRpbHMvZXJyb3ItaGFuZGxlcic7XG5cblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBBUFBTZXJ2ZXIge1xuICBcbiAgICBjb25zdHJ1Y3RvcihhcHApIHtcbiAgICAgIHRoaXMuX2FwcCA9IGFwcDtcblxuICAgICAgdGhpcy5fYXBwLnVzZShoZWxtZXQoe1xuICAgICAgICB4UG93ZXJlZEJ5OiB0cnVlLFxuICAgICAgICBzdHJpY3RUcmFuc3BvcnRTZWN1cml0eToge1xuICAgICAgICAgIG1heEFnZTogODY0MDAsXG4gICAgICAgICAgaW5jbHVkZVN1YkRvbWFpbnM6IGZhbHNlLFxuICAgICAgICB9LFxuICAgICAgICBjb250ZW50U2VjdXJpdHlQb2xpY3k6IHRydWUsXG4gICAgICAgIHhYc3NQcm90ZWN0aW9uOiB0cnVlLFxuICAgICAgfSkpO1xuICAgICAgdGhpcy5fYXBwLnVzZShtb3JnYW4oJ2RldicpKTtcbiAgICAgIHRoaXMuX2FwcC51c2UoZXhwcmVzcy5qc29uKCkpOyAgICAgIFxuICAgICAgdGhpcy5fYXBwLnVzZShleHByZXNzLnVybGVuY29kZWQoe2V4dGVuZGVkOiBmYWxzZX0pKTtcbiAgICAgIHRoaXMuX2FwcC51c2UoY29ycyh7XG4gICAgICAgIGFsbG93ZWRIZWFkZXJzOiBbXCJDb250ZW50LVR5cGVcIiwgXCJUb2tlblwiLCBcIkF1dGhvcml6YXRpb25cIl0sXG4gICAgICAgIGV4cG9zZWRIZWFkZXJzOiBbXCJUb2tlblwiLCBcIkF1dGhvcml6YXRpb25cIl0sXG4gICAgICAgIG9yaWdpbjogXCIqXCIsXG4gICAgICAgIG1ldGhvZHM6IFtcIkdFVCwgSEVBRCwgUFVULCBQQVRDSCwgUE9TVCwgREVMRVRFXCJdLFxuICAgICAgICBwcmVmbGlnaHRDb250aW51ZTogZmFsc2UsXG4gICAgICB9KSk7XG4gICAgfVxuICAgIFxuICAgIGFzeW5jIGNvbm5lY3QoKSB7XG4gICAgICBhd2FpdCBkYi5jb25uZWN0KFxuICAgICAgICBgbW9uZ29kYjovLyR7Y29uZmlnLm1vbmdvZGIuaG9zdH06JHtjb25maWcubW9uZ29kYi5wb3J0fS8ke2NvbmZpZy5tb25nb2RiLm5hbWV9YCxcbiAgICAgICAgY29uZmlnLm1vbmdvZGIub3B0aW9ucyxcbiAgICAgICAgY29ubmVjdGVkID0+IGNvbnNvbGUuaW5mbygnZGF0YWJhc2UgY29ubmVjdGlvbiBzdWNjZXNzZnVsJyksXG4gICAgICAgIGRpc2Nvbm5lY3RlZCA9PiBjb25zb2xlLmluZm8oJ2RhdGFiYXNlIGRpc2Nvbm5lY3Qgc3VjZXNzZnVsJyksXG4gICAgICAgIGVycm9yID0+IGNvbnNvbGUuZXJyb3IoZXJyb3IpLFxuICAgICAgKTtcbiAgICB9XG5cbiAgICBzZXRSb3V0ZXIoZW5kcG9pbnRzKSB7XG4gICAgICBlbmRwb2ludHModGhpcy5fYXBwKTtcbiAgICB9XG5cbiAgICBlcnJvckhhbmRsZXIoKSB7XG4gICAgICB0aGlzLl9hcHAudXNlKGVycm9ySGFuZGxlcik7XG4gICAgICB0aGlzLl9hcHAudXNlKGFwaUVycm9ySGFuZGxlcik7XG4gICAgfVxuICBcbiAgICBsaXN0ZW4oKSB7XG4gICAgICBjb25zdCBfc2VydmVyID0gaHR0cC5jcmVhdGVTZXJ2ZXIodGhpcy5fYXBwKTtcbiAgICAgIF9zZXJ2ZXIubGlzdGVuKGNvbmZpZy5hcHAucG9ydCk7XG4gICAgICBfc2VydmVyLm9uKCdlcnJvcicsIChlcnJvcikgPT4ge1xuICAgICAgICBpZiAoZXJyb3Iuc3lzY2FsbCAhPT0gJ2xpc3RlbicpIHtcbiAgICAgICAgICB0aHJvdyBlcnJvcjtcbiAgICAgICAgfVxuICBcbiAgICAgICAgbGV0IGJpbmQgPSB0eXBlb2YgcG9ydCA9PT0gJ3N0cmluZycgXG4gICAgICAgICAgPyBgUGlwZSAke2NvbmZpZy5hcHAucG9ydH1gIFxuICAgICAgICAgIDogYFBvcnQgJHtjb25maWcuYXBwLnBvcnR9YFxuICAgICAgICBcbiAgICAgICAgbGV0IG1lc3NhZ2UgPSB1bmRlZmluZWQ7XG4gICAgICAgIHN3aXRjaCAoZXJyb3IuY29kZSkge1xuICAgICAgICAgIGNhc2UgJ0VBQ0NFUyc6XG4gICAgICAgICAgICBtZXNzYWdlID0gYCR7YmluZH0gcmVxdWlyZXMgZWxldmF0ZWQgcHJpdmlsZWdlc2A7XG4gICAgICAgICAgICBicmVhaztcbiAgICAgICAgICBjYXNlICdFQUREUklOVVNFJzpcbiAgICAgICAgICAgIG1lc3NhZ2UgPSBgJHtiaW5kfSBpcyBhbHJlYWR5IGluIHVzZWA7XG4gICAgICAgICAgICBicmVhazsgICAgICAgIFxuICAgICAgICB9XG4gIFxuICAgICAgICBpZiAobWVzc2FnZSkge1xuICAgICAgICAgIGNvbnNvbGUuZXJyb3IobWVzc2FnZSk7XG4gICAgICAgICAgcHJvY2Vzcy5leGl0KDEpO1xuICAgICAgICB9XG4gIFxuICAgICAgICB0aHJvdyBlcnJvcjtcbiAgICAgIH0pO1xuICAgICAgXG4gICAgICBfc2VydmVyLm9uKCdsaXN0ZW5pbmcnLCAoKSA9PiB7XG4gICAgICAgIGNvbnN0IGFkZHIgPSBfc2VydmVyLmFkZHJlc3MoKTtcbiAgICAgICAgY29uc3QgYmluZCA9IHR5cGVvZiBhZGRyID09PSAnc3RyaW5nJyBcbiAgICAgICAgICA/IGBwaXBlICR7YWRkcn1gXG4gICAgICAgICAgOiBgcG9ydCAke2FkZHIucG9ydH1gXG4gICAgICAgIFxuICAgICAgICBjb25zb2xlLmluZm8oYHNlcnZlciBsaXN0ZW5pbmcgb24gJHtiaW5kfWApO1xuICAgICAgfSk7XG4gICAgfVxuICB9OyJdfQ==",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _http = require('http');\n\nvar http = _interopRequireWildcard(_http);\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nvar _index = require('./config/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _errorHandler = require('./utils/error-handler');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nclass APPServer {\n\n  constructor({ app = undefined }) {\n    this._app = app();\n\n    this._app.use(app.json());\n    this._app.use(app.urlencoded({ extended: false }));\n  }\n\n  async connect() {\n    await _mongoose2.default.connect(`mongodb://${_index2.default.mongodb.host}:${_index2.default.mongodb.port}/${_index2.default.mongodb.name}`, _index2.default.mongodb.options, connected => console.info('database connection successful'), disconnected => console.info('database disconnect sucessful'), error => console.error(error));\n  }\n\n  setMiddleware(middleware) {\n    middleware(this._app);\n  }\n\n  setRouter(endpoints) {\n    endpoints(this._app);\n  }\n\n  errorHandler() {\n    this._app.use(_errorHandler.errorHandler);\n    this._app.use(_errorHandler.apiErrorHandler);\n  }\n\n  listen() {\n    const _server = http.createServer(this._app);\n    _server.listen(_index2.default.app.port);\n    _server.on('error', error => {\n      if (error.syscall !== 'listen') {\n        throw error;\n      }\n\n      let bind = typeof port === 'string' ? `Pipe ${_index2.default.app.port}` : `Port ${_index2.default.app.port}`;\n\n      let message = undefined;\n      switch (error.code) {\n        case 'EACCES':\n          message = `${bind} requires elevated privileges`;\n          break;\n        case 'EADDRINUSE':\n          message = `${bind} is already in use`;\n          break;\n      }\n\n      if (message) {\n        console.error(message);\n        process.exit(1);\n      }\n\n      throw error;\n    });\n\n    _server.on('listening', () => {\n      const addr = _server.address();\n      const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;\n\n      console.info(`server listening on ${bind}`);\n    });\n  }\n}exports.default = APPServer;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZXJ2ZXIuanMiXSwibmFtZXMiOlsiaHR0cCIsIkFQUFNlcnZlciIsImNvbnN0cnVjdG9yIiwiYXBwIiwidW5kZWZpbmVkIiwiX2FwcCIsInVzZSIsImpzb24iLCJ1cmxlbmNvZGVkIiwiZXh0ZW5kZWQiLCJjb25uZWN0IiwiZGIiLCJjb25maWciLCJtb25nb2RiIiwiaG9zdCIsInBvcnQiLCJuYW1lIiwib3B0aW9ucyIsImNvbm5lY3RlZCIsImNvbnNvbGUiLCJpbmZvIiwiZGlzY29ubmVjdGVkIiwiZXJyb3IiLCJzZXRNaWRkbGV3YXJlIiwibWlkZGxld2FyZSIsInNldFJvdXRlciIsImVuZHBvaW50cyIsImVycm9ySGFuZGxlciIsImFwaUVycm9ySGFuZGxlciIsImxpc3RlbiIsIl9zZXJ2ZXIiLCJjcmVhdGVTZXJ2ZXIiLCJvbiIsInN5c2NhbGwiLCJiaW5kIiwibWVzc2FnZSIsImNvZGUiLCJwcm9jZXNzIiwiZXhpdCIsImFkZHIiLCJhZGRyZXNzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7SUFBWUEsSTs7QUFDWjs7OztBQUVBOzs7O0FBQ0E7Ozs7OztBQU9lLE1BQU1DLFNBQU4sQ0FBZ0I7O0FBRTNCQyxjQUFZLEVBQUNDLE1BQU1DLFNBQVAsRUFBWixFQUErQjtBQUM3QixTQUFLQyxJQUFMLEdBQVlGLEtBQVo7O0FBRUEsU0FBS0UsSUFBTCxDQUFVQyxHQUFWLENBQWNILElBQUlJLElBQUosRUFBZDtBQUNBLFNBQUtGLElBQUwsQ0FBVUMsR0FBVixDQUFjSCxJQUFJSyxVQUFKLENBQWUsRUFBQ0MsVUFBVSxLQUFYLEVBQWYsQ0FBZDtBQUVEOztBQUVELFFBQU1DLE9BQU4sR0FBZ0I7QUFDZCxVQUFNQyxtQkFBR0QsT0FBSCxDQUNILGFBQVlFLGdCQUFPQyxPQUFQLENBQWVDLElBQUssSUFBR0YsZ0JBQU9DLE9BQVAsQ0FBZUUsSUFBSyxJQUFHSCxnQkFBT0MsT0FBUCxDQUFlRyxJQUFLLEVBRDNFLEVBRUpKLGdCQUFPQyxPQUFQLENBQWVJLE9BRlgsRUFHSkMsYUFBYUMsUUFBUUMsSUFBUixDQUFhLGdDQUFiLENBSFQsRUFJSkMsZ0JBQWdCRixRQUFRQyxJQUFSLENBQWEsK0JBQWIsQ0FKWixFQUtKRSxTQUFTSCxRQUFRRyxLQUFSLENBQWNBLEtBQWQsQ0FMTCxDQUFOO0FBT0Q7O0FBRURDLGdCQUFjQyxVQUFkLEVBQTBCO0FBQ3hCQSxlQUFXLEtBQUtuQixJQUFoQjtBQUNEOztBQUVEb0IsWUFBVUMsU0FBVixFQUFxQjtBQUNuQkEsY0FBVSxLQUFLckIsSUFBZjtBQUNEOztBQUVEc0IsaUJBQWU7QUFDYixTQUFLdEIsSUFBTCxDQUFVQyxHQUFWLENBQWNxQiwwQkFBZDtBQUNBLFNBQUt0QixJQUFMLENBQVVDLEdBQVYsQ0FBY3NCLDZCQUFkO0FBQ0Q7O0FBRURDLFdBQVM7QUFDUCxVQUFNQyxVQUFVOUIsS0FBSytCLFlBQUwsQ0FBa0IsS0FBSzFCLElBQXZCLENBQWhCO0FBQ0F5QixZQUFRRCxNQUFSLENBQWVqQixnQkFBT1QsR0FBUCxDQUFXWSxJQUExQjtBQUNBZSxZQUFRRSxFQUFSLENBQVcsT0FBWCxFQUFxQlYsS0FBRCxJQUFXO0FBQzdCLFVBQUlBLE1BQU1XLE9BQU4sS0FBa0IsUUFBdEIsRUFBZ0M7QUFDOUIsY0FBTVgsS0FBTjtBQUNEOztBQUVELFVBQUlZLE9BQU8sT0FBT25CLElBQVAsS0FBZ0IsUUFBaEIsR0FDTixRQUFPSCxnQkFBT1QsR0FBUCxDQUFXWSxJQUFLLEVBRGpCLEdBRU4sUUFBT0gsZ0JBQU9ULEdBQVAsQ0FBV1ksSUFBSyxFQUY1Qjs7QUFJQSxVQUFJb0IsVUFBVS9CLFNBQWQ7QUFDQSxjQUFRa0IsTUFBTWMsSUFBZDtBQUNFLGFBQUssUUFBTDtBQUNFRCxvQkFBVyxHQUFFRCxJQUFLLCtCQUFsQjtBQUNBO0FBQ0YsYUFBSyxZQUFMO0FBQ0VDLG9CQUFXLEdBQUVELElBQUssb0JBQWxCO0FBQ0E7QUFOSjs7QUFTQSxVQUFJQyxPQUFKLEVBQWE7QUFDWGhCLGdCQUFRRyxLQUFSLENBQWNhLE9BQWQ7QUFDQUUsZ0JBQVFDLElBQVIsQ0FBYSxDQUFiO0FBQ0Q7O0FBRUQsWUFBTWhCLEtBQU47QUFDRCxLQXpCRDs7QUEyQkFRLFlBQVFFLEVBQVIsQ0FBVyxXQUFYLEVBQXdCLE1BQU07QUFDNUIsWUFBTU8sT0FBT1QsUUFBUVUsT0FBUixFQUFiO0FBQ0EsWUFBTU4sT0FBTyxPQUFPSyxJQUFQLEtBQWdCLFFBQWhCLEdBQ1IsUUFBT0EsSUFBSyxFQURKLEdBRVIsUUFBT0EsS0FBS3hCLElBQUssRUFGdEI7O0FBSUFJLGNBQVFDLElBQVIsQ0FBYyx1QkFBc0JjLElBQUssRUFBekM7QUFDRCxLQVBEO0FBUUQ7QUF2RTBCLEMsa0JBQVZqQyxTO0FBd0VsQiIsImZpbGUiOiJhcHAtc2VydmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgaHR0cCAgIGZyb20gJ2h0dHAnO1xuaW1wb3J0IGRiICAgICAgICAgIGZyb20gJ21vbmdvb3NlJztcblxuaW1wb3J0IGNvbmZpZyAgICAgICBmcm9tICcuL2NvbmZpZy9pbmRleCc7XG5pbXBvcnQge1xuICBlcnJvckhhbmRsZXIsIFxuICBhcGlFcnJvckhhbmRsZXIgXG59ICAgICAgICAgICAgICAgICAgIGZyb20gJy4vdXRpbHMvZXJyb3ItaGFuZGxlcic7XG5cblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBBUFBTZXJ2ZXIge1xuICBcbiAgICBjb25zdHJ1Y3Rvcih7YXBwID0gdW5kZWZpbmVkfSkge1xuICAgICAgdGhpcy5fYXBwID0gYXBwKCk7XG5cbiAgICAgIHRoaXMuX2FwcC51c2UoYXBwLmpzb24oKSk7ICAgICAgXG4gICAgICB0aGlzLl9hcHAudXNlKGFwcC51cmxlbmNvZGVkKHtleHRlbmRlZDogZmFsc2V9KSk7XG5cbiAgICB9XG4gICAgXG4gICAgYXN5bmMgY29ubmVjdCgpIHtcbiAgICAgIGF3YWl0IGRiLmNvbm5lY3QoXG4gICAgICAgIGBtb25nb2RiOi8vJHtjb25maWcubW9uZ29kYi5ob3N0fToke2NvbmZpZy5tb25nb2RiLnBvcnR9LyR7Y29uZmlnLm1vbmdvZGIubmFtZX1gLFxuICAgICAgICBjb25maWcubW9uZ29kYi5vcHRpb25zLFxuICAgICAgICBjb25uZWN0ZWQgPT4gY29uc29sZS5pbmZvKCdkYXRhYmFzZSBjb25uZWN0aW9uIHN1Y2Nlc3NmdWwnKSxcbiAgICAgICAgZGlzY29ubmVjdGVkID0+IGNvbnNvbGUuaW5mbygnZGF0YWJhc2UgZGlzY29ubmVjdCBzdWNlc3NmdWwnKSxcbiAgICAgICAgZXJyb3IgPT4gY29uc29sZS5lcnJvcihlcnJvciksXG4gICAgICApO1xuICAgIH1cblxuICAgIHNldE1pZGRsZXdhcmUobWlkZGxld2FyZSkge1xuICAgICAgbWlkZGxld2FyZSh0aGlzLl9hcHApO1xuICAgIH1cblxuICAgIHNldFJvdXRlcihlbmRwb2ludHMpIHtcbiAgICAgIGVuZHBvaW50cyh0aGlzLl9hcHApO1xuICAgIH1cblxuICAgIGVycm9ySGFuZGxlcigpIHtcbiAgICAgIHRoaXMuX2FwcC51c2UoZXJyb3JIYW5kbGVyKTtcbiAgICAgIHRoaXMuX2FwcC51c2UoYXBpRXJyb3JIYW5kbGVyKTtcbiAgICB9XG4gIFxuICAgIGxpc3RlbigpIHtcbiAgICAgIGNvbnN0IF9zZXJ2ZXIgPSBodHRwLmNyZWF0ZVNlcnZlcih0aGlzLl9hcHApO1xuICAgICAgX3NlcnZlci5saXN0ZW4oY29uZmlnLmFwcC5wb3J0KTtcbiAgICAgIF9zZXJ2ZXIub24oJ2Vycm9yJywgKGVycm9yKSA9PiB7XG4gICAgICAgIGlmIChlcnJvci5zeXNjYWxsICE9PSAnbGlzdGVuJykge1xuICAgICAgICAgIHRocm93IGVycm9yO1xuICAgICAgICB9XG4gIFxuICAgICAgICBsZXQgYmluZCA9IHR5cGVvZiBwb3J0ID09PSAnc3RyaW5nJyBcbiAgICAgICAgICA/IGBQaXBlICR7Y29uZmlnLmFwcC5wb3J0fWAgXG4gICAgICAgICAgOiBgUG9ydCAke2NvbmZpZy5hcHAucG9ydH1gXG4gICAgICAgIFxuICAgICAgICBsZXQgbWVzc2FnZSA9IHVuZGVmaW5lZDtcbiAgICAgICAgc3dpdGNoIChlcnJvci5jb2RlKSB7XG4gICAgICAgICAgY2FzZSAnRUFDQ0VTJzpcbiAgICAgICAgICAgIG1lc3NhZ2UgPSBgJHtiaW5kfSByZXF1aXJlcyBlbGV2YXRlZCBwcml2aWxlZ2VzYDtcbiAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICAgIGNhc2UgJ0VBRERSSU5VU0UnOlxuICAgICAgICAgICAgbWVzc2FnZSA9IGAke2JpbmR9IGlzIGFscmVhZHkgaW4gdXNlYDtcbiAgICAgICAgICAgIGJyZWFrOyAgICAgICAgXG4gICAgICAgIH1cbiAgXG4gICAgICAgIGlmIChtZXNzYWdlKSB7XG4gICAgICAgICAgY29uc29sZS5lcnJvcihtZXNzYWdlKTtcbiAgICAgICAgICBwcm9jZXNzLmV4aXQoMSk7XG4gICAgICAgIH1cbiAgXG4gICAgICAgIHRocm93IGVycm9yO1xuICAgICAgfSk7XG4gICAgICBcbiAgICAgIF9zZXJ2ZXIub24oJ2xpc3RlbmluZycsICgpID0+IHtcbiAgICAgICAgY29uc3QgYWRkciA9IF9zZXJ2ZXIuYWRkcmVzcygpO1xuICAgICAgICBjb25zdCBiaW5kID0gdHlwZW9mIGFkZHIgPT09ICdzdHJpbmcnIFxuICAgICAgICAgID8gYHBpcGUgJHthZGRyfWBcbiAgICAgICAgICA6IGBwb3J0ICR7YWRkci5wb3J0fWBcbiAgICAgICAgXG4gICAgICAgIGNvbnNvbGUuaW5mbyhgc2VydmVyIGxpc3RlbmluZyBvbiAke2JpbmR9YCk7XG4gICAgICB9KTtcbiAgICB9XG4gIH07Il19",
     "ast": null,
     "map": {
       "version": 3,
@@ -1231,23 +1189,12 @@
         "APPServer",
         "constructor",
         "app",
+        "undefined",
         "_app",
         "use",
-        "xPoweredBy",
-        "strictTransportSecurity",
-        "maxAge",
-        "includeSubDomains",
-        "contentSecurityPolicy",
-        "xXssProtection",
-        "express",
         "json",
         "urlencoded",
         "extended",
-        "allowedHeaders",
-        "exposedHeaders",
-        "origin",
-        "methods",
-        "preflightContinue",
         "connect",
         "db",
         "config",
@@ -1261,6 +1208,8 @@
         "info",
         "disconnected",
         "error",
+        "setMiddleware",
+        "middleware",
         "setRouter",
         "endpoints",
         "errorHandler",
@@ -1272,21 +1221,20 @@
         "syscall",
         "bind",
         "message",
-        "undefined",
         "code",
         "process",
         "exit",
         "addr",
         "address"
       ],
-      "mappings": ";;;;;;AAAA;;;;AACA;;;;AACA;;;;AACA;;IAAYA,I;;AACZ;;;;AACA;;;;AACA;;;;AAEA;;;;AACA;;;;;;AAOe,MAAMC,SAAN,CAAgB;;AAE3BC,cAAYC,GAAZ,EAAiB;AACf,SAAKC,IAAL,GAAYD,GAAZ;;AAEA,SAAKC,IAAL,CAAUC,GAAV,CAAc,sBAAO;AACnBC,kBAAY,IADO;AAEnBC,+BAAyB;AACvBC,gBAAQ,KADe;AAEvBC,2BAAmB;AAFI,OAFN;AAMnBC,6BAAuB,IANJ;AAOnBC,sBAAgB;AAPG,KAAP,CAAd;AASA,SAAKP,IAAL,CAAUC,GAAV,CAAc,sBAAO,KAAP,CAAd;AACA,SAAKD,IAAL,CAAUC,GAAV,CAAcO,kBAAQC,IAAR,EAAd;AACA,SAAKT,IAAL,CAAUC,GAAV,CAAcO,kBAAQE,UAAR,CAAmB,EAACC,UAAU,KAAX,EAAnB,CAAd;AACA,SAAKX,IAAL,CAAUC,GAAV,CAAc,oBAAK;AACjBW,sBAAgB,CAAC,cAAD,EAAiB,OAAjB,EAA0B,eAA1B,CADC;AAEjBC,sBAAgB,CAAC,OAAD,EAAU,eAAV,CAFC;AAGjBC,cAAQ,GAHS;AAIjBC,eAAS,CAAC,qCAAD,CAJQ;AAKjBC,yBAAmB;AALF,KAAL,CAAd;AAOD;;AAED,QAAMC,OAAN,GAAgB;AACd,UAAMC,mBAAGD,OAAH,CACH,aAAYE,gBAAOC,OAAP,CAAeC,IAAK,IAAGF,gBAAOC,OAAP,CAAeE,IAAK,IAAGH,gBAAOC,OAAP,CAAeG,IAAK,EAD3E,EAEJJ,gBAAOC,OAAP,CAAeI,OAFX,EAGJC,aAAaC,QAAQC,IAAR,CAAa,gCAAb,CAHT,EAIJC,gBAAgBF,QAAQC,IAAR,CAAa,+BAAb,CAJZ,EAKJE,SAASH,QAAQG,KAAR,CAAcA,KAAd,CALL,CAAN;AAOD;;AAEDC,YAAUC,SAAV,EAAqB;AACnBA,cAAU,KAAK/B,IAAf;AACD;;AAEDgC,iBAAe;AACb,SAAKhC,IAAL,CAAUC,GAAV,CAAc+B,0BAAd;AACA,SAAKhC,IAAL,CAAUC,GAAV,CAAcgC,6BAAd;AACD;;AAEDC,WAAS;AACP,UAAMC,UAAUvC,KAAKwC,YAAL,CAAkB,KAAKpC,IAAvB,CAAhB;AACAmC,YAAQD,MAAR,CAAef,gBAAOpB,GAAP,CAAWuB,IAA1B;AACAa,YAAQE,EAAR,CAAW,OAAX,EAAqBR,KAAD,IAAW;AAC7B,UAAIA,MAAMS,OAAN,KAAkB,QAAtB,EAAgC;AAC9B,cAAMT,KAAN;AACD;;AAED,UAAIU,OAAO,OAAOjB,IAAP,KAAgB,QAAhB,GACN,QAAOH,gBAAOpB,GAAP,CAAWuB,IAAK,EADjB,GAEN,QAAOH,gBAAOpB,GAAP,CAAWuB,IAAK,EAF5B;;AAIA,UAAIkB,UAAUC,SAAd;AACA,cAAQZ,MAAMa,IAAd;AACE,aAAK,QAAL;AACEF,oBAAW,GAAED,IAAK,+BAAlB;AACA;AACF,aAAK,YAAL;AACEC,oBAAW,GAAED,IAAK,oBAAlB;AACA;AANJ;;AASA,UAAIC,OAAJ,EAAa;AACXd,gBAAQG,KAAR,CAAcW,OAAd;AACAG,gBAAQC,IAAR,CAAa,CAAb;AACD;;AAED,YAAMf,KAAN;AACD,KAzBD;;AA2BAM,YAAQE,EAAR,CAAW,WAAX,EAAwB,MAAM;AAC5B,YAAMQ,OAAOV,QAAQW,OAAR,EAAb;AACA,YAAMP,OAAO,OAAOM,IAAP,KAAgB,QAAhB,GACR,QAAOA,IAAK,EADJ,GAER,QAAOA,KAAKvB,IAAK,EAFtB;;AAIAI,cAAQC,IAAR,CAAc,uBAAsBY,IAAK,EAAzC;AACD,KAPD;AAQD;AAnF0B,C,kBAAV1C,S;AAoFlB",
+      "mappings": ";;;;;;AAAA;;IAAYA,I;;AACZ;;;;AAEA;;;;AACA;;;;;;AAOe,MAAMC,SAAN,CAAgB;;AAE3BC,cAAY,EAACC,MAAMC,SAAP,EAAZ,EAA+B;AAC7B,SAAKC,IAAL,GAAYF,KAAZ;;AAEA,SAAKE,IAAL,CAAUC,GAAV,CAAcH,IAAII,IAAJ,EAAd;AACA,SAAKF,IAAL,CAAUC,GAAV,CAAcH,IAAIK,UAAJ,CAAe,EAACC,UAAU,KAAX,EAAf,CAAd;AAED;;AAED,QAAMC,OAAN,GAAgB;AACd,UAAMC,mBAAGD,OAAH,CACH,aAAYE,gBAAOC,OAAP,CAAeC,IAAK,IAAGF,gBAAOC,OAAP,CAAeE,IAAK,IAAGH,gBAAOC,OAAP,CAAeG,IAAK,EAD3E,EAEJJ,gBAAOC,OAAP,CAAeI,OAFX,EAGJC,aAAaC,QAAQC,IAAR,CAAa,gCAAb,CAHT,EAIJC,gBAAgBF,QAAQC,IAAR,CAAa,+BAAb,CAJZ,EAKJE,SAASH,QAAQG,KAAR,CAAcA,KAAd,CALL,CAAN;AAOD;;AAEDC,gBAAcC,UAAd,EAA0B;AACxBA,eAAW,KAAKnB,IAAhB;AACD;;AAEDoB,YAAUC,SAAV,EAAqB;AACnBA,cAAU,KAAKrB,IAAf;AACD;;AAEDsB,iBAAe;AACb,SAAKtB,IAAL,CAAUC,GAAV,CAAcqB,0BAAd;AACA,SAAKtB,IAAL,CAAUC,GAAV,CAAcsB,6BAAd;AACD;;AAEDC,WAAS;AACP,UAAMC,UAAU9B,KAAK+B,YAAL,CAAkB,KAAK1B,IAAvB,CAAhB;AACAyB,YAAQD,MAAR,CAAejB,gBAAOT,GAAP,CAAWY,IAA1B;AACAe,YAAQE,EAAR,CAAW,OAAX,EAAqBV,KAAD,IAAW;AAC7B,UAAIA,MAAMW,OAAN,KAAkB,QAAtB,EAAgC;AAC9B,cAAMX,KAAN;AACD;;AAED,UAAIY,OAAO,OAAOnB,IAAP,KAAgB,QAAhB,GACN,QAAOH,gBAAOT,GAAP,CAAWY,IAAK,EADjB,GAEN,QAAOH,gBAAOT,GAAP,CAAWY,IAAK,EAF5B;;AAIA,UAAIoB,UAAU/B,SAAd;AACA,cAAQkB,MAAMc,IAAd;AACE,aAAK,QAAL;AACED,oBAAW,GAAED,IAAK,+BAAlB;AACA;AACF,aAAK,YAAL;AACEC,oBAAW,GAAED,IAAK,oBAAlB;AACA;AANJ;;AASA,UAAIC,OAAJ,EAAa;AACXhB,gBAAQG,KAAR,CAAca,OAAd;AACAE,gBAAQC,IAAR,CAAa,CAAb;AACD;;AAED,YAAMhB,KAAN;AACD,KAzBD;;AA2BAQ,YAAQE,EAAR,CAAW,WAAX,EAAwB,MAAM;AAC5B,YAAMO,OAAOT,QAAQU,OAAR,EAAb;AACA,YAAMN,OAAO,OAAOK,IAAP,KAAgB,QAAhB,GACR,QAAOA,IAAK,EADJ,GAER,QAAOA,KAAKxB,IAAK,EAFtB;;AAIAI,cAAQC,IAAR,CAAc,uBAAsBc,IAAK,EAAzC;AACD,KAPD;AAQD;AAvE0B,C,kBAAVjC,S;AAwElB",
       "file": "app-server.js",
       "sourceRoot": "/app/server",
       "sourcesContent": [
-        "import express     from 'express';\nimport helmet      from 'helmet';\nimport cors        from 'cors';\nimport * as http   from 'http';\nimport createError from 'http-errors';\nimport morgan      from 'morgan';\nimport db          from 'mongoose';\n\nimport config       from './config/index';\nimport {\n  errorHandler, \n  apiErrorHandler \n}                   from './utils/error-handler';\n\n\n\nexport default class APPServer {\n  \n    constructor(app) {\n      this._app = app;\n\n      this._app.use(helmet({\n        xPoweredBy: true,\n        strictTransportSecurity: {\n          maxAge: 86400,\n          includeSubDomains: false,\n        },\n        contentSecurityPolicy: true,\n        xXssProtection: true,\n      }));\n      this._app.use(morgan('dev'));\n      this._app.use(express.json());      \n      this._app.use(express.urlencoded({extended: false}));\n      this._app.use(cors({\n        allowedHeaders: [\"Content-Type\", \"Token\", \"Authorization\"],\n        exposedHeaders: [\"Token\", \"Authorization\"],\n        origin: \"*\",\n        methods: [\"GET, HEAD, PUT, PATCH, POST, DELETE\"],\n        preflightContinue: false,\n      }));\n    }\n    \n    async connect() {\n      await db.connect(\n        `mongodb://${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.name}`,\n        config.mongodb.options,\n        connected => console.info('database connection successful'),\n        disconnected => console.info('database disconnect sucessful'),\n        error => console.error(error),\n      );\n    }\n\n    setRouter(endpoints) {\n      endpoints(this._app);\n    }\n\n    errorHandler() {\n      this._app.use(errorHandler);\n      this._app.use(apiErrorHandler);\n    }\n  \n    listen() {\n      const _server = http.createServer(this._app);\n      _server.listen(config.app.port);\n      _server.on('error', (error) => {\n        if (error.syscall !== 'listen') {\n          throw error;\n        }\n  \n        let bind = typeof port === 'string' \n          ? `Pipe ${config.app.port}` \n          : `Port ${config.app.port}`\n        \n        let message = undefined;\n        switch (error.code) {\n          case 'EACCES':\n            message = `${bind} requires elevated privileges`;\n            break;\n          case 'EADDRINUSE':\n            message = `${bind} is already in use`;\n            break;        \n        }\n  \n        if (message) {\n          console.error(message);\n          process.exit(1);\n        }\n  \n        throw error;\n      });\n      \n      _server.on('listening', () => {\n        const addr = _server.address();\n        const bind = typeof addr === 'string' \n          ? `pipe ${addr}`\n          : `port ${addr.port}`\n        \n        console.info(`server listening on ${bind}`);\n      });\n    }\n  };"
+        "import * as http   from 'http';\nimport db          from 'mongoose';\n\nimport config       from './config/index';\nimport {\n  errorHandler, \n  apiErrorHandler \n}                   from './utils/error-handler';\n\n\n\nexport default class APPServer {\n  \n    constructor({app = undefined}) {\n      this._app = app();\n\n      this._app.use(app.json());      \n      this._app.use(app.urlencoded({extended: false}));\n\n    }\n    \n    async connect() {\n      await db.connect(\n        `mongodb://${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.name}`,\n        config.mongodb.options,\n        connected => console.info('database connection successful'),\n        disconnected => console.info('database disconnect sucessful'),\n        error => console.error(error),\n      );\n    }\n\n    setMiddleware(middleware) {\n      middleware(this._app);\n    }\n\n    setRouter(endpoints) {\n      endpoints(this._app);\n    }\n\n    errorHandler() {\n      this._app.use(errorHandler);\n      this._app.use(apiErrorHandler);\n    }\n  \n    listen() {\n      const _server = http.createServer(this._app);\n      _server.listen(config.app.port);\n      _server.on('error', (error) => {\n        if (error.syscall !== 'listen') {\n          throw error;\n        }\n  \n        let bind = typeof port === 'string' \n          ? `Pipe ${config.app.port}` \n          : `Port ${config.app.port}`\n        \n        let message = undefined;\n        switch (error.code) {\n          case 'EACCES':\n            message = `${bind} requires elevated privileges`;\n            break;\n          case 'EADDRINUSE':\n            message = `${bind} is already in use`;\n            break;        \n        }\n  \n        if (message) {\n          console.error(message);\n          process.exit(1);\n        }\n  \n        throw error;\n      });\n      \n      _server.on('listening', () => {\n        const addr = _server.address();\n        const bind = typeof addr === 'string' \n          ? `pipe ${addr}`\n          : `port ${addr.port}`\n        \n        console.info(`server listening on ${bind}`);\n      });\n    }\n  };"
       ]
     },
-    "mtime": 1691830310191
+    "mtime": 1691921580560
   },
   "{\"filename\":\"/app/server/views/user/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -1532,16 +1480,8 @@
           }
         ],
         "exports": {
-          "exported": [
-            "UserController"
-          ],
-          "specifiers": [
-            {
-              "kind": "local",
-              "local": "UserController",
-              "exported": "default"
-            }
-          ]
+          "exported": [],
+          "specifiers": []
         }
       }
     },
@@ -1582,7 +1522,7 @@
       "basename": "index"
     },
     "ignored": false,
-    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _user = require(\"../../models/user\");\n\nvar _user2 = _interopRequireDefault(_user);\n\nvar _default = require(\"../default\");\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass UserController extends _default2.default {\n  constructor({ username = undefined, email = undefined, password = undefined }) {\n    super({ model: new _user2.default() });\n\n    if (username) this.model.model.username = username;\n    if (email) this.model.model.email = email;\n    if (password) this.model.model.password = password;\n  }\n}\nexports.default = UserController;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIlVzZXJDb250cm9sbGVyIiwiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsInVzZXJuYW1lIiwidW5kZWZpbmVkIiwiZW1haWwiLCJwYXNzd29yZCIsIm1vZGVsIiwiVXNlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7Ozs7O0FBR2UsTUFBTUEsY0FBTixTQUE2QkMsaUJBQTdCLENBQStDO0FBQzVEQyxjQUFZLEVBQUNDLFdBQVdDLFNBQVosRUFBdUJDLFFBQVFELFNBQS9CLEVBQTBDRSxXQUFXRixTQUFyRCxFQUFaLEVBQTZFO0FBQzNFLFVBQU0sRUFBQ0csT0FBTyxJQUFJQyxjQUFKLEVBQVIsRUFBTjs7QUFFQSxRQUFJTCxRQUFKLEVBQWdCLEtBQUtJLEtBQUwsQ0FBV0EsS0FBWCxDQUFpQkosUUFBakIsR0FBNEJBLFFBQTVCO0FBQ2hCLFFBQUlFLEtBQUosRUFBZ0IsS0FBS0UsS0FBTCxDQUFXQSxLQUFYLENBQWlCRixLQUFqQixHQUF5QkEsS0FBekI7QUFDaEIsUUFBSUMsUUFBSixFQUFnQixLQUFLQyxLQUFMLENBQVdBLEtBQVgsQ0FBaUJELFFBQWpCLEdBQTRCQSxRQUE1QjtBQUNqQjtBQVAyRDtrQkFBekNOLGMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvY29udHJvbGxlcnMvdXNlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBVc2VyIGZyb20gXCIuLi8uLi9tb2RlbHMvdXNlclwiO1xuaW1wb3J0IERlZmF1bHRDb250cm9sbGVyIGZyb20gXCIuLi9kZWZhdWx0XCI7XG5cblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVXNlckNvbnRyb2xsZXIgZXh0ZW5kcyBEZWZhdWx0Q29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHt1c2VybmFtZSA9IHVuZGVmaW5lZCwgZW1haWwgPSB1bmRlZmluZWQsIHBhc3N3b3JkID0gdW5kZWZpbmVkfSkge1xuICAgIHN1cGVyKHttb2RlbDogbmV3IFVzZXIoKX0pO1xuICAgIFxuICAgIGlmICh1c2VybmFtZSkgICB0aGlzLm1vZGVsLm1vZGVsLnVzZXJuYW1lID0gdXNlcm5hbWU7XG4gICAgaWYgKGVtYWlsKSAgICAgIHRoaXMubW9kZWwubW9kZWwuZW1haWwgPSBlbWFpbDtcbiAgICBpZiAocGFzc3dvcmQpICAgdGhpcy5tb2RlbC5tb2RlbC5wYXNzd29yZCA9IHBhc3N3b3JkO1xuICB9XG59Il19",
+    "code": "\"use strict\";\n\nvar _user = require(\"../../models/user\");\n\nvar _user2 = _interopRequireDefault(_user);\n\nvar _default = require(\"../default\");\n\nvar _default2 = _interopRequireDefault(_default);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nclass UserController extends _default2.default {\n  constructor({ username = undefined, email = undefined, password = undefined }) {\n    super({ model: new _user2.default() });\n\n    if (username) this.model.object.username = username;\n    if (email) this.model.object.email = email;\n    if (password) this.model.object.password = password;\n  }\n};\n\nclass UsersController extends UserController {\n  constructor({ query = {}, page = 1, limit = 10 }) {\n    super({});\n\n    this.query = query;\n    this.page = page;\n    this.limit = limit;\n  }\n};\n\nmodule.exports = {\n  UserController,\n  UsersController\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIlVzZXJDb250cm9sbGVyIiwiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsInVzZXJuYW1lIiwidW5kZWZpbmVkIiwiZW1haWwiLCJwYXNzd29yZCIsIm1vZGVsIiwiVXNlciIsIm9iamVjdCIsIlVzZXJzQ29udHJvbGxlciIsInF1ZXJ5IiwicGFnZSIsImxpbWl0IiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUNBOzs7Ozs7QUFHQSxNQUFNQSxjQUFOLFNBQTZCQyxpQkFBN0IsQ0FBK0M7QUFDN0NDLGNBQVksRUFBQ0MsV0FBV0MsU0FBWixFQUF1QkMsUUFBUUQsU0FBL0IsRUFBMENFLFdBQVdGLFNBQXJELEVBQVosRUFBNkU7QUFDM0UsVUFBTSxFQUFDRyxPQUFPLElBQUlDLGNBQUosRUFBUixFQUFOOztBQUVBLFFBQUlMLFFBQUosRUFBZ0IsS0FBS0ksS0FBTCxDQUFXRSxNQUFYLENBQWtCTixRQUFsQixHQUE2QkEsUUFBN0I7QUFDaEIsUUFBSUUsS0FBSixFQUFnQixLQUFLRSxLQUFMLENBQVdFLE1BQVgsQ0FBa0JKLEtBQWxCLEdBQTBCQSxLQUExQjtBQUNoQixRQUFJQyxRQUFKLEVBQWdCLEtBQUtDLEtBQUwsQ0FBV0UsTUFBWCxDQUFrQkgsUUFBbEIsR0FBNkJBLFFBQTdCO0FBQ2pCO0FBUDRDLENBUTlDOztBQUVELE1BQU1JLGVBQU4sU0FBOEJWLGNBQTlCLENBQTZDO0FBQzNDRSxjQUFZLEVBQUNTLFFBQVEsRUFBVCxFQUFhQyxPQUFPLENBQXBCLEVBQXVCQyxRQUFRLEVBQS9CLEVBQVosRUFBZ0Q7QUFDOUMsVUFBTSxFQUFOOztBQUVBLFNBQUtGLEtBQUwsR0FBYUEsS0FBYjtBQUNBLFNBQUtDLElBQUwsR0FBYUEsSUFBYjtBQUNBLFNBQUtDLEtBQUwsR0FBYUEsS0FBYjtBQUNEO0FBUDBDLENBUTVDOztBQUVEQyxPQUFPQyxPQUFQLEdBQWlCO0FBQ2ZmLGdCQURlO0FBRWZVO0FBRmUsQ0FBakIiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL2FwcC9zZXJ2ZXIvY29udHJvbGxlcnMvdXNlciIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBVc2VyIGZyb20gXCIuLi8uLi9tb2RlbHMvdXNlclwiO1xuaW1wb3J0IERlZmF1bHRDb250cm9sbGVyIGZyb20gXCIuLi9kZWZhdWx0XCI7XG5cblxuY2xhc3MgVXNlckNvbnRyb2xsZXIgZXh0ZW5kcyBEZWZhdWx0Q29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHt1c2VybmFtZSA9IHVuZGVmaW5lZCwgZW1haWwgPSB1bmRlZmluZWQsIHBhc3N3b3JkID0gdW5kZWZpbmVkfSkge1xuICAgIHN1cGVyKHttb2RlbDogbmV3IFVzZXIoKX0pO1xuICAgIFxuICAgIGlmICh1c2VybmFtZSkgICB0aGlzLm1vZGVsLm9iamVjdC51c2VybmFtZSA9IHVzZXJuYW1lO1xuICAgIGlmIChlbWFpbCkgICAgICB0aGlzLm1vZGVsLm9iamVjdC5lbWFpbCA9IGVtYWlsO1xuICAgIGlmIChwYXNzd29yZCkgICB0aGlzLm1vZGVsLm9iamVjdC5wYXNzd29yZCA9IHBhc3N3b3JkO1xuICB9XG59O1xuXG5jbGFzcyBVc2Vyc0NvbnRyb2xsZXIgZXh0ZW5kcyBVc2VyQ29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHtxdWVyeSA9IHt9LCBwYWdlID0gMSwgbGltaXQgPSAxMH0pIHtcbiAgICBzdXBlcih7fSk7XG5cbiAgICB0aGlzLnF1ZXJ5ID0gcXVlcnk7XG4gICAgdGhpcy5wYWdlICA9IHBhZ2U7XG4gICAgdGhpcy5saW1pdCA9IGxpbWl0O1xuICB9XG59O1xuXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgVXNlckNvbnRyb2xsZXIsXG4gIFVzZXJzQ29udHJvbGxlclxufTsiXX0=",
     "ast": null,
     "map": {
       "version": 3,
@@ -1598,16 +1538,23 @@
         "email",
         "password",
         "model",
-        "User"
+        "User",
+        "object",
+        "UsersController",
+        "query",
+        "page",
+        "limit",
+        "module",
+        "exports"
       ],
-      "mappings": ";;;;;;AAAA;;;;AACA;;;;;;AAGe,MAAMA,cAAN,SAA6BC,iBAA7B,CAA+C;AAC5DC,cAAY,EAACC,WAAWC,SAAZ,EAAuBC,QAAQD,SAA/B,EAA0CE,WAAWF,SAArD,EAAZ,EAA6E;AAC3E,UAAM,EAACG,OAAO,IAAIC,cAAJ,EAAR,EAAN;;AAEA,QAAIL,QAAJ,EAAgB,KAAKI,KAAL,CAAWA,KAAX,CAAiBJ,QAAjB,GAA4BA,QAA5B;AAChB,QAAIE,KAAJ,EAAgB,KAAKE,KAAL,CAAWA,KAAX,CAAiBF,KAAjB,GAAyBA,KAAzB;AAChB,QAAIC,QAAJ,EAAgB,KAAKC,KAAL,CAAWA,KAAX,CAAiBD,QAAjB,GAA4BA,QAA5B;AACjB;AAP2D;kBAAzCN,c",
+      "mappings": ";;AAAA;;;;AACA;;;;;;AAGA,MAAMA,cAAN,SAA6BC,iBAA7B,CAA+C;AAC7CC,cAAY,EAACC,WAAWC,SAAZ,EAAuBC,QAAQD,SAA/B,EAA0CE,WAAWF,SAArD,EAAZ,EAA6E;AAC3E,UAAM,EAACG,OAAO,IAAIC,cAAJ,EAAR,EAAN;;AAEA,QAAIL,QAAJ,EAAgB,KAAKI,KAAL,CAAWE,MAAX,CAAkBN,QAAlB,GAA6BA,QAA7B;AAChB,QAAIE,KAAJ,EAAgB,KAAKE,KAAL,CAAWE,MAAX,CAAkBJ,KAAlB,GAA0BA,KAA1B;AAChB,QAAIC,QAAJ,EAAgB,KAAKC,KAAL,CAAWE,MAAX,CAAkBH,QAAlB,GAA6BA,QAA7B;AACjB;AAP4C,CAQ9C;;AAED,MAAMI,eAAN,SAA8BV,cAA9B,CAA6C;AAC3CE,cAAY,EAACS,QAAQ,EAAT,EAAaC,OAAO,CAApB,EAAuBC,QAAQ,EAA/B,EAAZ,EAAgD;AAC9C,UAAM,EAAN;;AAEA,SAAKF,KAAL,GAAaA,KAAb;AACA,SAAKC,IAAL,GAAaA,IAAb;AACA,SAAKC,KAAL,GAAaA,KAAb;AACD;AAP0C,CAQ5C;;AAEDC,OAAOC,OAAP,GAAiB;AACff,gBADe;AAEfU;AAFe,CAAjB",
       "file": "index.js",
       "sourceRoot": "/app/server/controllers/user",
       "sourcesContent": [
-        "import User from \"../../models/user\";\nimport DefaultController from \"../default\";\n\n\nexport default class UserController extends DefaultController {\n  constructor({username = undefined, email = undefined, password = undefined}) {\n    super({model: new User()});\n    \n    if (username)   this.model.model.username = username;\n    if (email)      this.model.model.email = email;\n    if (password)   this.model.model.password = password;\n  }\n}"
+        "import User from \"../../models/user\";\nimport DefaultController from \"../default\";\n\n\nclass UserController extends DefaultController {\n  constructor({username = undefined, email = undefined, password = undefined}) {\n    super({model: new User()});\n    \n    if (username)   this.model.object.username = username;\n    if (email)      this.model.object.email = email;\n    if (password)   this.model.object.password = password;\n  }\n};\n\nclass UsersController extends UserController {\n  constructor({query = {}, page = 1, limit = 10}) {\n    super({});\n\n    this.query = query;\n    this.page  = page;\n    this.limit = limit;\n  }\n};\n\nmodule.exports = {\n  UserController,\n  UsersController\n};"
       ]
     },
-    "mtime": 1691835681216
+    "mtime": 1691926469650
   },
   "{\"filename\":\"/app/server/controllers/default.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/controllers\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -1680,7 +1627,7 @@
       "basename": "default"
     },
     "ignored": false,
-    "code": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require(\"mongoose\");\n\nclass DefaultController {\n  constructor({ model: model }) {\n    this.model = model;\n    this._types = _mongoose.Types;\n  }\n\n  async select() {\n    return await this.model.select(this.query);\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n}exports.default = DefaultController;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsIm1vZGVsIiwiX3R5cGVzIiwiVHlwZXMiLCJzZWxlY3QiLCJxdWVyeSIsInNhdmUiLCJib2R5Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7QUFHZSxNQUFNQSxpQkFBTixDQUF3QjtBQUNyQ0MsY0FBWSxFQUFDQyxPQUFPQSxLQUFSLEVBQVosRUFBNEI7QUFDMUIsU0FBS0EsS0FBTCxHQUFhQSxLQUFiO0FBQ0EsU0FBS0MsTUFBTCxHQUFjQyxlQUFkO0FBQ0Q7O0FBRUQsUUFBTUMsTUFBTixHQUFlO0FBQ2IsV0FBTyxNQUFNLEtBQUtILEtBQUwsQ0FBV0csTUFBWCxDQUFrQixLQUFLQyxLQUF2QixDQUFiO0FBQ0Q7O0FBRUQsUUFBTUMsSUFBTixDQUFXQyxJQUFYLEVBQWlCO0FBQ2YsV0FBTyxNQUFNLEtBQUtOLEtBQUwsQ0FBV0ssSUFBWCxDQUFnQkMsSUFBaEIsQ0FBYjtBQUNEO0FBWm9DLEMsa0JBQWxCUixpQjtBQWFwQiIsImZpbGUiOiJkZWZhdWx0LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL2NvbnRyb2xsZXJzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVHlwZXMgfSBmcm9tIFwibW9uZ29vc2VcIjtcblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBEZWZhdWx0Q29udHJvbGxlciB7XG4gIGNvbnN0cnVjdG9yKHttb2RlbDogbW9kZWx9KSB7XG4gICAgdGhpcy5tb2RlbCA9IG1vZGVsO1xuICAgIHRoaXMuX3R5cGVzID0gVHlwZXM7XG4gIH1cblxuICBhc3luYyBzZWxlY3QoKSB7XG4gICAgcmV0dXJuIGF3YWl0IHRoaXMubW9kZWwuc2VsZWN0KHRoaXMucXVlcnkpO1xuICB9XG5cbiAgYXN5bmMgc2F2ZShib2R5KSB7XG4gICAgcmV0dXJuIGF3YWl0IHRoaXMubW9kZWwuc2F2ZShib2R5KTtcbiAgfVxufTsiXX0=",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _mongoose = require('mongoose');\n\nclass DefaultController {\n  constructor({ model: model }) {\n    this.model = model;\n    this._types = _mongoose.Types;\n\n    if (typeof this.page === 'undefined') this.page = 0;\n    if (typeof this.limit === 'undefined') this.limit = 0;\n  }\n\n  async select() {\n    return await this.model.select();\n  }\n\n  async find() {\n    return await this.model.find({\n      query: this.query,\n      page: this.page,\n      limit: this.limit\n    });\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n}exports.default = DefaultController;\n;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlZmF1bHQuanMiXSwibmFtZXMiOlsiRGVmYXVsdENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsIm1vZGVsIiwiX3R5cGVzIiwiVHlwZXMiLCJwYWdlIiwibGltaXQiLCJzZWxlY3QiLCJmaW5kIiwicXVlcnkiLCJzYXZlIiwiYm9keSJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7O0FBR2UsTUFBTUEsaUJBQU4sQ0FBd0I7QUFDckNDLGNBQVksRUFBQ0MsT0FBT0EsS0FBUixFQUFaLEVBQTRCO0FBQzFCLFNBQUtBLEtBQUwsR0FBYUEsS0FBYjtBQUNBLFNBQUtDLE1BQUwsR0FBY0MsZUFBZDs7QUFFQSxRQUFJLE9BQU8sS0FBS0MsSUFBWixLQUFxQixXQUF6QixFQUF3QyxLQUFLQSxJQUFMLEdBQVksQ0FBWjtBQUN4QyxRQUFJLE9BQU8sS0FBS0MsS0FBWixLQUFzQixXQUExQixFQUF3QyxLQUFLQSxLQUFMLEdBQWEsQ0FBYjtBQUN6Qzs7QUFFRCxRQUFNQyxNQUFOLEdBQWU7QUFDYixXQUFPLE1BQU0sS0FBS0wsS0FBTCxDQUFXSyxNQUFYLEVBQWI7QUFDRDs7QUFFRCxRQUFNQyxJQUFOLEdBQWE7QUFDWCxXQUFPLE1BQU0sS0FBS04sS0FBTCxDQUFXTSxJQUFYLENBQWdCO0FBQzNCQyxhQUFPLEtBQUtBLEtBRGU7QUFFM0JKLFlBQU8sS0FBS0EsSUFGZTtBQUczQkMsYUFBTyxLQUFLQTtBQUhlLEtBQWhCLENBQWI7QUFLRDs7QUFFRCxRQUFNSSxJQUFOLENBQVdDLElBQVgsRUFBaUI7QUFDZixXQUFPLE1BQU0sS0FBS1QsS0FBTCxDQUFXUSxJQUFYLENBQWdCQyxJQUFoQixDQUFiO0FBQ0Q7QUF2Qm9DLEMsa0JBQWxCWCxpQjtBQXdCcEIiLCJmaWxlIjoiZGVmYXVsdC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci9jb250cm9sbGVycyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFR5cGVzIH0gZnJvbSBcIm1vbmdvb3NlXCI7XG5cblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgRGVmYXVsdENvbnRyb2xsZXIge1xuICBjb25zdHJ1Y3Rvcih7bW9kZWw6IG1vZGVsfSkge1xuICAgIHRoaXMubW9kZWwgPSBtb2RlbDtcbiAgICB0aGlzLl90eXBlcyA9IFR5cGVzO1xuXG4gICAgaWYgKHR5cGVvZiB0aGlzLnBhZ2UgPT09ICd1bmRlZmluZWQnKSAgIHRoaXMucGFnZSA9IDA7XG4gICAgaWYgKHR5cGVvZiB0aGlzLmxpbWl0ID09PSAndW5kZWZpbmVkJykgIHRoaXMubGltaXQgPSAwO1xuICB9XG5cbiAgYXN5bmMgc2VsZWN0KCkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLnNlbGVjdCgpO1xuICB9XG5cbiAgYXN5bmMgZmluZCgpIHtcbiAgICByZXR1cm4gYXdhaXQgdGhpcy5tb2RlbC5maW5kKHtcbiAgICAgIHF1ZXJ5OiB0aGlzLnF1ZXJ5LCBcbiAgICAgIHBhZ2UgOiB0aGlzLnBhZ2UsIFxuICAgICAgbGltaXQ6IHRoaXMubGltaXRcbiAgICB9KTtcbiAgfVxuXG4gIGFzeW5jIHNhdmUoYm9keSkge1xuICAgIHJldHVybiBhd2FpdCB0aGlzLm1vZGVsLnNhdmUoYm9keSk7XG4gIH1cbn07Il19",
     "ast": null,
     "map": {
       "version": 3,
@@ -1693,19 +1640,22 @@
         "model",
         "_types",
         "Types",
+        "page",
+        "limit",
         "select",
+        "find",
         "query",
         "save",
         "body"
       ],
-      "mappings": ";;;;;;AAAA;;AAGe,MAAMA,iBAAN,CAAwB;AACrCC,cAAY,EAACC,OAAOA,KAAR,EAAZ,EAA4B;AAC1B,SAAKA,KAAL,GAAaA,KAAb;AACA,SAAKC,MAAL,GAAcC,eAAd;AACD;;AAED,QAAMC,MAAN,GAAe;AACb,WAAO,MAAM,KAAKH,KAAL,CAAWG,MAAX,CAAkB,KAAKC,KAAvB,CAAb;AACD;;AAED,QAAMC,IAAN,CAAWC,IAAX,EAAiB;AACf,WAAO,MAAM,KAAKN,KAAL,CAAWK,IAAX,CAAgBC,IAAhB,CAAb;AACD;AAZoC,C,kBAAlBR,iB;AAapB",
+      "mappings": ";;;;;;AAAA;;AAGe,MAAMA,iBAAN,CAAwB;AACrCC,cAAY,EAACC,OAAOA,KAAR,EAAZ,EAA4B;AAC1B,SAAKA,KAAL,GAAaA,KAAb;AACA,SAAKC,MAAL,GAAcC,eAAd;;AAEA,QAAI,OAAO,KAAKC,IAAZ,KAAqB,WAAzB,EAAwC,KAAKA,IAAL,GAAY,CAAZ;AACxC,QAAI,OAAO,KAAKC,KAAZ,KAAsB,WAA1B,EAAwC,KAAKA,KAAL,GAAa,CAAb;AACzC;;AAED,QAAMC,MAAN,GAAe;AACb,WAAO,MAAM,KAAKL,KAAL,CAAWK,MAAX,EAAb;AACD;;AAED,QAAMC,IAAN,GAAa;AACX,WAAO,MAAM,KAAKN,KAAL,CAAWM,IAAX,CAAgB;AAC3BC,aAAO,KAAKA,KADe;AAE3BJ,YAAO,KAAKA,IAFe;AAG3BC,aAAO,KAAKA;AAHe,KAAhB,CAAb;AAKD;;AAED,QAAMI,IAAN,CAAWC,IAAX,EAAiB;AACf,WAAO,MAAM,KAAKT,KAAL,CAAWQ,IAAX,CAAgBC,IAAhB,CAAb;AACD;AAvBoC,C,kBAAlBX,iB;AAwBpB",
       "file": "default.js",
       "sourceRoot": "/app/server/controllers",
       "sourcesContent": [
-        "import { Types } from \"mongoose\";\n\n\nexport default class DefaultController {\n  constructor({model: model}) {\n    this.model = model;\n    this._types = Types;\n  }\n\n  async select() {\n    return await this.model.select(this.query);\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n};"
+        "import { Types } from \"mongoose\";\n\n\nexport default class DefaultController {\n  constructor({model: model}) {\n    this.model = model;\n    this._types = Types;\n\n    if (typeof this.page === 'undefined')   this.page = 0;\n    if (typeof this.limit === 'undefined')  this.limit = 0;\n  }\n\n  async select() {\n    return await this.model.select();\n  }\n\n  async find() {\n    return await this.model.find({\n      query: this.query, \n      page : this.page, \n      limit: this.limit\n    });\n  }\n\n  async save(body) {\n    return await this.model.save(body);\n  }\n};"
       ]
     },
-    "mtime": 1691835733581
+    "mtime": 1691918699958
   },
   "{\"filename\":\"/app/server/views/user/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/views/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -1961,7 +1911,7 @@
       "basename": "error-handler"
     },
     "ignored": false,
-    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nconst errorHandler = (error, request, response, next) => {\n  if (process.env.DEBUG) {\n    console.log(error);\n  }\n\n  let result = {};\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`);\n      }\n\n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response.status(error.status || 500).send(error);\n};\n\nexports.errorHandler = errorHandler;\nexports.apiErrorHandler = apiErrorHandler;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVycm9yLWhhbmRsZXIuanMiXSwibmFtZXMiOlsiZXJyb3JIYW5kbGVyIiwiZXJyb3IiLCJyZXF1ZXN0IiwicmVzcG9uc2UiLCJuZXh0IiwicHJvY2VzcyIsImVudiIsIkRFQlVHIiwiY29uc29sZSIsImxvZyIsInJlc3VsdCIsIm5hbWUiLCJjb2RlIiwibXNnIiwia2V5Iiwia2V5VmFsdWUiLCJwdXNoIiwic3RhdHVzIiwibWVzc2FnZSIsImpvaW4iLCJhcGlFcnJvckhhbmRsZXIiLCJsb2NhbHMiLCJzZW5kIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxNQUFNQSxlQUFlLENBQUNDLEtBQUQsRUFBUUMsT0FBUixFQUFpQkMsUUFBakIsRUFBMkJDLElBQTNCLEtBQW9DO0FBQ3ZELE1BQUlDLFFBQVFDLEdBQVIsQ0FBWUMsS0FBaEIsRUFBdUI7QUFDckJDLFlBQVFDLEdBQVIsQ0FBWVIsS0FBWjtBQUNEOztBQUVELE1BQUlTLFNBQVMsRUFBYjs7QUFFQSxNQUFJLE9BQU9ULEtBQVAsS0FBaUIsUUFBakIsSUFBNkJBLE1BQU1VLElBQU4sS0FBZSxZQUFoRCxFQUE4RDtBQUM1RCxRQUFJVixNQUFNVyxJQUFOLEtBQWUsS0FBbkIsRUFBMEI7QUFDeEIsVUFBSUMsTUFBTSxFQUFWO0FBQ0EsV0FBSyxJQUFJQyxHQUFULElBQWdCYixNQUFNYyxRQUF0QixFQUFnQztBQUM5QkYsWUFBSUcsSUFBSixDQUFVLEdBQUVGLEdBQUksS0FBSWIsTUFBTWMsUUFBTixDQUFlRCxHQUFmLENBQW9CLGtCQUF4QztBQUNEOztBQUVESixlQUFTLEVBQUVPLFFBQVEsR0FBVixFQUFlQyxTQUFTTCxJQUFJTSxJQUFKLENBQVMsR0FBVCxDQUF4QixFQUFUO0FBQ0Q7QUFDRjs7QUFFRCxNQUFJVCxNQUFKLEVBQVk7QUFDVixXQUFPTixLQUFLTSxNQUFMLENBQVA7QUFDRDs7QUFFRE4sT0FBS0gsS0FBTDtBQUNELENBdkJEOztBQXlCQSxNQUFNbUIsa0JBQWtCLENBQUNuQixLQUFELEVBQVFDLE9BQVIsRUFBaUJDLFFBQWpCLEVBQTJCQyxJQUEzQixLQUFvQztBQUMxREQsV0FBU2tCLE1BQVQsQ0FBZ0JILE9BQWhCLEdBQTBCakIsTUFBTWlCLE9BQWhDO0FBQ0FmLFdBQVNrQixNQUFULENBQWdCcEIsS0FBaEIsR0FBd0JBLEtBQXhCOztBQUVBRSxXQUNHYyxNQURILENBQ1VoQixNQUFNZ0IsTUFBTixJQUFnQixHQUQxQixFQUVHSyxJQUZILENBRVFyQixLQUZSO0FBR0QsQ0FQRDs7UUFVRUQsWSxHQUFBQSxZO1FBQ0FvQixlLEdBQUFBLGUiLCJmaWxlIjoiZXJyb3ItaGFuZGxlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci91dGlscyIsInNvdXJjZXNDb250ZW50IjpbIlxuY29uc3QgZXJyb3JIYW5kbGVyID0gKGVycm9yLCByZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICBpZiAocHJvY2Vzcy5lbnYuREVCVUcpIHtcbiAgICBjb25zb2xlLmxvZyhlcnJvcik7XG4gIH1cblxuICBsZXQgcmVzdWx0ID0ge307XG5cbiAgaWYgKHR5cGVvZiBlcnJvciA9PT0gJ29iamVjdCcgJiYgZXJyb3IubmFtZSA9PT0gJ01vbmdvRXJyb3InKSB7XG4gICAgaWYgKGVycm9yLmNvZGUgPT09IDExMDAwKSB7XG4gICAgICBsZXQgbXNnID0gW107XG4gICAgICBmb3IgKGxldCBrZXkgaW4gZXJyb3Iua2V5VmFsdWUpIHtcbiAgICAgICAgbXNnLnB1c2goYCR7a2V5fSAnJHtlcnJvci5rZXlWYWx1ZVtrZXldfScgYWxyZWFkeSBleGlzdHNgKVxuICAgICAgfVxuICAgICAgXG4gICAgICByZXN1bHQgPSB7IHN0YXR1czogNDA5LCBtZXNzYWdlOiBtc2cuam9pbignLCcpIH07XG4gICAgfVxuICB9XG5cbiAgaWYgKHJlc3VsdCkge1xuICAgIHJldHVybiBuZXh0KHJlc3VsdCk7XG4gIH1cblxuICBuZXh0KGVycm9yKTtcbn07XG5cbmNvbnN0IGFwaUVycm9ySGFuZGxlciA9IChlcnJvciwgcmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2UubG9jYWxzLm1lc3NhZ2UgPSBlcnJvci5tZXNzYWdlO1xuICByZXNwb25zZS5sb2NhbHMuZXJyb3IgPSBlcnJvcjtcblxuICByZXNwb25zZVxuICAgIC5zdGF0dXMoZXJyb3Iuc3RhdHVzIHx8IDUwMClcbiAgICAuc2VuZChlcnJvcik7XG59O1xuXG5leHBvcnQge1xuICBlcnJvckhhbmRsZXIsXG4gIGFwaUVycm9ySGFuZGxlclxufVxuIl19",
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nconst errorHandler = (error, request, response, next) => {\n\n  console.log(error);\n\n  let result = undefined;\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`);\n      }\n\n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response.status(error.status || 500).send(error);\n};\n\nexports.errorHandler = errorHandler;\nexports.apiErrorHandler = apiErrorHandler;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVycm9yLWhhbmRsZXIuanMiXSwibmFtZXMiOlsiZXJyb3JIYW5kbGVyIiwiZXJyb3IiLCJyZXF1ZXN0IiwicmVzcG9uc2UiLCJuZXh0IiwiY29uc29sZSIsImxvZyIsInJlc3VsdCIsInVuZGVmaW5lZCIsIm5hbWUiLCJjb2RlIiwibXNnIiwia2V5Iiwia2V5VmFsdWUiLCJwdXNoIiwic3RhdHVzIiwibWVzc2FnZSIsImpvaW4iLCJhcGlFcnJvckhhbmRsZXIiLCJsb2NhbHMiLCJzZW5kIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQSxNQUFNQSxlQUFlLENBQUNDLEtBQUQsRUFBUUMsT0FBUixFQUFpQkMsUUFBakIsRUFBMkJDLElBQTNCLEtBQW9DOztBQUV2REMsVUFBUUMsR0FBUixDQUFZTCxLQUFaOztBQUVBLE1BQUlNLFNBQVNDLFNBQWI7O0FBRUEsTUFBSSxPQUFPUCxLQUFQLEtBQWlCLFFBQWpCLElBQTZCQSxNQUFNUSxJQUFOLEtBQWUsWUFBaEQsRUFBOEQ7QUFDNUQsUUFBSVIsTUFBTVMsSUFBTixLQUFlLEtBQW5CLEVBQTBCO0FBQ3hCLFVBQUlDLE1BQU0sRUFBVjtBQUNBLFdBQUssSUFBSUMsR0FBVCxJQUFnQlgsTUFBTVksUUFBdEIsRUFBZ0M7QUFDOUJGLFlBQUlHLElBQUosQ0FBVSxHQUFFRixHQUFJLEtBQUlYLE1BQU1ZLFFBQU4sQ0FBZUQsR0FBZixDQUFvQixrQkFBeEM7QUFDRDs7QUFFREwsZUFBUyxFQUFFUSxRQUFRLEdBQVYsRUFBZUMsU0FBU0wsSUFBSU0sSUFBSixDQUFTLEdBQVQsQ0FBeEIsRUFBVDtBQUNEO0FBQ0Y7O0FBRUQsTUFBSVYsTUFBSixFQUFZO0FBQ1YsV0FBT0gsS0FBS0csTUFBTCxDQUFQO0FBQ0Q7O0FBRURILE9BQUtILEtBQUw7QUFDRCxDQXRCRDs7QUF3QkEsTUFBTWlCLGtCQUFrQixDQUFDakIsS0FBRCxFQUFRQyxPQUFSLEVBQWlCQyxRQUFqQixFQUEyQkMsSUFBM0IsS0FBb0M7QUFDMURELFdBQVNnQixNQUFULENBQWdCSCxPQUFoQixHQUEwQmYsTUFBTWUsT0FBaEM7QUFDQWIsV0FBU2dCLE1BQVQsQ0FBZ0JsQixLQUFoQixHQUF3QkEsS0FBeEI7O0FBRUFFLFdBQ0dZLE1BREgsQ0FDVWQsTUFBTWMsTUFBTixJQUFnQixHQUQxQixFQUVHSyxJQUZILENBRVFuQixLQUZSO0FBR0QsQ0FQRDs7UUFVRUQsWSxHQUFBQSxZO1FBQ0FrQixlLEdBQUFBLGUiLCJmaWxlIjoiZXJyb3ItaGFuZGxlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci91dGlscyIsInNvdXJjZXNDb250ZW50IjpbIlxuY29uc3QgZXJyb3JIYW5kbGVyID0gKGVycm9yLCByZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICBcbiAgY29uc29sZS5sb2coZXJyb3IpO1xuXG4gIGxldCByZXN1bHQgPSB1bmRlZmluZWQ7XG5cbiAgaWYgKHR5cGVvZiBlcnJvciA9PT0gJ29iamVjdCcgJiYgZXJyb3IubmFtZSA9PT0gJ01vbmdvRXJyb3InKSB7XG4gICAgaWYgKGVycm9yLmNvZGUgPT09IDExMDAwKSB7XG4gICAgICBsZXQgbXNnID0gW107XG4gICAgICBmb3IgKGxldCBrZXkgaW4gZXJyb3Iua2V5VmFsdWUpIHtcbiAgICAgICAgbXNnLnB1c2goYCR7a2V5fSAnJHtlcnJvci5rZXlWYWx1ZVtrZXldfScgYWxyZWFkeSBleGlzdHNgKVxuICAgICAgfVxuICAgICAgXG4gICAgICByZXN1bHQgPSB7IHN0YXR1czogNDA5LCBtZXNzYWdlOiBtc2cuam9pbignLCcpIH07XG4gICAgfVxuICB9XG5cbiAgaWYgKHJlc3VsdCkge1xuICAgIHJldHVybiBuZXh0KHJlc3VsdCk7XG4gIH1cblxuICBuZXh0KGVycm9yKTtcbn07XG5cbmNvbnN0IGFwaUVycm9ySGFuZGxlciA9IChlcnJvciwgcmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2UubG9jYWxzLm1lc3NhZ2UgPSBlcnJvci5tZXNzYWdlO1xuICByZXNwb25zZS5sb2NhbHMuZXJyb3IgPSBlcnJvcjtcblxuICByZXNwb25zZVxuICAgIC5zdGF0dXMoZXJyb3Iuc3RhdHVzIHx8IDUwMClcbiAgICAuc2VuZChlcnJvcik7XG59O1xuXG5leHBvcnQge1xuICBlcnJvckhhbmRsZXIsXG4gIGFwaUVycm9ySGFuZGxlclxufVxuIl19",
     "ast": null,
     "map": {
       "version": 3,
@@ -1974,12 +1924,10 @@
         "request",
         "response",
         "next",
-        "process",
-        "env",
-        "DEBUG",
         "console",
         "log",
         "result",
+        "undefined",
         "name",
         "code",
         "msg",
@@ -1993,14 +1941,14 @@
         "locals",
         "send"
       ],
-      "mappings": ";;;;;;AACA,MAAMA,eAAe,CAACC,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;AACvD,MAAIC,QAAQC,GAAR,CAAYC,KAAhB,EAAuB;AACrBC,YAAQC,GAAR,CAAYR,KAAZ;AACD;;AAED,MAAIS,SAAS,EAAb;;AAEA,MAAI,OAAOT,KAAP,KAAiB,QAAjB,IAA6BA,MAAMU,IAAN,KAAe,YAAhD,EAA8D;AAC5D,QAAIV,MAAMW,IAAN,KAAe,KAAnB,EAA0B;AACxB,UAAIC,MAAM,EAAV;AACA,WAAK,IAAIC,GAAT,IAAgBb,MAAMc,QAAtB,EAAgC;AAC9BF,YAAIG,IAAJ,CAAU,GAAEF,GAAI,KAAIb,MAAMc,QAAN,CAAeD,GAAf,CAAoB,kBAAxC;AACD;;AAEDJ,eAAS,EAAEO,QAAQ,GAAV,EAAeC,SAASL,IAAIM,IAAJ,CAAS,GAAT,CAAxB,EAAT;AACD;AACF;;AAED,MAAIT,MAAJ,EAAY;AACV,WAAON,KAAKM,MAAL,CAAP;AACD;;AAEDN,OAAKH,KAAL;AACD,CAvBD;;AAyBA,MAAMmB,kBAAkB,CAACnB,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;AAC1DD,WAASkB,MAAT,CAAgBH,OAAhB,GAA0BjB,MAAMiB,OAAhC;AACAf,WAASkB,MAAT,CAAgBpB,KAAhB,GAAwBA,KAAxB;;AAEAE,WACGc,MADH,CACUhB,MAAMgB,MAAN,IAAgB,GAD1B,EAEGK,IAFH,CAEQrB,KAFR;AAGD,CAPD;;QAUED,Y,GAAAA,Y;QACAoB,e,GAAAA,e",
+      "mappings": ";;;;;;AACA,MAAMA,eAAe,CAACC,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;;AAEvDC,UAAQC,GAAR,CAAYL,KAAZ;;AAEA,MAAIM,SAASC,SAAb;;AAEA,MAAI,OAAOP,KAAP,KAAiB,QAAjB,IAA6BA,MAAMQ,IAAN,KAAe,YAAhD,EAA8D;AAC5D,QAAIR,MAAMS,IAAN,KAAe,KAAnB,EAA0B;AACxB,UAAIC,MAAM,EAAV;AACA,WAAK,IAAIC,GAAT,IAAgBX,MAAMY,QAAtB,EAAgC;AAC9BF,YAAIG,IAAJ,CAAU,GAAEF,GAAI,KAAIX,MAAMY,QAAN,CAAeD,GAAf,CAAoB,kBAAxC;AACD;;AAEDL,eAAS,EAAEQ,QAAQ,GAAV,EAAeC,SAASL,IAAIM,IAAJ,CAAS,GAAT,CAAxB,EAAT;AACD;AACF;;AAED,MAAIV,MAAJ,EAAY;AACV,WAAOH,KAAKG,MAAL,CAAP;AACD;;AAEDH,OAAKH,KAAL;AACD,CAtBD;;AAwBA,MAAMiB,kBAAkB,CAACjB,KAAD,EAAQC,OAAR,EAAiBC,QAAjB,EAA2BC,IAA3B,KAAoC;AAC1DD,WAASgB,MAAT,CAAgBH,OAAhB,GAA0Bf,MAAMe,OAAhC;AACAb,WAASgB,MAAT,CAAgBlB,KAAhB,GAAwBA,KAAxB;;AAEAE,WACGY,MADH,CACUd,MAAMc,MAAN,IAAgB,GAD1B,EAEGK,IAFH,CAEQnB,KAFR;AAGD,CAPD;;QAUED,Y,GAAAA,Y;QACAkB,e,GAAAA,e",
       "file": "error-handler.js",
       "sourceRoot": "/app/server/utils",
       "sourcesContent": [
-        "\nconst errorHandler = (error, request, response, next) => {\n  if (process.env.DEBUG) {\n    console.log(error);\n  }\n\n  let result = {};\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`)\n      }\n      \n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response\n    .status(error.status || 500)\n    .send(error);\n};\n\nexport {\n  errorHandler,\n  apiErrorHandler\n}\n"
+        "\nconst errorHandler = (error, request, response, next) => {\n  \n  console.log(error);\n\n  let result = undefined;\n\n  if (typeof error === 'object' && error.name === 'MongoError') {\n    if (error.code === 11000) {\n      let msg = [];\n      for (let key in error.keyValue) {\n        msg.push(`${key} '${error.keyValue[key]}' already exists`)\n      }\n      \n      result = { status: 409, message: msg.join(',') };\n    }\n  }\n\n  if (result) {\n    return next(result);\n  }\n\n  next(error);\n};\n\nconst apiErrorHandler = (error, request, response, next) => {\n  response.locals.message = error.message;\n  response.locals.error = error;\n\n  response\n    .status(error.status || 500)\n    .send(error);\n};\n\nexport {\n  errorHandler,\n  apiErrorHandler\n}\n"
       ]
     },
-    "mtime": 1691834271058
+    "mtime": 1691916801649
   },
   "{\"filename\":\"/app/server/controllers/user/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/controllers/user\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -2026,13 +1974,19 @@
           {
             "source": ".",
             "imported": [
-              "default"
+              "UserController",
+              "UsersController"
             ],
             "specifiers": [
               {
                 "kind": "named",
-                "imported": "default",
+                "imported": "UserController",
                 "local": "UserController"
+              },
+              {
+                "kind": "named",
+                "imported": "UsersController",
+                "local": "UsersController"
               }
             ]
           }
@@ -2080,7 +2034,7 @@
       "basename": "router"
     },
     "ignored": false,
-    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _ = require('.');\n\nvar _2 = _interopRequireDefault(_);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconst router = _express2.default.Router();\n\nrouter.post('/', async (request, response, next) => {\n  const user = new _2.default(request.body);\n  try {\n    const result = await user.save();\n    response.send(result);\n  } catch (err) {\n    console.log(err);\n    next(err);\n  }\n});\n\nrouter.post('/:id', async (request, response, next) => {\n  response.send('test');\n});\n\nrouter.get('/:id', async (request, response, next) => {\n  const user = new _2.default({ username: request.params.id });\n  const result = await user.select();\n  response.send(result);\n});\n\nrouter.put('/:id', async (request, response, next) => {\n  response.send('put');\n});\n\nrouter.delete('/:id', async (request, response, next) => {\n  response.send('delete');\n});\n\nmodule.exports = router;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJleHByZXNzIiwiUm91dGVyIiwicG9zdCIsInJlcXVlc3QiLCJyZXNwb25zZSIsIm5leHQiLCJ1c2VyIiwiVXNlckNvbnRyb2xsZXIiLCJib2R5IiwicmVzdWx0Iiwic2F2ZSIsInNlbmQiLCJlcnIiLCJjb25zb2xlIiwibG9nIiwiZ2V0IiwidXNlcm5hbWUiLCJwYXJhbXMiLCJpZCIsInNlbGVjdCIsInB1dCIsImRlbGV0ZSIsIm1vZHVsZSIsImV4cG9ydHMiXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFFQTs7Ozs7O0FBR0EsTUFBTUEsU0FBU0Msa0JBQVFDLE1BQVIsRUFBZjs7QUFHQUYsT0FBT0csSUFBUCxDQUFZLEdBQVosRUFBaUIsT0FBT0MsT0FBUCxFQUFnQkMsUUFBaEIsRUFBMEJDLElBQTFCLEtBQW1DO0FBQ2xELFFBQU1DLE9BQU8sSUFBSUMsVUFBSixDQUFtQkosUUFBUUssSUFBM0IsQ0FBYjtBQUNBLE1BQUk7QUFDRixVQUFNQyxTQUFTLE1BQU1ILEtBQUtJLElBQUwsRUFBckI7QUFDQU4sYUFBU08sSUFBVCxDQUFjRixNQUFkO0FBQ0QsR0FIRCxDQUdFLE9BQU9HLEdBQVAsRUFBWTtBQUNaQyxZQUFRQyxHQUFSLENBQVlGLEdBQVo7QUFDQVAsU0FBS08sR0FBTDtBQUNEO0FBQ0YsQ0FURDs7QUFZQWIsT0FBT0csSUFBUCxDQUFZLE1BQVosRUFBb0IsT0FBT0MsT0FBUCxFQUFnQkMsUUFBaEIsRUFBMEJDLElBQTFCLEtBQW1DO0FBQ3JERCxXQUFTTyxJQUFULENBQWMsTUFBZDtBQUNELENBRkQ7O0FBS0FaLE9BQU9nQixHQUFQLENBQVcsTUFBWCxFQUFtQixPQUFPWixPQUFQLEVBQWdCQyxRQUFoQixFQUEwQkMsSUFBMUIsS0FBbUM7QUFDcEQsUUFBTUMsT0FBTyxJQUFJQyxVQUFKLENBQW1CLEVBQUNTLFVBQVViLFFBQVFjLE1BQVIsQ0FBZUMsRUFBMUIsRUFBbkIsQ0FBYjtBQUNBLFFBQU1ULFNBQVMsTUFBTUgsS0FBS2EsTUFBTCxFQUFyQjtBQUNBZixXQUFTTyxJQUFULENBQWNGLE1BQWQ7QUFDRCxDQUpEOztBQU9BVixPQUFPcUIsR0FBUCxDQUFXLE1BQVgsRUFBbUIsT0FBT2pCLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUNwREQsV0FBU08sSUFBVCxDQUFjLEtBQWQ7QUFDRCxDQUZEOztBQUtBWixPQUFPc0IsTUFBUCxDQUFjLE1BQWQsRUFBc0IsT0FBT2xCLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUN2REQsV0FBU08sSUFBVCxDQUFjLFFBQWQ7QUFDRCxDQUZEOztBQUtBVyxPQUFPQyxPQUFQLEdBQWlCeEIsTUFBakIiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL2NvbnRyb2xsZXJzL3VzZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxuaW1wb3J0IFVzZXJDb250cm9sbGVyIGZyb20gJy4nO1xuXG5cbmNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XG5cblxucm91dGVyLnBvc3QoJy8nLCBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgY29uc3QgdXNlciA9IG5ldyBVc2VyQ29udHJvbGxlcihyZXF1ZXN0LmJvZHkpXG4gIHRyeSB7XG4gICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgdXNlci5zYXZlKCk7XG4gICAgcmVzcG9uc2Uuc2VuZChyZXN1bHQpO1xuICB9IGNhdGNoIChlcnIpIHtcbiAgICBjb25zb2xlLmxvZyhlcnIpO1xuICAgIG5leHQoZXJyKTtcbiAgfSAgXG59KTtcblxuXG5yb3V0ZXIucG9zdCgnLzppZCcsIGFzeW5jIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICByZXNwb25zZS5zZW5kKCd0ZXN0Jyk7XG59KTtcblxuXG5yb3V0ZXIuZ2V0KCcvOmlkJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIGNvbnN0IHVzZXIgPSBuZXcgVXNlckNvbnRyb2xsZXIoe3VzZXJuYW1lOiByZXF1ZXN0LnBhcmFtcy5pZH0pO1xuICBjb25zdCByZXN1bHQgPSBhd2FpdCB1c2VyLnNlbGVjdCgpXG4gIHJlc3BvbnNlLnNlbmQocmVzdWx0KTtcbn0pO1xuXG5cbnJvdXRlci5wdXQoJy86aWQnLCBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgcmVzcG9uc2Uuc2VuZCgncHV0Jyk7XG59KTtcblxuXG5yb3V0ZXIuZGVsZXRlKCcvOmlkJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gIHJlc3BvbnNlLnNlbmQoJ2RlbGV0ZScpO1xufSk7XG5cblxubW9kdWxlLmV4cG9ydHMgPSByb3V0ZXI7Il19",
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _ = require('.');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nmodule.exports = () => {\n  const router = _express2.default.Router();\n\n  // Endpoints /users, /user, /user/:id\n  router.get('/', async (request, response, next) => {\n    try {\n      const { page = 1, limit = 10 } = request.query;\n      const users = new _.UsersController({ page: page, limit: limit });\n      const result = await users.find();\n      response.json({ result: result, page: page, limit: limit });\n    } catch (err) {\n      next(err);\n    }\n  });\n\n  router.get('/:id', async (request, response, next) => {\n    try {\n      const user = new _.UserController({ username: request.params.id });\n      const result = await user.select();\n\n      response.json(result);\n    } catch (err) {\n      next(err);\n    }\n  });\n\n  router.post('/', async (request, response, next) => {\n    try {\n      const user = new _.UserController(request.body);\n      const result = await user.save();\n\n      response.json({ result });\n    } catch (err) {\n      next(err);\n    }\n  });\n\n  router.post('/:id', async (request, response, next) => {\n    response.send('test');\n  });\n\n  router.put('/:id', async (request, response, next) => {\n    response.send('put');\n  });\n\n  router.delete('/:id', async (request, response, next) => {\n    response.send('delete');\n  });\n\n  return router;\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwicm91dGVyIiwiZXhwcmVzcyIsIlJvdXRlciIsImdldCIsInJlcXVlc3QiLCJyZXNwb25zZSIsIm5leHQiLCJwYWdlIiwibGltaXQiLCJxdWVyeSIsInVzZXJzIiwiVXNlcnNDb250cm9sbGVyIiwicmVzdWx0IiwiZmluZCIsImpzb24iLCJlcnIiLCJ1c2VyIiwiVXNlckNvbnRyb2xsZXIiLCJ1c2VybmFtZSIsInBhcmFtcyIsImlkIiwic2VsZWN0IiwicG9zdCIsImJvZHkiLCJzYXZlIiwic2VuZCIsInB1dCIsImRlbGV0ZSJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUVBOzs7O0FBR0FBLE9BQU9DLE9BQVAsR0FBaUIsTUFBTTtBQUNyQixRQUFNQyxTQUFTQyxrQkFBUUMsTUFBUixFQUFmOztBQUVBO0FBQ0FGLFNBQU9HLEdBQVAsQ0FBVyxHQUFYLEVBQWdCLE9BQU9DLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUNqRCxRQUFJO0FBQ0YsWUFBTSxFQUFDQyxPQUFPLENBQVIsRUFBV0MsUUFBUSxFQUFuQixLQUF5QkosUUFBUUssS0FBdkM7QUFDQSxZQUFNQyxRQUFRLElBQUlDLGlCQUFKLENBQW9CLEVBQUNKLE1BQU1BLElBQVAsRUFBYUMsT0FBT0EsS0FBcEIsRUFBcEIsQ0FBZDtBQUNBLFlBQU1JLFNBQVMsTUFBTUYsTUFBTUcsSUFBTixFQUFyQjtBQUNBUixlQUFTUyxJQUFULENBQWMsRUFBQ0YsUUFBUUEsTUFBVCxFQUFpQkwsTUFBTUEsSUFBdkIsRUFBNkJDLE9BQU9BLEtBQXBDLEVBQWQ7QUFFRCxLQU5ELENBTUUsT0FBT08sR0FBUCxFQUFZO0FBQUVULFdBQUtTLEdBQUw7QUFBWTtBQUM3QixHQVJEOztBQVdBZixTQUFPRyxHQUFQLENBQVcsTUFBWCxFQUFtQixPQUFPQyxPQUFQLEVBQWdCQyxRQUFoQixFQUEwQkMsSUFBMUIsS0FBbUM7QUFDcEQsUUFBSTtBQUNGLFlBQU1VLE9BQU8sSUFBSUMsZ0JBQUosQ0FBbUIsRUFBQ0MsVUFBVWQsUUFBUWUsTUFBUixDQUFlQyxFQUExQixFQUFuQixDQUFiO0FBQ0EsWUFBTVIsU0FBUyxNQUFNSSxLQUFLSyxNQUFMLEVBQXJCOztBQUVBaEIsZUFBU1MsSUFBVCxDQUFjRixNQUFkO0FBRUQsS0FORCxDQU1FLE9BQU9HLEdBQVAsRUFBWTtBQUFFVCxXQUFLUyxHQUFMO0FBQVk7QUFDN0IsR0FSRDs7QUFXQWYsU0FBT3NCLElBQVAsQ0FBWSxHQUFaLEVBQWlCLE9BQU9sQixPQUFQLEVBQWdCQyxRQUFoQixFQUEwQkMsSUFBMUIsS0FBbUM7QUFDbEQsUUFBSTtBQUNGLFlBQU1VLE9BQU8sSUFBSUMsZ0JBQUosQ0FBbUJiLFFBQVFtQixJQUEzQixDQUFiO0FBQ0EsWUFBTVgsU0FBUyxNQUFNSSxLQUFLUSxJQUFMLEVBQXJCOztBQUVBbkIsZUFBU1MsSUFBVCxDQUFjLEVBQUNGLE1BQUQsRUFBZDtBQUVELEtBTkQsQ0FNRSxPQUFPRyxHQUFQLEVBQVk7QUFBRVQsV0FBS1MsR0FBTDtBQUFZO0FBQzdCLEdBUkQ7O0FBV0FmLFNBQU9zQixJQUFQLENBQVksTUFBWixFQUFvQixPQUFPbEIsT0FBUCxFQUFnQkMsUUFBaEIsRUFBMEJDLElBQTFCLEtBQW1DO0FBQ3JERCxhQUFTb0IsSUFBVCxDQUFjLE1BQWQ7QUFDRCxHQUZEOztBQUtBekIsU0FBTzBCLEdBQVAsQ0FBVyxNQUFYLEVBQW1CLE9BQU90QixPQUFQLEVBQWdCQyxRQUFoQixFQUEwQkMsSUFBMUIsS0FBbUM7QUFDcERELGFBQVNvQixJQUFULENBQWMsS0FBZDtBQUNELEdBRkQ7O0FBS0F6QixTQUFPMkIsTUFBUCxDQUFjLE1BQWQsRUFBc0IsT0FBT3ZCLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUN2REQsYUFBU29CLElBQVQsQ0FBYyxRQUFkO0FBQ0QsR0FGRDs7QUFJQSxTQUFPekIsTUFBUDtBQUNELENBcEREIiwiZmlsZSI6InJvdXRlci5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NlcnZlci9jb250cm9sbGVycy91c2VyIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7XG5cbmltcG9ydCB7IFVzZXJDb250cm9sbGVyLCBVc2Vyc0NvbnRyb2xsZXIgfSBmcm9tICcuJztcblxuXG5tb2R1bGUuZXhwb3J0cyA9ICgpID0+IHtcbiAgY29uc3Qgcm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcbiAgXG4gIC8vIEVuZHBvaW50cyAvdXNlcnMsIC91c2VyLCAvdXNlci86aWRcbiAgcm91dGVyLmdldCgnLycsIGFzeW5jIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICAgIHRyeSB7XG4gICAgICBjb25zdCB7cGFnZSA9IDEsIGxpbWl0ID0gMTB9ID0gcmVxdWVzdC5xdWVyeTtcbiAgICAgIGNvbnN0IHVzZXJzID0gbmV3IFVzZXJzQ29udHJvbGxlcih7cGFnZTogcGFnZSwgbGltaXQ6IGxpbWl0fSk7XG4gICAgICBjb25zdCByZXN1bHQgPSBhd2FpdCB1c2Vycy5maW5kKCk7XG4gICAgICByZXNwb25zZS5qc29uKHtyZXN1bHQ6IHJlc3VsdCwgcGFnZTogcGFnZSwgbGltaXQ6IGxpbWl0fSk7XG4gICAgXG4gICAgfSBjYXRjaCAoZXJyKSB7IG5leHQoZXJyKTsgfVxuICB9KTtcblxuXG4gIHJvdXRlci5nZXQoJy86aWQnLCBhc3luYyAocmVxdWVzdCwgcmVzcG9uc2UsIG5leHQpID0+IHtcbiAgICB0cnkge1xuICAgICAgY29uc3QgdXNlciA9IG5ldyBVc2VyQ29udHJvbGxlcih7dXNlcm5hbWU6IHJlcXVlc3QucGFyYW1zLmlkfSk7XG4gICAgICBjb25zdCByZXN1bHQgPSBhd2FpdCB1c2VyLnNlbGVjdCgpO1xuXG4gICAgICByZXNwb25zZS5qc29uKHJlc3VsdCk7XG4gICAgXG4gICAgfSBjYXRjaCAoZXJyKSB7IG5leHQoZXJyKTsgfVxuICB9KTtcblxuXG4gIHJvdXRlci5wb3N0KCcvJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gICAgdHJ5IHtcbiAgICAgIGNvbnN0IHVzZXIgPSBuZXcgVXNlckNvbnRyb2xsZXIocmVxdWVzdC5ib2R5KTtcbiAgICAgIGNvbnN0IHJlc3VsdCA9IGF3YWl0IHVzZXIuc2F2ZSgpO1xuXG4gICAgICByZXNwb25zZS5qc29uKHtyZXN1bHR9KTtcbiAgICBcbiAgICB9IGNhdGNoIChlcnIpIHsgbmV4dChlcnIpOyB9ICBcbiAgfSk7XG5cblxuICByb3V0ZXIucG9zdCgnLzppZCcsIGFzeW5jIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICAgIHJlc3BvbnNlLnNlbmQoJ3Rlc3QnKTtcbiAgfSk7XG5cblxuICByb3V0ZXIucHV0KCcvOmlkJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gICAgcmVzcG9uc2Uuc2VuZCgncHV0Jyk7XG4gIH0pO1xuXG5cbiAgcm91dGVyLmRlbGV0ZSgnLzppZCcsIGFzeW5jIChyZXF1ZXN0LCByZXNwb25zZSwgbmV4dCkgPT4ge1xuICAgIHJlc3BvbnNlLnNlbmQoJ2RlbGV0ZScpO1xuICB9KTtcblxuICByZXR1cm4gcm91dGVyO1xufTsiXX0=",
     "ast": null,
     "map": {
       "version": 3,
@@ -2088,40 +2042,45 @@
         "router.js"
       ],
       "names": [
+        "module",
+        "exports",
         "router",
         "express",
         "Router",
-        "post",
+        "get",
         "request",
         "response",
         "next",
+        "page",
+        "limit",
+        "query",
+        "users",
+        "UsersController",
+        "result",
+        "find",
+        "json",
+        "err",
         "user",
         "UserController",
-        "body",
-        "result",
-        "save",
-        "send",
-        "err",
-        "console",
-        "log",
-        "get",
         "username",
         "params",
         "id",
         "select",
+        "post",
+        "body",
+        "save",
+        "send",
         "put",
-        "delete",
-        "module",
-        "exports"
+        "delete"
       ],
-      "mappings": ";;AAAA;;;;AAEA;;;;;;AAGA,MAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAGAF,OAAOG,IAAP,CAAY,GAAZ,EAAiB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AAClD,QAAMC,OAAO,IAAIC,UAAJ,CAAmBJ,QAAQK,IAA3B,CAAb;AACA,MAAI;AACF,UAAMC,SAAS,MAAMH,KAAKI,IAAL,EAArB;AACAN,aAASO,IAAT,CAAcF,MAAd;AACD,GAHD,CAGE,OAAOG,GAAP,EAAY;AACZC,YAAQC,GAAR,CAAYF,GAAZ;AACAP,SAAKO,GAAL;AACD;AACF,CATD;;AAYAb,OAAOG,IAAP,CAAY,MAAZ,EAAoB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACrDD,WAASO,IAAT,CAAc,MAAd;AACD,CAFD;;AAKAZ,OAAOgB,GAAP,CAAW,MAAX,EAAmB,OAAOZ,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpD,QAAMC,OAAO,IAAIC,UAAJ,CAAmB,EAACS,UAAUb,QAAQc,MAAR,CAAeC,EAA1B,EAAnB,CAAb;AACA,QAAMT,SAAS,MAAMH,KAAKa,MAAL,EAArB;AACAf,WAASO,IAAT,CAAcF,MAAd;AACD,CAJD;;AAOAV,OAAOqB,GAAP,CAAW,MAAX,EAAmB,OAAOjB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpDD,WAASO,IAAT,CAAc,KAAd;AACD,CAFD;;AAKAZ,OAAOsB,MAAP,CAAc,MAAd,EAAsB,OAAOlB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACvDD,WAASO,IAAT,CAAc,QAAd;AACD,CAFD;;AAKAW,OAAOC,OAAP,GAAiBxB,MAAjB",
+      "mappings": ";;AAAA;;;;AAEA;;;;AAGAA,OAAOC,OAAP,GAAiB,MAAM;AACrB,QAAMC,SAASC,kBAAQC,MAAR,EAAf;;AAEA;AACAF,SAAOG,GAAP,CAAW,GAAX,EAAgB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACjD,QAAI;AACF,YAAM,EAACC,OAAO,CAAR,EAAWC,QAAQ,EAAnB,KAAyBJ,QAAQK,KAAvC;AACA,YAAMC,QAAQ,IAAIC,iBAAJ,CAAoB,EAACJ,MAAMA,IAAP,EAAaC,OAAOA,KAApB,EAApB,CAAd;AACA,YAAMI,SAAS,MAAMF,MAAMG,IAAN,EAArB;AACAR,eAASS,IAAT,CAAc,EAACF,QAAQA,MAAT,EAAiBL,MAAMA,IAAvB,EAA6BC,OAAOA,KAApC,EAAd;AAED,KAND,CAME,OAAOO,GAAP,EAAY;AAAET,WAAKS,GAAL;AAAY;AAC7B,GARD;;AAWAf,SAAOG,GAAP,CAAW,MAAX,EAAmB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpD,QAAI;AACF,YAAMU,OAAO,IAAIC,gBAAJ,CAAmB,EAACC,UAAUd,QAAQe,MAAR,CAAeC,EAA1B,EAAnB,CAAb;AACA,YAAMR,SAAS,MAAMI,KAAKK,MAAL,EAArB;;AAEAhB,eAASS,IAAT,CAAcF,MAAd;AAED,KAND,CAME,OAAOG,GAAP,EAAY;AAAET,WAAKS,GAAL;AAAY;AAC7B,GARD;;AAWAf,SAAOsB,IAAP,CAAY,GAAZ,EAAiB,OAAOlB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AAClD,QAAI;AACF,YAAMU,OAAO,IAAIC,gBAAJ,CAAmBb,QAAQmB,IAA3B,CAAb;AACA,YAAMX,SAAS,MAAMI,KAAKQ,IAAL,EAArB;;AAEAnB,eAASS,IAAT,CAAc,EAACF,MAAD,EAAd;AAED,KAND,CAME,OAAOG,GAAP,EAAY;AAAET,WAAKS,GAAL;AAAY;AAC7B,GARD;;AAWAf,SAAOsB,IAAP,CAAY,MAAZ,EAAoB,OAAOlB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACrDD,aAASoB,IAAT,CAAc,MAAd;AACD,GAFD;;AAKAzB,SAAO0B,GAAP,CAAW,MAAX,EAAmB,OAAOtB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACpDD,aAASoB,IAAT,CAAc,KAAd;AACD,GAFD;;AAKAzB,SAAO2B,MAAP,CAAc,MAAd,EAAsB,OAAOvB,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACvDD,aAASoB,IAAT,CAAc,QAAd;AACD,GAFD;;AAIA,SAAOzB,MAAP;AACD,CApDD",
       "file": "router.js",
       "sourceRoot": "/app/server/controllers/user",
       "sourcesContent": [
-        "import express from 'express';\n\nimport UserController from '.';\n\n\nconst router = express.Router();\n\n\nrouter.post('/', async (request, response, next) => {\n  const user = new UserController(request.body)\n  try {\n    const result = await user.save();\n    response.send(result);\n  } catch (err) {\n    console.log(err);\n    next(err);\n  }  \n});\n\n\nrouter.post('/:id', async (request, response, next) => {\n  response.send('test');\n});\n\n\nrouter.get('/:id', async (request, response, next) => {\n  const user = new UserController({username: request.params.id});\n  const result = await user.select()\n  response.send(result);\n});\n\n\nrouter.put('/:id', async (request, response, next) => {\n  response.send('put');\n});\n\n\nrouter.delete('/:id', async (request, response, next) => {\n  response.send('delete');\n});\n\n\nmodule.exports = router;"
+        "import express from 'express';\n\nimport { UserController, UsersController } from '.';\n\n\nmodule.exports = () => {\n  const router = express.Router();\n  \n  // Endpoints /users, /user, /user/:id\n  router.get('/', async (request, response, next) => {\n    try {\n      const {page = 1, limit = 10} = request.query;\n      const users = new UsersController({page: page, limit: limit});\n      const result = await users.find();\n      response.json({result: result, page: page, limit: limit});\n    \n    } catch (err) { next(err); }\n  });\n\n\n  router.get('/:id', async (request, response, next) => {\n    try {\n      const user = new UserController({username: request.params.id});\n      const result = await user.select();\n\n      response.json(result);\n    \n    } catch (err) { next(err); }\n  });\n\n\n  router.post('/', async (request, response, next) => {\n    try {\n      const user = new UserController(request.body);\n      const result = await user.save();\n\n      response.json({result});\n    \n    } catch (err) { next(err); }  \n  });\n\n\n  router.post('/:id', async (request, response, next) => {\n    response.send('test');\n  });\n\n\n  router.put('/:id', async (request, response, next) => {\n    response.send('put');\n  });\n\n\n  router.delete('/:id', async (request, response, next) => {\n    response.send('delete');\n  });\n\n  return router;\n};"
       ]
     },
-    "mtime": 1691834846245
+    "mtime": 1691923610731
   },
   "{\"filename\":\"/app/server/utils/api-error-handler.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/utils\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
     "metadata": {
@@ -2184,5 +2143,162 @@
       "sourcesContent": []
     },
     "mtime": 1691829101617
+  },
+  "{\"filename\":\"/app/server/middleware/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/server/middleware\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.3": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "morgan",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "morgan"
+              }
+            ]
+          },
+          {
+            "source": "helmet",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "helmet"
+              }
+            ]
+          },
+          {
+            "source": "cors",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cors"
+              }
+            ]
+          },
+          {
+            "source": "./../config",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "config"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "middleware",
+            "app"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "middleware",
+              "exported": "default"
+            },
+            {
+              "kind": "local",
+              "local": "app",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server/middleware/index.js",
+      "filenameRelative": "/app/server/middleware/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/server/middleware",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/server/middleware",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = middleware;\n\nvar _morgan = require('morgan');\n\nvar _morgan2 = _interopRequireDefault(_morgan);\n\nvar _helmet = require('helmet');\n\nvar _helmet2 = _interopRequireDefault(_helmet);\n\nvar _cors = require('cors');\n\nvar _cors2 = _interopRequireDefault(_cors);\n\nvar _config = require('./../config');\n\nvar _config2 = _interopRequireDefault(_config);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction middleware(app) {\n  app.use((0, _morgan2.default)('dev'));\n\n  app.use((0, _helmet2.default)({\n    xPoweredBy: true,\n    strictTransportSecurity: {\n      maxAge: 86400,\n      includeSubDomains: false\n    },\n    contentSecurityPolicy: true,\n    xXssProtection: true\n  }));\n\n  app.use((0, _cors2.default)({\n    allowedHeaders: ['Content-Type', 'Authorization'],\n    exposedHeaders: ['Authorization'],\n    origin: '*',\n    methods: ['GET', 'PUT', 'POST', 'DELETE'],\n    preflightContinue: false\n  }));\n\n  app.options('/*', async (request, response, next) => {\n    if (!(request.method in ['GET', 'PUT', 'POST', 'DELETE'])) {\n      console.log(`request method is ${request.method}`);\n    }\n  });\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIm1pZGRsZXdhcmUiLCJhcHAiLCJ1c2UiLCJ4UG93ZXJlZEJ5Iiwic3RyaWN0VHJhbnNwb3J0U2VjdXJpdHkiLCJtYXhBZ2UiLCJpbmNsdWRlU3ViRG9tYWlucyIsImNvbnRlbnRTZWN1cml0eVBvbGljeSIsInhYc3NQcm90ZWN0aW9uIiwiYWxsb3dlZEhlYWRlcnMiLCJleHBvc2VkSGVhZGVycyIsIm9yaWdpbiIsIm1ldGhvZHMiLCJwcmVmbGlnaHRDb250aW51ZSIsIm9wdGlvbnMiLCJyZXF1ZXN0IiwicmVzcG9uc2UiLCJuZXh0IiwibWV0aG9kIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBUXdCQSxVOztBQVJ4Qjs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFFQTs7Ozs7O0FBSWUsU0FBU0EsVUFBVCxDQUFvQkMsR0FBcEIsRUFBeUI7QUFDdENBLE1BQUlDLEdBQUosQ0FBUSxzQkFBTyxLQUFQLENBQVI7O0FBRUFELE1BQUlDLEdBQUosQ0FBUSxzQkFBTztBQUNiQyxnQkFBWSxJQURDO0FBRWJDLDZCQUF5QjtBQUN2QkMsY0FBUSxLQURlO0FBRXZCQyx5QkFBbUI7QUFGSSxLQUZaO0FBTWJDLDJCQUF1QixJQU5WO0FBT2JDLG9CQUFnQjtBQVBILEdBQVAsQ0FBUjs7QUFVQVAsTUFBSUMsR0FBSixDQUFRLG9CQUFLO0FBQ1hPLG9CQUFnQixDQUFDLGNBQUQsRUFBaUIsZUFBakIsQ0FETDtBQUVYQyxvQkFBZ0IsQ0FBQyxlQUFELENBRkw7QUFHWEMsWUFBUSxHQUhHO0FBSVhDLGFBQVMsQ0FBQyxLQUFELEVBQVEsS0FBUixFQUFlLE1BQWYsRUFBdUIsUUFBdkIsQ0FKRTtBQUtYQyx1QkFBbUI7QUFMUixHQUFMLENBQVI7O0FBUUFaLE1BQUlhLE9BQUosQ0FBWSxJQUFaLEVBQWtCLE9BQU9DLE9BQVAsRUFBZ0JDLFFBQWhCLEVBQTBCQyxJQUExQixLQUFtQztBQUNuRCxRQUFJLEVBQUVGLFFBQVFHLE1BQVIsSUFBa0IsQ0FBQyxLQUFELEVBQVEsS0FBUixFQUFlLE1BQWYsRUFBdUIsUUFBdkIsQ0FBcEIsQ0FBSixFQUEyRDtBQUN6REMsY0FBUUMsR0FBUixDQUFhLHFCQUFvQkwsUUFBUUcsTUFBTyxFQUFoRDtBQUNEO0FBQ0YsR0FKRDtBQUtEIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc2VydmVyL21pZGRsZXdhcmUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbW9yZ2FuICAgICAgZnJvbSAnbW9yZ2FuJztcbmltcG9ydCBoZWxtZXQgICAgICBmcm9tICdoZWxtZXQnO1xuaW1wb3J0IGNvcnMgICAgICAgIGZyb20gJ2NvcnMnO1xuXG5pbXBvcnQgY29uZmlnIGZyb20gXCIuLy4uL2NvbmZpZ1wiO1xuXG5cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gbWlkZGxld2FyZShhcHApIHtcbiAgYXBwLnVzZShtb3JnYW4oJ2RldicpKTtcblxuICBhcHAudXNlKGhlbG1ldCh7XG4gICAgeFBvd2VyZWRCeTogdHJ1ZSxcbiAgICBzdHJpY3RUcmFuc3BvcnRTZWN1cml0eToge1xuICAgICAgbWF4QWdlOiA4NjQwMCxcbiAgICAgIGluY2x1ZGVTdWJEb21haW5zOiBmYWxzZSxcbiAgICB9LFxuICAgIGNvbnRlbnRTZWN1cml0eVBvbGljeTogdHJ1ZSxcbiAgICB4WHNzUHJvdGVjdGlvbjogdHJ1ZSxcbiAgfSkpO1xuXG4gIGFwcC51c2UoY29ycyh7XG4gICAgYWxsb3dlZEhlYWRlcnM6IFsnQ29udGVudC1UeXBlJywgJ0F1dGhvcml6YXRpb24nXSxcbiAgICBleHBvc2VkSGVhZGVyczogWydBdXRob3JpemF0aW9uJ10sXG4gICAgb3JpZ2luOiAnKicsXG4gICAgbWV0aG9kczogWydHRVQnLCAnUFVUJywgJ1BPU1QnLCAnREVMRVRFJ10sXG4gICAgcHJlZmxpZ2h0Q29udGludWU6IGZhbHNlLFxuICB9KSk7XG5cbiAgYXBwLm9wdGlvbnMoJy8qJywgYXN5bmMgKHJlcXVlc3QsIHJlc3BvbnNlLCBuZXh0KSA9PiB7XG4gICAgaWYgKCEocmVxdWVzdC5tZXRob2QgaW4gWydHRVQnLCAnUFVUJywgJ1BPU1QnLCAnREVMRVRFJ10pKSB7XG4gICAgICBjb25zb2xlLmxvZyhgcmVxdWVzdCBtZXRob2QgaXMgJHtyZXF1ZXN0Lm1ldGhvZH1gKTtcbiAgICB9XG4gIH0pO1xufSJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "middleware",
+        "app",
+        "use",
+        "xPoweredBy",
+        "strictTransportSecurity",
+        "maxAge",
+        "includeSubDomains",
+        "contentSecurityPolicy",
+        "xXssProtection",
+        "allowedHeaders",
+        "exposedHeaders",
+        "origin",
+        "methods",
+        "preflightContinue",
+        "options",
+        "request",
+        "response",
+        "next",
+        "method",
+        "console",
+        "log"
+      ],
+      "mappings": ";;;;;kBAQwBA,U;;AARxB;;;;AACA;;;;AACA;;;;AAEA;;;;;;AAIe,SAASA,UAAT,CAAoBC,GAApB,EAAyB;AACtCA,MAAIC,GAAJ,CAAQ,sBAAO,KAAP,CAAR;;AAEAD,MAAIC,GAAJ,CAAQ,sBAAO;AACbC,gBAAY,IADC;AAEbC,6BAAyB;AACvBC,cAAQ,KADe;AAEvBC,yBAAmB;AAFI,KAFZ;AAMbC,2BAAuB,IANV;AAObC,oBAAgB;AAPH,GAAP,CAAR;;AAUAP,MAAIC,GAAJ,CAAQ,oBAAK;AACXO,oBAAgB,CAAC,cAAD,EAAiB,eAAjB,CADL;AAEXC,oBAAgB,CAAC,eAAD,CAFL;AAGXC,YAAQ,GAHG;AAIXC,aAAS,CAAC,KAAD,EAAQ,KAAR,EAAe,MAAf,EAAuB,QAAvB,CAJE;AAKXC,uBAAmB;AALR,GAAL,CAAR;;AAQAZ,MAAIa,OAAJ,CAAY,IAAZ,EAAkB,OAAOC,OAAP,EAAgBC,QAAhB,EAA0BC,IAA1B,KAAmC;AACnD,QAAI,EAAEF,QAAQG,MAAR,IAAkB,CAAC,KAAD,EAAQ,KAAR,EAAe,MAAf,EAAuB,QAAvB,CAApB,CAAJ,EAA2D;AACzDC,cAAQC,GAAR,CAAa,qBAAoBL,QAAQG,MAAO,EAAhD;AACD;AACF,GAJD;AAKD",
+      "file": "index.js",
+      "sourceRoot": "/app/server/middleware",
+      "sourcesContent": [
+        "import morgan      from 'morgan';\nimport helmet      from 'helmet';\nimport cors        from 'cors';\n\nimport config from \"./../config\";\n\n\n\nexport default function middleware(app) {\n  app.use(morgan('dev'));\n\n  app.use(helmet({\n    xPoweredBy: true,\n    strictTransportSecurity: {\n      maxAge: 86400,\n      includeSubDomains: false,\n    },\n    contentSecurityPolicy: true,\n    xXssProtection: true,\n  }));\n\n  app.use(cors({\n    allowedHeaders: ['Content-Type', 'Authorization'],\n    exposedHeaders: ['Authorization'],\n    origin: '*',\n    methods: ['GET', 'PUT', 'POST', 'DELETE'],\n    preflightContinue: false,\n  }));\n\n  app.options('/*', async (request, response, next) => {\n    if (!(request.method in ['GET', 'PUT', 'POST', 'DELETE'])) {\n      console.log(`request method is ${request.method}`);\n    }\n  });\n}"
+      ]
+    },
+    "mtime": 1691923359818
   }
 }
