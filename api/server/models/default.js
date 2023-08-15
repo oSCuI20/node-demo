@@ -2,7 +2,7 @@
 
 export default class DefaultModel {
   constructor({model = undefined}) { 
-    this.object = new model({username: 'testing'});
+    this.object = new model();
     this.model  = model;
   }
   
@@ -17,7 +17,8 @@ export default class DefaultModel {
                            .exec();
   }
 
-  async save() {
+  async save(values) {
+    this.object.set(values);
     return await this.object.save();
   }
 

@@ -1,5 +1,6 @@
 import db, { Schema } from 'mongoose';
-import DefaultModel        from '../default';
+
+import DefaultModel   from '../default';
 
 
 const userModel = db.model('users', 
@@ -15,22 +16,20 @@ const userModel = db.model('users',
       is_signed: {type: Boolean, default: false},
       is_admin : {type: Boolean, default: false},
 
-      created_at: {type: Date, index: true,  default: Date.now},
-      updated_at: {type: Date, index: true, default: Date.now},
+      created_at: {type: Date, default: new Date()},
+      updated_at: {type: Date, default: new Date()},
     },
     {
-      strict: true,
-      collection: 'users',
+      strict: false,
+      collection: 'users'
     }
   )
   // hooks for creation users
   .pre('save', function (next) {
-    let current_date = new Date();
-    this.updated_at = current_date;
+    let now = new Date();
+    this.updated_at = now;
 
-    if (!this.created_at) {
-      this.created_at = current_date;
-    }
+    if (!this.created_at) this.created_at = now;
 
     if (this.password) {
       // TODO password hashed
@@ -39,15 +38,17 @@ const userModel = db.model('users',
     next();
   })
   .post('save', function (error, doc, next) {
-    if (typeof error === 'object' && error.name !== 'MongoError') {
-      return next();
-    }
+    if (typeof error === 'object' && error.name !== 'MongoError') return next();
   
     next(error);
   })
-  .pre('updateOne', function (next) {
-    let current_date = new Date();
-    this.updated_at = current_date;
+  .pre('updateOne', async function (next) {
+    const user = await this.findOne(this.getFilter());
+    const update_values = this.getUpdate();
+    
+    Object.entries(update_values).forEach(([key, value]) => {
+      if (user[key] !== value) this.set({updated_at: new Date()});
+    });
 
     next();
   })

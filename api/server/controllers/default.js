@@ -23,6 +23,10 @@ export default class DefaultController {
   }
 
   async save() {
-    return await this.model.save();
+    return await this.model.save(this.values);
+  }
+
+  async update() {
+    return await this.model.update(this.query, this.values);
   }
 };
