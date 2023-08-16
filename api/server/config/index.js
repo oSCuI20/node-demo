@@ -6,7 +6,13 @@ function config() {
       host: process.env.APP_HOST,
       port: process.env.APP_PORT || '3000',
       admin: process.env.APP_ADMIN_URL,
-      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`)
+      rootfs: process.env.APP_HOME || path.normalize(`${__dirname}`),
+      jwt_secret: 'my->jwt->secret->key',
+      authorization: [
+        '/user',
+        '/users',
+        '/dashboard',
+      ],
     },
     mongodb: {
       host: process.env.MONGO_HOST,
